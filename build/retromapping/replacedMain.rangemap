@@ -1,0 +1,56 @@
+Symbol range map extraction starting
+Processing 2 files
+processing de\labymod\lennart\addon.java
+@|de\labymod\lennart\addon.java|8|26|de.labymod.lennart|package|de.labymod.lennart|(file)
+Class Start: de.labymod.lennart.addon
+   Method Start: onEnable()V
+      @|de\labymod\lennart\addon.java|382|390|onEnable|method|net.labymod.api.LabyModAddon|onEnable|()V
+      @|de\labymod\lennart\addon.java|403|409|System|class|java.lang.System
+      @|de\labymod\lennart\addon.java|410|413|out|field|java.lang.System|out
+      @|de\labymod\lennart\addon.java|414|421|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|de\labymod\lennart\addon.java|459|465|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
+      @|de\labymod\lennart\addon.java|468|483|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
+      @|de\labymod\lennart\addon.java|486|494|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/MessageReceiveEvent;)V
+      @|de\labymod\lennart\addon.java|499|521|MessageReceiveListener|class|de.labymod.lennart.listener.MessageReceiveListener
+   Method End: onEnable()V
+   Method Start: loadConfig()V
+      @|de\labymod\lennart\addon.java|563|573|loadConfig|method|net.labymod.api.LabyModAddon|loadConfig|()V
+   Method End: loadConfig()V
+   Method Start: fillSettings(Ljava/util/List;)V
+      @|de\labymod\lennart\addon.java|619|631|fillSettings|method|net.labymod.api.LabyModAddon|fillSettings|(Ljava/util/List;)V
+      @|de\labymod\lennart\addon.java|643|658|SettingsElement|class|net.labymod.settings.elements.SettingsElement
+      @|de\labymod\lennart\addon.java|638|642|List|class|java.util.List
+      @|de\labymod\lennart\addon.java|660|664|list|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|list|0
+   Method End: fillSettings(Ljava/util/List;)V
+Class End  : de.labymod.lennart.addon
+endProcessing de\labymod\lennart\addon.java
+
+processing de\labymod\lennart\listener\MessageReceiveListener.java
+@|de\labymod\lennart\listener\MessageReceiveListener.java|8|35|de.labymod.lennart.listener|package|de.labymod.lennart.listener|(file)
+Class Start: de.labymod.lennart.listener.MessageReceiveListener
+   Method Start: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|232|241|onReceive|method|net.labymod.api.events.MessageReceiveEvent|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|242|248|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|249|250|s|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s|0
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|252|258|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|259|261|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|277|279|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|280|288|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|297|299|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|300|308|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|336|338|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|339|347|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|379|388|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|389|401|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|404|413|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|414|429|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|460|462|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|463|471|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|503|512|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|513|525|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|528|537|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|538|553|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+   Method End: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
+Class End  : de.labymod.lennart.listener.MessageReceiveListener
+endProcessing de\labymod\lennart\listener\MessageReceiveListener.java
+
