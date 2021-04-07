@@ -1,0 +1,10 @@
+{
+  "uuid": "%uuid%",
+  "name": "Timolia Addon (Inoffical)",
+  "mainClass": "de.labymod.lennart.addon",
+  "description": "Sends automatic gg after an 1vs1 Game",
+  "version": 1,
+  "author": "L3nnart_ & Cuube",
+  "category": 3,
+  "icon": "https://i.imgur.com/NkFEsHW.png"
+}

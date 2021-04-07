@@ -1,5 +1,0 @@
-{
-  "uuid":  "%uuid%",
-  "name": "addon",
-  "mainClass": "de.labymod.lennart.addon"
-}
