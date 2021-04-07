@@ -3,24 +3,71 @@ Processing 2 files
 processing de\labymod\lennart\addon.java
 @|de\labymod\lennart\addon.java|8|26|de.labymod.lennart|package|de.labymod.lennart|(file)
 Class Start: de.labymod.lennart.addon
+   @|de\labymod\lennart\addon.java|494|511|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1|
+   @|de\labymod\lennart\addon.java|524|530|String|class|java.lang.String
+   @|de\labymod\lennart\addon.java|531|538|win1vs1|field|de.labymod.lennart.addon|win1vs1|
+   @|de\labymod\lennart\addon.java|551|557|String|class|java.lang.String
+   @|de\labymod\lennart\addon.java|558|566|lose1vs1|field|de.labymod.lennart.addon|lose1vs1|
+   @|de\labymod\lennart\addon.java|586|591|addon|class|de.labymod.lennart.addon
+   @|de\labymod\lennart\addon.java|592|600|INSTANCE|field|de.labymod.lennart.addon|INSTANCE|
    Method Start: onEnable()V
-      @|de\labymod\lennart\addon.java|382|390|onEnable|method|net.labymod.api.LabyModAddon|onEnable|()V
-      @|de\labymod\lennart\addon.java|403|409|System|class|java.lang.System
-      @|de\labymod\lennart\addon.java|410|413|out|field|java.lang.System|out
-      @|de\labymod\lennart\addon.java|414|421|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
-      @|de\labymod\lennart\addon.java|459|465|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
-      @|de\labymod\lennart\addon.java|468|483|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
-      @|de\labymod\lennart\addon.java|486|494|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/MessageReceiveEvent;)V
-      @|de\labymod\lennart\addon.java|499|521|MessageReceiveListener|class|de.labymod.lennart.listener.MessageReceiveListener
+      @|de\labymod\lennart\addon.java|633|641|onEnable|method|net.labymod.api.LabyModAddon|onEnable|()V
+      @|de\labymod\lennart\addon.java|654|662|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\addon.java|679|685|System|class|java.lang.System
+      @|de\labymod\lennart\addon.java|686|689|out|field|java.lang.System|out
+      @|de\labymod\lennart\addon.java|690|697|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|de\labymod\lennart\addon.java|738|744|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
+      @|de\labymod\lennart\addon.java|747|762|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
+      @|de\labymod\lennart\addon.java|765|773|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/MessageReceiveEvent;)V
+      @|de\labymod\lennart\addon.java|778|800|MessageReceiveListener|class|de.labymod.lennart.listener.MessageReceiveListener
    Method End: onEnable()V
    Method Start: loadConfig()V
-      @|de\labymod\lennart\addon.java|563|573|loadConfig|method|net.labymod.api.LabyModAddon|loadConfig|()V
+      @|de\labymod\lennart\addon.java|842|852|loadConfig|method|net.labymod.api.LabyModAddon|loadConfig|()V
+      @|de\labymod\lennart\addon.java|871|888|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
+      @|de\labymod\lennart\addon.java|891|900|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|903|906|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\addon.java|932|941|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|944|947|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|de\labymod\lennart\addon.java|971|983|getAsBoolean|method|com.google.gson.JsonElement|getAsBoolean|()Z
+      @|de\labymod\lennart\addon.java|1007|1014|win1vs1|field|de.labymod.lennart.addon|win1vs1
+      @|de\labymod\lennart\addon.java|1017|1026|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|1029|1032|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\addon.java|1048|1057|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|1060|1063|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|de\labymod\lennart\addon.java|1077|1088|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
+      @|de\labymod\lennart\addon.java|1112|1120|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
+      @|de\labymod\lennart\addon.java|1123|1132|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|1135|1138|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\addon.java|1155|1164|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|1167|1170|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|de\labymod\lennart\addon.java|1185|1196|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
    Method End: loadConfig()V
    Method Start: fillSettings(Ljava/util/List;)V
-      @|de\labymod\lennart\addon.java|619|631|fillSettings|method|net.labymod.api.LabyModAddon|fillSettings|(Ljava/util/List;)V
-      @|de\labymod\lennart\addon.java|643|658|SettingsElement|class|net.labymod.settings.elements.SettingsElement
-      @|de\labymod\lennart\addon.java|638|642|List|class|java.util.List
-      @|de\labymod\lennart\addon.java|660|664|list|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|list|0
+      @|de\labymod\lennart\addon.java|1248|1260|fillSettings|method|net.labymod.api.LabyModAddon|fillSettings|(Ljava/util/List;)V
+      @|de\labymod\lennart\addon.java|1267|1282|SettingsElement|class|net.labymod.settings.elements.SettingsElement
+      @|de\labymod\lennart\addon.java|1262|1266|List|class|java.util.List
+      @|de\labymod\lennart\addon.java|1284|1295|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|1309|1320|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|1321|1324|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|de\labymod\lennart\addon.java|1329|1343|BooleanElement|class|net.labymod.settings.elements.BooleanElement
+      @|de\labymod\lennart\addon.java|1369|1392|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|1393|1401|Material|class|net.labymod.utils.Material
+      @|de\labymod\lennart\addon.java|1402|1407|LEVER|field|net.labymod.utils.Material|LEVER
+      @|de\labymod\lennart\addon.java|1436|1453|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
+      @|de\labymod\lennart\addon.java|1465|1476|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|1477|1480|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|de\labymod\lennart\addon.java|1485|1498|StringElement|class|net.labymod.settings.elements.StringElement
+      @|de\labymod\lennart\addon.java|1518|1541|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|1542|1550|Material|class|net.labymod.utils.Material
+      @|de\labymod\lennart\addon.java|1551|1560|EMPTY_MAP|field|net.labymod.utils.Material|EMPTY_MAP
+      @|de\labymod\lennart\addon.java|1580|1587|win1vs1|field|de.labymod.lennart.addon|win1vs1
+      @|de\labymod\lennart\addon.java|1599|1610|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|1611|1614|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|de\labymod\lennart\addon.java|1619|1632|StringElement|class|net.labymod.settings.elements.StringElement
+      @|de\labymod\lennart\addon.java|1653|1676|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|1677|1685|Material|class|net.labymod.utils.Material
+      @|de\labymod\lennart\addon.java|1686|1695|EMPTY_MAP|field|net.labymod.utils.Material|EMPTY_MAP
+      @|de\labymod\lennart\addon.java|1716|1724|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
    Method End: fillSettings(Ljava/util/List;)V
 Class End  : de.labymod.lennart.addon
 endProcessing de\labymod\lennart\addon.java
@@ -29,27 +76,38 @@ processing de\labymod\lennart\listener\MessageReceiveListener.java
 @|de\labymod\lennart\listener\MessageReceiveListener.java|8|35|de.labymod.lennart.listener|package|de.labymod.lennart.listener|(file)
 Class Start: de.labymod.lennart.listener.MessageReceiveListener
    Method Start: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|232|241|onReceive|method|net.labymod.api.events.MessageReceiveEvent|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|242|248|String|class|java.lang.String
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|249|250|s|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s|0
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|252|258|String|class|java.lang.String
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|259|261|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|277|279|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|280|288|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|297|299|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|300|308|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|336|338|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|339|347|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|379|388|Minecraft|class|net.minecraft.client.Minecraft
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|389|401|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|404|413|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|414|429|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|460|462|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|463|471|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|503|512|Minecraft|class|net.minecraft.client.Minecraft
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|513|525|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|528|537|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|538|553|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|265|274|onReceive|method|net.labymod.api.events.MessageReceiveEvent|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|275|281|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|282|283|s|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s|0
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|285|291|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|292|294|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|311|316|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|317|325|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|326|343|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|371|373|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|374|382|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|391|393|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|394|402|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|414|416|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|417|425|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|454|456|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|457|465|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|497|506|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|507|519|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|522|531|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|532|547|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|548|553|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|554|562|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|563|570|win1vs1|field|de.labymod.lennart.addon|win1vs1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|596|598|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|599|607|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|639|648|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|649|661|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|664|673|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|674|689|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|690|695|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|696|704|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|705|713|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
    Method End: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
 Class End  : de.labymod.lennart.listener.MessageReceiveListener
 endProcessing de\labymod\lennart\listener\MessageReceiveListener.java
