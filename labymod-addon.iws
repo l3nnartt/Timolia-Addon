@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d480676f-33bb-4851-9c6b-1481415eb2f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/cache.properties.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/cache.properties.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/taskArtifacts.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/taskArtifacts.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/gradle.log" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/gradle.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/addon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/addon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.0-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.0-sources.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/addon.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/addon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/addon.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/addon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/addon.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/addon.java" afterDir="false" />
+    <list default="true" id="d480676f-33bb-4851-9c6b-1481415eb2f5" name="Default Changelist" comment="Timolia-Addon-v1">
       <change beforePath="$PROJECT_DIR$/labymod-addon.iws" beforeDir="false" afterPath="$PROJECT_DIR$/labymod-addon.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/addon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/addon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/listener/MessageReceiveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/listener/MessageReceiveListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addon.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addon.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +208,21 @@
       <option name="presentableId" value="Default" />
       <updated>1616759595737</updated>
     </task>
+    <task id="LOCAL-00001" summary="Timolia-Addon-v1">
+      <created>1617826902835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617826902835</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Timolia-Addon-v1">
+      <created>1617826911426</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617826911426</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +239,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <MESSAGE value="Timolia-Addon-v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Timolia-Addon-v1" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>
