@@ -9,7 +9,7 @@ public class MessageReceiveListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
         if (!addon.INSTANCE.enabledAutoGG1vs1) return false;
-        if (s1.contains("»") && s1.contains("1vs1") || s1.contains("Splun")) {
+        if (s1.contains("1vs1") && s1.contains("»")) {
             if (s1.contains("gewonnen")) {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage(addon.INSTANCE.win1vs1);
             } else if (s1.contains("verloren")) {
@@ -17,5 +17,4 @@ public class MessageReceiveListener implements MessageReceiveEvent {
             }
         } return false;
     }
-
 }

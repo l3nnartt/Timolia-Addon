@@ -19,7 +19,7 @@ Warning, useNotchSrg() is deprecated! You should use mappingType instead.Warning
 :apiClasses UP-TO-DATE
 :sourceMainJava
 :compileJava
-:processResources UP-TO-DATE
+:processResources
 :classes
 :jar
 :sourceTestJava UP-TO-DATE
@@ -44,4 +44,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 8.349 secs
+Total time: 8.606 secs

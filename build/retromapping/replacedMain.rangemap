@@ -1,76 +1,183 @@
 Symbol range map extraction starting
-Processing 2 files
+Processing 6 files
 processing de\labymod\lennart\addon.java
 @|de\labymod\lennart\addon.java|8|26|de.labymod.lennart|package|de.labymod.lennart|(file)
 Class Start: de.labymod.lennart.addon
-   @|de\labymod\lennart\addon.java|494|511|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1|
-   @|de\labymod\lennart\addon.java|524|530|String|class|java.lang.String
-   @|de\labymod\lennart\addon.java|531|538|win1vs1|field|de.labymod.lennart.addon|win1vs1|
-   @|de\labymod\lennart\addon.java|551|557|String|class|java.lang.String
-   @|de\labymod\lennart\addon.java|558|566|lose1vs1|field|de.labymod.lennart.addon|lose1vs1|
-   @|de\labymod\lennart\addon.java|586|591|addon|class|de.labymod.lennart.addon
-   @|de\labymod\lennart\addon.java|592|600|INSTANCE|field|de.labymod.lennart.addon|INSTANCE|
+   @|de\labymod\lennart\addon.java|862|868|String|class|java.lang.String
+   @|de\labymod\lennart\addon.java|871|878|servers|field|de.labymod.lennart.addon|servers|
+   @|de\labymod\lennart\addon.java|899|916|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1|
+   @|de\labymod\lennart\addon.java|929|935|String|class|java.lang.String
+   @|de\labymod\lennart\addon.java|936|943|win1vs1|field|de.labymod.lennart.addon|win1vs1|
+   @|de\labymod\lennart\addon.java|956|962|String|class|java.lang.String
+   @|de\labymod\lennart\addon.java|963|971|lose1vs1|field|de.labymod.lennart.addon|lose1vs1|
+   @|de\labymod\lennart\addon.java|991|996|addon|class|de.labymod.lennart.addon
+   @|de\labymod\lennart\addon.java|997|1005|INSTANCE|field|de.labymod.lennart.addon|INSTANCE|
+   @|de\labymod\lennart\addon.java|1018|1032|ModuleCategory|class|net.labymod.ingamegui.ModuleCategory
+   @|de\labymod\lennart\addon.java|1033|1040|timolia|field|de.labymod.lennart.addon|timolia|
+   @|de\labymod\lennart\addon.java|1053|1057|Gson|class|com.google.gson.Gson
+   @|de\labymod\lennart\addon.java|1058|1062|gson|field|de.labymod.lennart.addon|gson|
+   @|de\labymod\lennart\addon.java|1075|1086|AddonConfig|class|de.labymod.lennart.config.AddonConfig
+   @|de\labymod\lennart\addon.java|1087|1098|addonConfig|field|de.labymod.lennart.addon|addonConfig|
+   @|de\labymod\lennart\addon.java|1119|1128|mapAnswer|field|de.labymod.lennart.addon|mapAnswer|
    Method Start: onEnable()V
-      @|de\labymod\lennart\addon.java|633|641|onEnable|method|net.labymod.api.LabyModAddon|onEnable|()V
-      @|de\labymod\lennart\addon.java|654|662|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
-      @|de\labymod\lennart\addon.java|679|685|System|class|java.lang.System
-      @|de\labymod\lennart\addon.java|686|689|out|field|java.lang.System|out
-      @|de\labymod\lennart\addon.java|690|697|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
-      @|de\labymod\lennart\addon.java|738|744|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
-      @|de\labymod\lennart\addon.java|747|762|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
-      @|de\labymod\lennart\addon.java|765|773|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/MessageReceiveEvent;)V
-      @|de\labymod\lennart\addon.java|778|800|MessageReceiveListener|class|de.labymod.lennart.listener.MessageReceiveListener
+      @|de\labymod\lennart\addon.java|1169|1177|onEnable|method|net.labymod.api.LabyModAddon|onEnable|()V
+      @|de\labymod\lennart\addon.java|1191|1199|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\addon.java|1216|1223|timolia|field|de.labymod.lennart.addon|timolia
+      @|de\labymod\lennart\addon.java|1230|1244|ModuleCategory|class|net.labymod.ingamegui.ModuleCategory
+      @|de\labymod\lennart\addon.java|1266|1289|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|1294|1310|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|de\labymod\lennart\addon.java|1354|1360|System|class|java.lang.System
+      @|de\labymod\lennart\addon.java|1361|1364|out|field|java.lang.System|out
+      @|de\labymod\lennart\addon.java|1365|1372|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|de\labymod\lennart\addon.java|1407|1429|ModuleCategoryRegistry|class|net.labymod.ingamegui.ModuleCategoryRegistry
+      @|de\labymod\lennart\addon.java|1430|1442|loadCategory|method|net.labymod.ingamegui.ModuleCategoryRegistry|loadCategory|(Lnet/labymod/ingamegui/ModuleCategory;)V
+      @|de\labymod\lennart\addon.java|1443|1450|timolia|field|de.labymod.lennart.addon|timolia
+      @|de\labymod\lennart\addon.java|1462|1466|gson|field|de.labymod.lennart.addon|gson
+      @|de\labymod\lennart\addon.java|1473|1484|GsonBuilder|class|com.google.gson.GsonBuilder
+      @|de\labymod\lennart\addon.java|1487|1504|setPrettyPrinting|method|com.google.gson.GsonBuilder|setPrettyPrinting|()Lcom/google/gson/GsonBuilder;
+      @|de\labymod\lennart\addon.java|1507|1513|create|method|com.google.gson.GsonBuilder|create|()Lcom/google/gson/Gson;
+      @|de\labymod\lennart\addon.java|1525|1536|addonConfig|field|de.labymod.lennart.addon|addonConfig
+      @|de\labymod\lennart\addon.java|1539|1550|AddonConfig|class|de.labymod.lennart.config.AddonConfig
+      @|de\labymod\lennart\addon.java|1551|1555|read|method|de.labymod.lennart.config.AddonConfig|read|()Lde/labymod/lennart/config/AddonConfig;
+      @|de\labymod\lennart\addon.java|1573|1579|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
+      @|de\labymod\lennart\addon.java|1582|1597|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
+      @|de\labymod\lennart\addon.java|1600|1608|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/TabListEvent;)V
+      @|de\labymod\lennart\addon.java|1613|1634|TablistHeaderListener|class|de.labymod.lennart.listener.TablistHeaderListener
+      @|de\labymod\lennart\addon.java|1652|1658|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
+      @|de\labymod\lennart\addon.java|1661|1676|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
+      @|de\labymod\lennart\addon.java|1679|1687|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/MessageReceiveEvent;)V
+      @|de\labymod\lennart\addon.java|1692|1714|MessageReceiveListener|class|de.labymod.lennart.listener.MessageReceiveListener
+      @|de\labymod\lennart\addon.java|1732|1738|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
+      @|de\labymod\lennart\addon.java|1741|1756|getEventManager|method|net.labymod.api.LabyModAPI|getEventManager|()Lnet/labymod/api/EventManager;
+      @|de\labymod\lennart\addon.java|1759|1767|register|method|net.labymod.api.EventManager|register|(Lnet/labymod/api/events/MessageReceiveEvent;)V
+      @|de\labymod\lennart\addon.java|1772|1797|MessageMapReceiveListener|class|de.labymod.lennart.listener.MessageMapReceiveListener
+      @|de\labymod\lennart\addon.java|1815|1821|getApi|method|net.labymod.api.LabyModAddon|getApi|()Lnet/labymod/api/LabyModAPI;
+      @|de\labymod\lennart\addon.java|1824|1838|registerModule|method|net.labymod.api.LabyModAPI|registerModule|(Lnet/labymod/ingamegui/Module;)V
+      @|de\labymod\lennart\addon.java|1843|1846|Map|class|de.labymod.lennart.modules.Map
    Method End: onEnable()V
    Method Start: loadConfig()V
-      @|de\labymod\lennart\addon.java|842|852|loadConfig|method|net.labymod.api.LabyModAddon|loadConfig|()V
-      @|de\labymod\lennart\addon.java|871|888|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
-      @|de\labymod\lennart\addon.java|891|900|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
-      @|de\labymod\lennart\addon.java|903|906|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
-      @|de\labymod\lennart\addon.java|932|941|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
-      @|de\labymod\lennart\addon.java|944|947|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-      @|de\labymod\lennart\addon.java|971|983|getAsBoolean|method|com.google.gson.JsonElement|getAsBoolean|()Z
-      @|de\labymod\lennart\addon.java|1007|1014|win1vs1|field|de.labymod.lennart.addon|win1vs1
-      @|de\labymod\lennart\addon.java|1017|1026|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
-      @|de\labymod\lennart\addon.java|1029|1032|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
-      @|de\labymod\lennart\addon.java|1048|1057|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
-      @|de\labymod\lennart\addon.java|1060|1063|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-      @|de\labymod\lennart\addon.java|1077|1088|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
-      @|de\labymod\lennart\addon.java|1112|1120|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
-      @|de\labymod\lennart\addon.java|1123|1132|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
-      @|de\labymod\lennart\addon.java|1135|1138|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
-      @|de\labymod\lennart\addon.java|1155|1164|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
-      @|de\labymod\lennart\addon.java|1167|1170|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
-      @|de\labymod\lennart\addon.java|1185|1196|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
+      @|de\labymod\lennart\addon.java|1888|1898|loadConfig|method|net.labymod.api.LabyModAddon|loadConfig|()V
+      @|de\labymod\lennart\addon.java|1917|1934|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
+      @|de\labymod\lennart\addon.java|1938|1947|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|1950|1953|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\addon.java|1978|1987|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|1990|1993|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|de\labymod\lennart\addon.java|2015|2027|getAsBoolean|method|com.google.gson.JsonElement|getAsBoolean|()Z
+      @|de\labymod\lennart\addon.java|2044|2051|win1vs1|field|de.labymod.lennart.addon|win1vs1
+      @|de\labymod\lennart\addon.java|2054|2063|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|2066|2069|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\addon.java|2083|2092|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|2095|2098|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|de\labymod\lennart\addon.java|2110|2121|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
+      @|de\labymod\lennart\addon.java|2145|2153|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
+      @|de\labymod\lennart\addon.java|2156|2165|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|2168|2171|has|method|com.google.gson.JsonObject|has|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\addon.java|2186|2195|getConfig|method|net.labymod.api.LabyModAddon|getConfig|()Lcom/google/gson/JsonObject;
+      @|de\labymod\lennart\addon.java|2198|2201|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|de\labymod\lennart\addon.java|2214|2225|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
    Method End: loadConfig()V
    Method Start: fillSettings(Ljava/util/List;)V
-      @|de\labymod\lennart\addon.java|1248|1260|fillSettings|method|net.labymod.api.LabyModAddon|fillSettings|(Ljava/util/List;)V
-      @|de\labymod\lennart\addon.java|1267|1282|SettingsElement|class|net.labymod.settings.elements.SettingsElement
-      @|de\labymod\lennart\addon.java|1262|1266|List|class|java.util.List
-      @|de\labymod\lennart\addon.java|1284|1295|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
-      @|de\labymod\lennart\addon.java|1309|1320|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
-      @|de\labymod\lennart\addon.java|1321|1324|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|de\labymod\lennart\addon.java|1329|1343|BooleanElement|class|net.labymod.settings.elements.BooleanElement
-      @|de\labymod\lennart\addon.java|1369|1392|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
-      @|de\labymod\lennart\addon.java|1393|1401|Material|class|net.labymod.utils.Material
-      @|de\labymod\lennart\addon.java|1402|1407|LEVER|field|net.labymod.utils.Material|LEVER
-      @|de\labymod\lennart\addon.java|1436|1453|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
-      @|de\labymod\lennart\addon.java|1465|1476|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
-      @|de\labymod\lennart\addon.java|1477|1480|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|de\labymod\lennart\addon.java|1485|1498|StringElement|class|net.labymod.settings.elements.StringElement
-      @|de\labymod\lennart\addon.java|1518|1541|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
-      @|de\labymod\lennart\addon.java|1542|1550|Material|class|net.labymod.utils.Material
-      @|de\labymod\lennart\addon.java|1551|1560|EMPTY_MAP|field|net.labymod.utils.Material|EMPTY_MAP
-      @|de\labymod\lennart\addon.java|1580|1587|win1vs1|field|de.labymod.lennart.addon|win1vs1
-      @|de\labymod\lennart\addon.java|1599|1610|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
-      @|de\labymod\lennart\addon.java|1611|1614|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|de\labymod\lennart\addon.java|1619|1632|StringElement|class|net.labymod.settings.elements.StringElement
-      @|de\labymod\lennart\addon.java|1653|1676|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
-      @|de\labymod\lennart\addon.java|1677|1685|Material|class|net.labymod.utils.Material
-      @|de\labymod\lennart\addon.java|1686|1695|EMPTY_MAP|field|net.labymod.utils.Material|EMPTY_MAP
-      @|de\labymod\lennart\addon.java|1716|1724|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
+      @|de\labymod\lennart\addon.java|2276|2288|fillSettings|method|net.labymod.api.LabyModAddon|fillSettings|(Ljava/util/List;)V
+      @|de\labymod\lennart\addon.java|2295|2310|SettingsElement|class|net.labymod.settings.elements.SettingsElement
+      @|de\labymod\lennart\addon.java|2290|2294|List|class|java.util.List
+      @|de\labymod\lennart\addon.java|2312|2323|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|2337|2348|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|2349|2352|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|de\labymod\lennart\addon.java|2357|2371|BooleanElement|class|net.labymod.settings.elements.BooleanElement
+      @|de\labymod\lennart\addon.java|2397|2420|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|2421|2429|Material|class|net.labymod.utils.Material
+      @|de\labymod\lennart\addon.java|2430|2435|LEVER|field|net.labymod.utils.Material|LEVER
+      @|de\labymod\lennart\addon.java|2464|2481|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
+      @|de\labymod\lennart\addon.java|2493|2504|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|2505|2508|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|de\labymod\lennart\addon.java|2513|2526|StringElement|class|net.labymod.settings.elements.StringElement
+      @|de\labymod\lennart\addon.java|2546|2569|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|2570|2578|Material|class|net.labymod.utils.Material
+      @|de\labymod\lennart\addon.java|2579|2588|EMPTY_MAP|field|net.labymod.utils.Material|EMPTY_MAP
+      @|de\labymod\lennart\addon.java|2607|2614|win1vs1|field|de.labymod.lennart.addon|win1vs1
+      @|de\labymod\lennart\addon.java|2626|2637|subSettings|param|de.labymod.lennart.addon|fillSettings|(Ljava/util/List;)V|subSettings|0
+      @|de\labymod\lennart\addon.java|2638|2641|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|de\labymod\lennart\addon.java|2646|2659|StringElement|class|net.labymod.settings.elements.StringElement
+      @|de\labymod\lennart\addon.java|2680|2703|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\addon.java|2704|2712|Material|class|net.labymod.utils.Material
+      @|de\labymod\lennart\addon.java|2713|2722|EMPTY_MAP|field|net.labymod.utils.Material|EMPTY_MAP
+      @|de\labymod\lennart\addon.java|2742|2750|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
    Method End: fillSettings(Ljava/util/List;)V
 Class End  : de.labymod.lennart.addon
 endProcessing de\labymod\lennart\addon.java
+
+processing de\labymod\lennart\config\AddonConfig.java
+@|de\labymod\lennart\config\AddonConfig.java|8|33|de.labymod.lennart.config|package|de.labymod.lennart.config|(file)
+Class Start: de.labymod.lennart.config.AddonConfig
+   @|de\labymod\lennart\config\AddonConfig.java|304|310|String|class|java.lang.String
+   @|de\labymod\lennart\config\AddonConfig.java|299|303|List|class|java.util.List
+   @|de\labymod\lennart\config\AddonConfig.java|312|319|servers|field|de.labymod.lennart.config.AddonConfig|servers|
+   @|de\labymod\lennart\config\AddonConfig.java|326|335|ArrayList|class|java.util.ArrayList
+   Method Start: AddonConfig()V
+      @|de\labymod\lennart\config\AddonConfig.java|354|365|AddonConfig|method|de.labymod.lennart.config.AddonConfig|AddonConfig|()V
+   Method End: AddonConfig()V
+   Method Start: read()Lde/labymod/lennart/config/AddonConfig;
+      @|de\labymod\lennart\config\AddonConfig.java|402|406|read|method|de.labymod.lennart.config.AddonConfig|read|()Lde/labymod/lennart/config/AddonConfig;
+      @|de\labymod\lennart\config\AddonConfig.java|390|401|AddonConfig|class|de.labymod.lennart.config.AddonConfig
+      @|de\labymod\lennart\config\AddonConfig.java|419|422|URL|class|java.net.URL
+      @|de\labymod\lennart\config\AddonConfig.java|429|438|Resources|class|com.google.common.io.Resources
+      @|de\labymod\lennart\config\AddonConfig.java|439|450|getResource|method|com.google.common.io.Resources|getResource|(Ljava/lang/String;)Ljava/net/URL;
+      @|de\labymod\lennart\config\AddonConfig.java|476|482|String|class|java.lang.String
+      @|de\labymod\lennart\config\AddonConfig.java|535|544|Resources|class|com.google.common.io.Resources
+      @|de\labymod\lennart\config\AddonConfig.java|545|553|toString|method|com.google.common.io.Resources|toString|(Ljava/net/URL;Ljava/nio/charset/Charset;)Ljava/lang/String;
+      @|de\labymod\lennart\config\AddonConfig.java|559|575|StandardCharsets|class|java.nio.charset.StandardCharsets
+      @|de\labymod\lennart\config\AddonConfig.java|576|581|UTF_8|field|java.nio.charset.StandardCharsets|UTF_8
+      @|de\labymod\lennart\config\AddonConfig.java|601|612|IOException|class|java.io.IOException
+      @|de\labymod\lennart\config\AddonConfig.java|632|647|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+      @|de\labymod\lennart\config\AddonConfig.java|677|682|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\config\AddonConfig.java|683|691|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\config\AddonConfig.java|692|696|gson|field|de.labymod.lennart.addon|gson
+      @|de\labymod\lennart\config\AddonConfig.java|697|705|fromJson|method|com.google.gson.Gson|fromJson|(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+      @|de\labymod\lennart\config\AddonConfig.java|715|726|AddonConfig|class|de.labymod.lennart.config.AddonConfig
+   Method End: read()Lde/labymod/lennart/config/AddonConfig;
+   Method Start: getServers()Ljava/util/List;
+      @|de\labymod\lennart\config\AddonConfig.java|766|776|getServers|method|de.labymod.lennart.config.AddonConfig|getServers|()Ljava/util/List;
+      @|de\labymod\lennart\config\AddonConfig.java|758|764|String|class|java.lang.String
+      @|de\labymod\lennart\config\AddonConfig.java|753|757|List|class|java.util.List
+      @|de\labymod\lennart\config\AddonConfig.java|796|803|servers|field|de.labymod.lennart.config.AddonConfig|servers
+   Method End: getServers()Ljava/util/List;
+Class End  : de.labymod.lennart.config.AddonConfig
+endProcessing de\labymod\lennart\config\AddonConfig.java
+
+processing de\labymod\lennart\listener\MessageMapReceiveListener.java
+@|de\labymod\lennart\listener\MessageMapReceiveListener.java|8|35|de.labymod.lennart.listener|package|de.labymod.lennart.listener|(file)
+Class Start: de.labymod.lennart.listener.MessageMapReceiveListener
+   @|de\labymod\lennart\listener\MessageMapReceiveListener.java|214|220|String|class|java.lang.String
+   @|de\labymod\lennart\listener\MessageMapReceiveListener.java|221|230|latestMap|field|de.labymod.lennart.listener.MessageMapReceiveListener|latestMap|
+   Method Start: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|273|282|onReceive|method|net.labymod.api.events.MessageReceiveEvent|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|283|289|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|290|291|s|param|de.labymod.lennart.listener.MessageMapReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s|0
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|293|299|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|300|302|s1|param|de.labymod.lennart.listener.MessageMapReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|318|320|s1|param|de.labymod.lennart.listener.MessageMapReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|321|329|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|346|348|s1|param|de.labymod.lennart.listener.MessageMapReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|349|357|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|366|368|s1|param|de.labymod.lennart.listener.MessageMapReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|369|377|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|404|410|String|class|java.lang.String
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|423|424|s|param|de.labymod.lennart.listener.MessageMapReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s|0
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|425|430|split|method|java.lang.String|split|(Ljava/lang/String;)[Ljava/lang/String;
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|450|456|String|class|java.lang.String
+      Field: Array Length, skipping
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|530|539|substring|method|java.lang.String|substring|(II)Ljava/lang/String;
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|552|558|length|method|java.lang.CharSequence|length|()I
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|577|586|latestMap|field|de.labymod.lennart.listener.MessageMapReceiveListener|latestMap
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|617|622|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|623|631|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|632|641|mapAnswer|field|de.labymod.lennart.addon|mapAnswer
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|661|666|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|667|675|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageMapReceiveListener.java|676|685|mapAnswer|field|de.labymod.lennart.addon|mapAnswer
+   Method End: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
+Class End  : de.labymod.lennart.listener.MessageMapReceiveListener
+endProcessing de\labymod\lennart\listener\MessageMapReceiveListener.java
 
 processing de\labymod\lennart\listener\MessageReceiveListener.java
 @|de\labymod\lennart\listener\MessageReceiveListener.java|8|35|de.labymod.lennart.listener|package|de.labymod.lennart.listener|(file)
@@ -86,29 +193,129 @@ Class Start: de.labymod.lennart.listener.MessageReceiveListener
       @|de\labymod\lennart\listener\MessageReceiveListener.java|326|343|enabledAutoGG1vs1|field|de.labymod.lennart.addon|enabledAutoGG1vs1
       @|de\labymod\lennart\listener\MessageReceiveListener.java|371|373|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
       @|de\labymod\lennart\listener\MessageReceiveListener.java|374|382|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|391|393|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|394|402|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|414|416|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|417|425|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|454|456|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|457|465|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|497|506|Minecraft|class|net.minecraft.client.Minecraft
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|507|519|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|522|531|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|532|547|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|548|553|addon|class|de.labymod.lennart.addon
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|554|562|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|563|570|win1vs1|field|de.labymod.lennart.addon|win1vs1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|596|598|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|599|607|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|639|648|Minecraft|class|net.minecraft.client.Minecraft
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|649|661|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|664|673|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|674|689|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|690|695|addon|class|de.labymod.lennart.addon
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|696|704|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
-      @|de\labymod\lennart\listener\MessageReceiveListener.java|705|713|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|394|396|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|397|405|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|430|432|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|433|441|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|473|482|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|483|495|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|498|507|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|508|523|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|524|529|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|530|538|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|539|546|win1vs1|field|de.labymod.lennart.addon|win1vs1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|572|574|s1|param|de.labymod.lennart.listener.MessageReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|s1|1
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|575|583|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|615|624|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|625|637|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|640|649|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|650|665|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|666|671|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|672|680|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\MessageReceiveListener.java|681|689|lose1vs1|field|de.labymod.lennart.addon|lose1vs1
    Method End: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
 Class End  : de.labymod.lennart.listener.MessageReceiveListener
 endProcessing de\labymod\lennart\listener\MessageReceiveListener.java
+
+processing de\labymod\lennart\listener\TablistHeaderListener.java
+@|de\labymod\lennart\listener\TablistHeaderListener.java|8|35|de.labymod.lennart.listener|package|de.labymod.lennart.listener|(file)
+Class Start: de.labymod.lennart.listener.TablistHeaderListener
+   Method Start: onUpdate(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|270|278|onUpdate|method|net.labymod.api.events.TabListEvent|onUpdate|(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|279|283|Type|class|net.labymod.api.events.TabListEvent.Type
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|284|288|type|param|de.labymod.lennart.listener.TablistHeaderListener|onUpdate|(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V|type|0
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|290|296|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|297|303|header|param|de.labymod.lennart.listener.TablistHeaderListener|onUpdate|(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V|header|1
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|305|311|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|312|314|s1|param|de.labymod.lennart.listener.TablistHeaderListener|onUpdate|(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V|s1|2
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|330|351|containsTimoliaServer|method|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|352|358|header|param|de.labymod.lennart.listener.TablistHeaderListener|onUpdate|(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V|header|1
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|375|384|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|385|397|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|400|409|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|410|425|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|445|450|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|451|459|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|460|469|mapAnswer|field|de.labymod.lennart.addon|mapAnswer
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|496|521|MessageMapReceiveListener|class|de.labymod.lennart.listener.MessageMapReceiveListener
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|522|531|latestMap|field|de.labymod.lennart.listener.MessageMapReceiveListener|latestMap
+   Method End: onUpdate(Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V
+   Method Start: containsTimoliaServer(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|567|588|containsTimoliaServer|method|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|589|595|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|596|604|gamemode|param|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;Ljava/lang/String;)Z|gamemode|0
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|606|612|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|613|614|s|param|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;Ljava/lang/String;)Z|s|1
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|633|634|s|param|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;Ljava/lang/String;)Z|s|1
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|635|643|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|675|683|gamemode|param|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;Ljava/lang/String;)Z|gamemode|0
+   Method End: containsTimoliaServer(Ljava/lang/String;Ljava/lang/String;)Z
+   Method Start: containsTimoliaServer(Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|713|734|containsTimoliaServer|method|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|735|741|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|742|743|s|param|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;)Z|s|0
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|755|759|List|class|java.util.List
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|760|766|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|781|786|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|787|795|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|796|807|addonConfig|field|de.labymod.lennart.addon|addonConfig
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|808|818|getServers|method|de.labymod.lennart.config.AddonConfig|getServers|()Ljava/util/List;
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|835|841|String|class|java.lang.String
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|882|903|containsTimoliaServer|method|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;Ljava/lang/String;)Z
+      @|de\labymod\lennart\listener\TablistHeaderListener.java|912|913|s|param|de.labymod.lennart.listener.TablistHeaderListener|containsTimoliaServer|(Ljava/lang/String;)Z|s|0
+   Method End: containsTimoliaServer(Ljava/lang/String;)Z
+Class End  : de.labymod.lennart.listener.TablistHeaderListener
+endProcessing de\labymod\lennart\listener\TablistHeaderListener.java
+
+processing de\labymod\lennart\modules\Map.java
+@|de\labymod\lennart\modules\Map.java|8|34|de.labymod.lennart.modules|package|de.labymod.lennart.modules|(file)
+Class Start: de.labymod.lennart.modules.Map
+   Method Start: getCategory()Lnet/labymod/ingamegui/ModuleCategory;
+      @|de\labymod\lennart\modules\Map.java|447|458|getCategory|method|net.labymod.ingamegui.Module|getCategory|()Lnet/labymod/ingamegui/ModuleCategory;
+      @|de\labymod\lennart\modules\Map.java|432|446|ModuleCategory|class|net.labymod.ingamegui.ModuleCategory
+      @|de\labymod\lennart\modules\Map.java|478|483|addon|class|de.labymod.lennart.addon
+      @|de\labymod\lennart\modules\Map.java|484|492|INSTANCE|field|de.labymod.lennart.addon|INSTANCE
+      @|de\labymod\lennart\modules\Map.java|493|500|timolia|field|de.labymod.lennart.addon|timolia
+   Method End: getCategory()Lnet/labymod/ingamegui/ModuleCategory;
+   Method Start: getDisplayName()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|541|555|getDisplayName|method|net.labymod.ingamegui.moduletypes.SimpleModule|getDisplayName|()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|534|540|String|class|java.lang.String
+   Method End: getDisplayName()Ljava/lang/String;
+   Method Start: getDisplayValue()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|621|636|getDisplayValue|method|net.labymod.ingamegui.moduletypes.SimpleModule|getDisplayValue|()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|614|620|String|class|java.lang.String
+      @|de\labymod\lennart\modules\Map.java|656|681|MessageMapReceiveListener|class|de.labymod.lennart.listener.MessageMapReceiveListener
+      @|de\labymod\lennart\modules\Map.java|682|691|latestMap|field|de.labymod.lennart.listener.MessageMapReceiveListener|latestMap
+   Method End: getDisplayValue()Ljava/lang/String;
+   Method Start: getDefaultValue()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|732|747|getDefaultValue|method|net.labymod.ingamegui.moduletypes.SimpleModule|getDefaultValue|()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|725|731|String|class|java.lang.String
+   Method End: getDefaultValue()Ljava/lang/String;
+   Method Start: getIconData()Lnet/labymod/settings/elements/ControlElement$IconData;
+      @|de\labymod\lennart\modules\Map.java|830|841|getIconData|method|net.labymod.ingamegui.Module|getIconData|()Lnet/labymod/settings/elements/ControlElement$IconData;
+      @|de\labymod\lennart\modules\Map.java|806|829|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\modules\Map.java|865|888|ControlElement.IconData|class|net.labymod.settings.elements.ControlElement.IconData
+      @|de\labymod\lennart\modules\Map.java|893|909|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   Method End: getIconData()Lnet/labymod/settings/elements/ControlElement$IconData;
+   Method Start: loadSettings()V
+      @|de\labymod\lennart\modules\Map.java|977|989|loadSettings|method|net.labymod.ingamegui.Module|loadSettings|()V
+   Method End: loadSettings()V
+   Method Start: getSettingName()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|1034|1048|getSettingName|method|net.labymod.ingamegui.Module|getSettingName|()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|1027|1033|String|class|java.lang.String
+   Method End: getSettingName()Ljava/lang/String;
+   Method Start: getControlName()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|1122|1136|getControlName|method|net.labymod.ingamegui.Module|getControlName|()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|1115|1121|String|class|java.lang.String
+      @|de\labymod\lennart\modules\Map.java|1156|1170|getSettingName|method|net.labymod.ingamegui.Module|getSettingName|()Ljava/lang/String;
+   Method End: getControlName()Ljava/lang/String;
+   Method Start: getDescription()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|1213|1227|getDescription|method|net.labymod.ingamegui.Module|getDescription|()Ljava/lang/String;
+      @|de\labymod\lennart\modules\Map.java|1206|1212|String|class|java.lang.String
+   Method End: getDescription()Ljava/lang/String;
+   Method Start: getSortingId()I
+      @|de\labymod\lennart\modules\Map.java|1329|1341|getSortingId|method|net.labymod.ingamegui.Module|getSortingId|()I
+   Method End: getSortingId()I
+Class End  : de.labymod.lennart.modules.Map
+endProcessing de\labymod\lennart\modules\Map.java
 

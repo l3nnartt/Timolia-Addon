@@ -1,4 +1,8 @@
 Symbol range map extraction starting
-Processing 2 files
+Processing 6 files
 processing de\labymod\lennart\addon.java
+processing de\labymod\lennart\config\AddonConfig.java
+processing de\labymod\lennart\listener\MessageMapReceiveListener.java
 processing de\labymod\lennart\listener\MessageReceiveListener.java
+processing de\labymod\lennart\listener\TablistHeaderListener.java
+processing de\labymod\lennart\modules\Map.java
