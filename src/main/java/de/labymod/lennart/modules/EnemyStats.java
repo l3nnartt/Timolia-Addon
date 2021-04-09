@@ -73,7 +73,6 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public void loadSettings() {
-
     }
 
     @Override

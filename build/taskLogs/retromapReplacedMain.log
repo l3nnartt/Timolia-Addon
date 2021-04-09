@@ -33390,7 +33390,7 @@ RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraf
 Start Processing: de\labymod\lennart\addon.java
 Warning: de\labymod\lennart\addon.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/LabyModAddon/onEnable, ()V]
-Rename class net/minecraft/util/ResourceLocation[1491,1507]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[1167,1183]::ResourceLocation->ResourceLocation
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, net/labymod/ingamegui/ModuleCategoryRegistry/loadCategory, (Lnet/labymod/ingamegui/ModuleCategory;)V]
 [method, com/google/gson/GsonBuilder/setPrettyPrinting, ()Lcom/google/gson/GsonBuilder;]
@@ -33399,6 +33399,9 @@ Rename class net/minecraft/util/ResourceLocation[1491,1507]::ResourceLocation->R
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/TabListEvent;)V]
+[method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
+[method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
+[method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
@@ -33430,7 +33433,27 @@ Rename class net/minecraft/util/ResourceLocation[1491,1507]::ResourceLocation->R
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
 [method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
 [method, com/google/gson/JsonElement/getAsString, ()Ljava/lang/String;]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
+[method, com/google/gson/JsonElement/getAsBoolean, ()Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
+[method, com/google/gson/JsonElement/getAsString, ()Ljava/lang/String;]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
+[method, com/google/gson/JsonElement/getAsString, ()Ljava/lang/String;]
 [method, net/labymod/api/LabyModAddon/fillSettings, (Ljava/util/List;)V]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
@@ -33491,24 +33514,52 @@ Warning: de\labymod\lennart\listener\MessageMapReceiveListener.java has CRLF lin
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageMapReceiveListener.java
 
-Start Processing: de\labymod\lennart\listener\MessageReceiveListener.java
-Warning: de\labymod\lennart\listener\MessageReceiveListener.java has CRLF line endings; consider switching to LF
+Start Processing: de\labymod\lennart\listener\MessageRecive1vs1Listener.java
+Warning: de\labymod\lennart\listener\MessageRecive1vs1Listener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[473,482]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[483,495]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[498,507]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[512,527]::sendChatMessage->func_71165_d
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[616,625]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[626,638]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[641,650]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[655,670]::sendChatMessage->func_71165_d
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[576,585]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[586,598]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[601,610]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[615,630]::sendChatMessage->func_71165_d
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[727,736]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[737,749]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[752,761]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[766,781]::sendChatMessage->func_71165_d
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
-End  Processing: de\labymod\lennart\listener\MessageReceiveListener.java
+End  Processing: de\labymod\lennart\listener\MessageRecive1vs1Listener.java
+
+Start Processing: de\labymod\lennart\listener\MessageRecive4renaListener.java
+Warning: de\labymod\lennart\listener\MessageRecive4renaListener.java has CRLF line endings; consider switching to LF
+[method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[514,523]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[524,536]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[539,548]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[553,568]::sendChatMessage->func_71165_d
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[689,698]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[699,711]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[714,723]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[728,743]::sendChatMessage->func_71165_d
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[882,891]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[892,904]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[907,916]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[921,936]::sendChatMessage->func_71165_d
+Import: net.minecraft.client.Minecraft
+Adding 0 imports
+End  Processing: de\labymod\lennart\listener\MessageRecive4renaListener.java
 
 Start Processing: de\labymod\lennart\listener\TablistHeaderListener.java
 Warning: de\labymod\lennart\listener\TablistHeaderListener.java has CRLF line endings; consider switching to LF
