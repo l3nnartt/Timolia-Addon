@@ -1,13 +1,12 @@
 package de.labymod.lennart.modules;
 
 import de.labymod.lennart.addon;
-import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
-import net.labymod.ingamegui.moduletypes.SimpleModule;
+import net.labymod.ingamegui.moduletypes.SimpleTextModule;
 import net.labymod.settings.elements.ControlElement;
 import net.minecraft.util.ResourceLocation;
 
-public class Enemy extends SimpleModule {
+public class PlayerStats extends SimpleTextModule {
 
     @Override
     public ModuleCategory getCategory() {
@@ -15,32 +14,38 @@ public class Enemy extends SimpleModule {
     }
 
     @Override
-    public String getDisplayName() {
-        return "Enemy";
+    public String[] getValues() {
+        return new String[0];
     }
 
     @Override
-    public String getDisplayValue() {
-        return MessageEnemyReceiveListener.enemy;
+    public String[] getDefaultValues() {
+        return new String[0];
     }
 
     @Override
-    public String getDefaultValue() {
-        return "???";
+    public String[] getKeys() {
+        return new String[0];
+    }
+
+    @Override
+    public String[] getDefaultKeys() {
+        return new String[0];
     }
 
     @Override
     public ControlElement.IconData getIconData() {
-        return new ControlElement.IconData(new ResourceLocation("icons/timolia/enemy128.png"));
+        return new ControlElement.IconData(new ResourceLocation("icons/timolia/stats128.png"));
     }
 
     @Override
     public void loadSettings() {
+
     }
 
     @Override
     public String getSettingName() {
-        return "Enemy Name/s";
+        return "Own Stats";
     }
 
     @Override
@@ -50,7 +55,7 @@ public class Enemy extends SimpleModule {
 
     @Override
     public String getDescription() {
-        return "Displays the name of the enemy/s";
+        return "Displays your own Stats";
     }
 
     @Override

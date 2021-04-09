@@ -36,7 +36,6 @@ public class Enemy extends SimpleModule {
 
     @Override
     public void loadSettings() {
-
     }
 
     @Override

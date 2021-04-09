@@ -1,6 +1,5 @@
 package de.labymod.lennart.listener;
 
-import de.labymod.lennart.stats.EnemyStat1vs1;
 import de.labymod.lennart.stats.EnemyStats1vs1;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.minecraft.client.Minecraft;
@@ -8,9 +7,8 @@ import net.minecraft.client.Minecraft;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageEnemyReceiveListener implements MessageReceiveEvent {
-
-    public static String enemy = null;
+public class MessagePlayerReceiveListener implements MessageReceiveEvent {
+    public static String player = null;
     public static EnemyStats1vs1 stats = null;
     private boolean listenForStats = false;
     private List<String> latestStats = new ArrayList<>();
@@ -23,17 +21,16 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
                 String enemyname = s.split("§6")[1].split("§7")[0];
                 enemyname = enemyname.substring(0, enemyname.length()-2);
                 System.out.println(enemyname);
-                enemy = enemyname;
+                player = enemyname;
 
-                if (enemy.contains("&") && enemy.contains(" ")) {
+                if (player.contains("&") && player.contains(" ")) {
                     return false;
                 }
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("/stats " + enemy);
+                Minecraft.func_71410_x().field_71439_g.func_71165_d("/stats");
                 listenForStats = true;
             }
             else if (strippedMessage.contains("Du") && strippedMessage.contains("hast den Kampf gegen")) {
-                stats = null;
-                enemy = null;
+                player = null;
             }
         }
 

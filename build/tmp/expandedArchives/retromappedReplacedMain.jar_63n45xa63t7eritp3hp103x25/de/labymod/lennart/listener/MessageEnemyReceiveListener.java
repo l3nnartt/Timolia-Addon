@@ -28,12 +28,11 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
                 if (enemy.contains("&") && enemy.contains(" ")) {
                     return false;
                 }
-
                 Minecraft.func_71410_x().field_71439_g.func_71165_d("/stats " + enemy);
                 listenForStats = true;
             }
-
             else if (strippedMessage.contains("Du") && strippedMessage.contains("hast den Kampf gegen")) {
+                stats = null;
                 enemy = null;
             }
         }
@@ -49,13 +48,9 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
         }
 
         if (listenForStats) {
-
             latestStats.add(strippedMessage);
-
             return true;
         }
-
         return false;
     }
-
 }

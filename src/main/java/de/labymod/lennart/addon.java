@@ -10,6 +10,7 @@ import de.labymod.lennart.listener.TablistHeaderListener;
 import de.labymod.lennart.modules.Enemy;
 import de.labymod.lennart.modules.EnemyStats;
 import de.labymod.lennart.modules.Map;
+import de.labymod.lennart.modules.PlayerStats;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.ModuleCategoryRegistry;
@@ -50,6 +51,8 @@ public class addon extends LabyModAddon {
         this.getApi().registerModule(new Map());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());
+        //this.getApi().registerModule(new PlayerStats());
+        // TODO: Spieler Statistiken anzeigen(eigene Stats)
     }
 
     @Override

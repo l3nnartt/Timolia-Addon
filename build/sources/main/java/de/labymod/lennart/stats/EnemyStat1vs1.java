@@ -6,10 +6,8 @@ public class EnemyStat1vs1 {
     String value;
 
     public EnemyStat1vs1(String name, String value) {
-
         this.name = name;
         this.value = value;
-
     }
 
     public String getName() {
@@ -23,5 +21,4 @@ public class EnemyStat1vs1 {
     public String getFull() {
         return name + ": " + value;
     }
-
 }

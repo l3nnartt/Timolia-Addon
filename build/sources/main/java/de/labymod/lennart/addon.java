@@ -10,6 +10,7 @@ import de.labymod.lennart.listener.TablistHeaderListener;
 import de.labymod.lennart.modules.Enemy;
 import de.labymod.lennart.modules.EnemyStats;
 import de.labymod.lennart.modules.Map;
+import de.labymod.lennart.modules.PlayerStats;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.ModuleCategoryRegistry;
@@ -35,7 +36,6 @@ public class addon extends LabyModAddon {
 
     @Override
     public void onEnable() {
-
         INSTANCE = this;
         timolia = new ModuleCategory("Timolia", true, new ControlElement.IconData(new ResourceLocation("icons/timolia/timolia128.png")));
         System.out.println("Timolia-Addon enabled");
@@ -51,11 +51,11 @@ public class addon extends LabyModAddon {
         this.getApi().registerModule(new Map());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());
+        //this.getApi().registerModule(new PlayerStats());
     }
 
     @Override
     public void loadConfig() {
-
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
         this.lose1vs1 = getConfig().has("lose1vs1") ? getConfig().get("lose1vs1").getAsString() : "gg";
@@ -63,7 +63,6 @@ public class addon extends LabyModAddon {
 
     @Override
     protected void fillSettings( List<SettingsElement> subSettings ) {
-
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.LEVER), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
         subSettings.add(new StringElement("WinGG", this, new ControlElement.IconData(Material.EMPTY_MAP), "win1vs1", this.win1vs1));
         subSettings.add(new StringElement("LoseGG", this, new ControlElement.IconData(Material.EMPTY_MAP), "lose1vs1", this.lose1vs1));

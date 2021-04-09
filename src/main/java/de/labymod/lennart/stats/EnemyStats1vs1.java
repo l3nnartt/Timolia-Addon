@@ -26,7 +26,6 @@ public class EnemyStats1vs1 {
         return stats;
     }
     public String[] getFullEnemyStats() {
-
         List<String> strings = new ArrayList<>();
         stats.forEach(statitem -> {
             strings.add(statitem.getFull());

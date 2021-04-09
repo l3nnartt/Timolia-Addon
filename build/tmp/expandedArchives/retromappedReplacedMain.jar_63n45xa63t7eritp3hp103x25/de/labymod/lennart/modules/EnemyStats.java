@@ -26,7 +26,18 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String[] getDefaultValues() {
-        return new String[0];
+        return new String[]{
+                "000",
+                "000",
+                "000",
+                "000",
+                "000",
+                "000",
+                "000",
+                "000",
+                "000",
+                "000"
+        };
     }
 
     @Override
@@ -41,12 +52,23 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String[] getDefaultKeys() {
-        return new String[0];
+        return new String[]{
+                "Spiele gespielt",
+                "Spiele gewonnen",
+                "Knappe Wins",
+                "eZ Wins",
+                "W/L",
+                "Spiele gespielt(Team)",
+                "Spiele gewonnen(Team)",
+                "Kills insgesamt(Team)",
+                "Beste Platzierung(Team)",
+                "Medaillen"
+        };
     }
 
     @Override
     public ControlElement.IconData getIconData() {
-        return new ControlElement.IconData(new ResourceLocation("icons/timolia/enemy128.png"));
+        return new ControlElement.IconData(new ResourceLocation("icons/timolia/stats128.png"));
     }
 
     @Override
@@ -56,7 +78,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String getSettingName() {
-        return "Stats of Enemy";
+        return "Stats of the Enemy(1vs1)";
     }
 
     @Override
@@ -66,7 +88,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String getDescription() {
-        return "display stats of the enemy";
+        return "Displays the Stats of the enemy";
     }
 
     @Override
