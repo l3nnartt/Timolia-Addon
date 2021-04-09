@@ -3,9 +3,11 @@ package de.labymod.lennart;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.config.AddonConfig;
+import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import de.labymod.lennart.listener.MessageMapReceiveListener;
 import de.labymod.lennart.listener.MessageReceiveListener;
 import de.labymod.lennart.listener.TablistHeaderListener;
+import de.labymod.lennart.modules.Enemy;
 import de.labymod.lennart.modules.Map;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
@@ -44,7 +46,9 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new TablistHeaderListener());
         this.getApi().getEventManager().register(new MessageReceiveListener());
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
+        this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().registerModule(new Map());
+        this.getApi().registerModule(new Enemy());
     }
 
     @Override
