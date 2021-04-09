@@ -8,6 +8,7 @@ import de.labymod.lennart.listener.MessageMapReceiveListener;
 import de.labymod.lennart.listener.MessageReceiveListener;
 import de.labymod.lennart.listener.TablistHeaderListener;
 import de.labymod.lennart.modules.Enemy;
+import de.labymod.lennart.modules.EnemyStats;
 import de.labymod.lennart.modules.Map;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
@@ -49,6 +50,7 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().registerModule(new Map());
         this.getApi().registerModule(new Enemy());
+        this.getApi().registerModule(new EnemyStats());
     }
 
     @Override

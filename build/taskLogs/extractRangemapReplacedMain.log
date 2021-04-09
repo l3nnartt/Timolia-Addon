@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 8 files
+Processing 11 files
 processing de\labymod\lennart\addon.java
 processing de\labymod\lennart\config\AddonConfig.java
 processing de\labymod\lennart\listener\MessageEnemyReceiveListener.java
@@ -7,4 +7,7 @@ processing de\labymod\lennart\listener\MessageMapReceiveListener.java
 processing de\labymod\lennart\listener\MessageReceiveListener.java
 processing de\labymod\lennart\listener\TablistHeaderListener.java
 processing de\labymod\lennart\modules\Enemy.java
+processing de\labymod\lennart\modules\EnemyStats.java
 processing de\labymod\lennart\modules\Map.java
+processing de\labymod\lennart\stats\EnemyStat1vs1.java
+processing de\labymod\lennart\stats\EnemyStats1vs1.java
