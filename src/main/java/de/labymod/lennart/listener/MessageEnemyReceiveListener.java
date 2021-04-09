@@ -17,16 +17,11 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
             String enemyname = s.split("§6")[1].split("§7")[0];
             enemyname = enemyname.substring(0, enemyname.length()-2);
             System.out.println(enemyname);
-
             enemy = enemyname;
-
-
         }
 
         else if (strippedMessage.contains("Du") && strippedMessage.contains("hast den Kampf gegen")) {
-
             enemy = null;
-
         }
 
         return false;

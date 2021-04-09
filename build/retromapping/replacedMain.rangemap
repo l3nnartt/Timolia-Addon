@@ -179,12 +179,12 @@ Class Start: de.labymod.lennart.listener.MessageEnemyReceiveListener
       @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|639|645|System|class|java.lang.System
       @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|646|649|out|field|java.lang.System|out
       @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|650|657|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
-      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|683|688|enemy|field|de.labymod.lennart.listener.MessageEnemyReceiveListener|enemy
-      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|732|747|strippedMessage|param|de.labymod.lennart.listener.MessageEnemyReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|strippedMessage|1
-      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|748|756|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|766|781|strippedMessage|param|de.labymod.lennart.listener.MessageEnemyReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|strippedMessage|1
-      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|782|790|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|831|836|enemy|field|de.labymod.lennart.listener.MessageEnemyReceiveListener|enemy
+      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|682|687|enemy|field|de.labymod.lennart.listener.MessageEnemyReceiveListener|enemy
+      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|729|744|strippedMessage|param|de.labymod.lennart.listener.MessageEnemyReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|strippedMessage|1
+      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|745|753|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|763|778|strippedMessage|param|de.labymod.lennart.listener.MessageEnemyReceiveListener|onReceive|(Ljava/lang/String;Ljava/lang/String;)Z|strippedMessage|1
+      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|779|787|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|de\labymod\lennart\listener\MessageEnemyReceiveListener.java|827|832|enemy|field|de.labymod.lennart.listener.MessageEnemyReceiveListener|enemy
    Method End: onReceive(Ljava/lang/String;Ljava/lang/String;)Z
 Class End  : de.labymod.lennart.listener.MessageEnemyReceiveListener
 endProcessing de\labymod\lennart\listener\MessageEnemyReceiveListener.java
