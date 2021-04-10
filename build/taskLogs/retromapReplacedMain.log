@@ -33401,7 +33401,7 @@ End  Processing: de\labymod\lennart\ConfigItem.java
 Start Processing: de\labymod\lennart\addon.java
 Warning: de\labymod\lennart\addon.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/LabyModAddon/onEnable, ()V]
-Rename class net/minecraft/util/ResourceLocation[1995,2011]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[2075,2091]::ResourceLocation->ResourceLocation
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, net/labymod/ingamegui/ModuleCategoryRegistry/loadCategory, (Lnet/labymod/ingamegui/ModuleCategory;)V]
 [method, com/google/gson/GsonBuilder/setPrettyPrinting, ()Lcom/google/gson/GsonBuilder;]
@@ -33454,6 +33454,16 @@ Rename class net/minecraft/util/ResourceLocation[1995,2011]::ResourceLocation->R
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
 [method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
 [method, com/google/gson/JsonElement/getAsString, ()Ljava/lang/String;]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
+[method, com/google/gson/JsonElement/getAsString, ()Ljava/lang/String;]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
+[method, com/google/gson/JsonElement/getAsBoolean, ()Z]
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
 [method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]

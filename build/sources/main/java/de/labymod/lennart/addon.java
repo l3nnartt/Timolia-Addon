@@ -32,6 +32,7 @@ public class addon extends LabyModAddon {
     public boolean enabledAutoGGInTime;
     public boolean enabledAutoGGBrainbow;
     public boolean enabledAutoGGTSpiele;
+    private boolean enabledAutoGGChainReact;
     public String win1vs1;
     public String lose1vs1;
     public String match4rena;
@@ -45,6 +46,7 @@ public class addon extends LabyModAddon {
     public String gameInTime;
     public String gameBrainbow;
     public String gameTSpiele;
+    private String gameChainReact;
     public static addon INSTANCE;
     public ModuleCategory timolia;
     public Gson gson;
@@ -106,7 +108,10 @@ public class addon extends LabyModAddon {
         this.gameBrainbow = getConfig().has("gameBrainbow") ? getConfig().get("gameBrainbow").getAsString() : "gg";
 
         this.enabledAutoGGTSpiele = !getConfig().has("enabledAutoGGTSpiele") || getConfig().get("enabledAutoGGTSpiele").getAsBoolean();
-        this.gameBrainbow = getConfig().has("gameTSpiele") ? getConfig().get("gameTSpiele").getAsString() : "gg";
+        this.gameTSpiele = getConfig().has("gameTSpiele") ? getConfig().get("gameTSpiele").getAsString() : "gg";
+
+        this.enabledAutoGGChainReact = !getConfig().has("enabledAutoGGChainReact") || getConfig().get("enabledAutoGGChainReact").getAsBoolean();
+        this.gameChainReact = getConfig().has("gameChainReact") ? getConfig().get("gameChainReact").getAsString() : "gg";
     }
 
     @Override
@@ -126,12 +131,13 @@ public class addon extends LabyModAddon {
                 new ConfigItem("Castles", this.gameCastles, this.enabledAutoGGCastles, new ControlElement.IconData(Material.BANNER)),
                 new ConfigItem("JumpWorld", this.gameJumpWorld, this.enabledAutoGGJumpWorld, new ControlElement.IconData(Material.GOLD_BOOTS)),
                 new ConfigItem("Mineception", this.gameMineception, this.enabledAutoGGMineception, new ControlElement.IconData(Material.RECORD_8)),
-                new ConfigItem("Splun", this.gameSplun, this.enabledAutoGGSplun, new ControlElement.IconData(Material.CLAY)),
+                new ConfigItem("Splun", this.gameSplun, this.enabledAutoGGSplun, new ControlElement.IconData(Material.STAINED_CLAY)),
                 new ConfigItem("Suspicious", this.gameSuspicious, this.enabledAutoGGSuspicious, new ControlElement.IconData(Material.IRON_DOOR)),
                 new ConfigItem("DNA", this.gameDNA, this.enabledAutoGGDNA, new ControlElement.IconData(Material.GLASS)),
                 new ConfigItem("InTime", this.gameInTime, this.enabledAutoGGInTime, new ControlElement.IconData(Material.WATCH)),
                 new ConfigItem("Brainbow", this.gameBrainbow, this.enabledAutoGGBrainbow, new ControlElement.IconData(Material.BOW)),
-                new ConfigItem("TSpiele", this.gameDNA, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
+                new ConfigItem("TSpiele", this.gameDNA, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON)),
+                new ConfigItem("ChainReact", this.gameChainReact, this.enabledAutoGGChainReact, new ControlElement.IconData(Material.EYE_OF_ENDER))
         );
     }
 

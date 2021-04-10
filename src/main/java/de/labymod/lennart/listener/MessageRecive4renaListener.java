@@ -1,4 +1,4 @@
-package de.labymod.lennart.arena;
+package de.labymod.lennart.listener;
 
 import de.labymod.lennart.addon;
 import net.labymod.api.events.MessageReceiveEvent;
@@ -22,6 +22,7 @@ public class MessageRecive4renaListener implements MessageReceiveEvent {
         if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
             Minecraft.getMinecraft().thePlayer.sendChatMessage(addon.INSTANCE.game4rena);
         }
+
         return false;
     }
 }

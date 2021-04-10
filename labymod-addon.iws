@@ -5,48 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d480676f-33bb-4851-9c6b-1481415eb2f5" name="Default Changelist" comment="Timolia-Addon-v1.2&#10;&#10;Adds Enemy in 1vs1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/ConfigItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/mineception/MessageReciveMineceptionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/pvp/MessageEnemyReceiveListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/cache.properties.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/cache.properties.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/outputFileStates.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/outputFileStates.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/taskArtifacts.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/taskArtifacts.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/gradle.log" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/gradle.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/addon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/addon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/listener/MessageEnemyReceiveListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/listener/MessageRecive1vs1Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/listener/MessageRecive4renaListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/modules/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/modules/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/modules/EnemyStats.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/modules/EnemyStats.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/modules/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/de/labymod/lennart/modules/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.4.3-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.4.3-sources.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.4.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.4.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.5-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.5-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Timolia-Addon-1.5.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/addon.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/addon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/listener/MessageEnemyReceiveListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/listener/MessageRecive1vs1Listener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/listener/MessageRecive4renaListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/modules/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/modules/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/modules/EnemyStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/modules/EnemyStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/modules/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/de/labymod/lennart/modules/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/addon.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/addon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/modules/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/modules/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/modules/EnemyStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/modules/EnemyStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/modules/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/retromappedReplacedMain.jar_63n45xa63t7eritp3hp103x25/de/labymod/lennart/modules/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labymod-addon.iws" beforeDir="false" afterPath="$PROJECT_DIR$/labymod-addon.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/addon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/addon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/listener/MessageEnemyReceiveListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/listener/MessageRecive1vs1Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/pvp/MessageRecive1vs1Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/listener/MessageRecive4renaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/arena/MessageRecive4renaListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/modules/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/modules/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/modules/EnemyStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/modules/EnemyStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/modules/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/modules/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/arena/MessageRecive4renaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/labymod/lennart/listener/MessageRecive4renaListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
