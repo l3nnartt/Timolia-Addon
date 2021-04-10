@@ -5,7 +5,6 @@ import de.labymod.lennart.listener.MessageMapReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
-import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
 
 public class Map extends SimpleModule {

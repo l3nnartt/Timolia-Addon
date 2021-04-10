@@ -1,7 +1,7 @@
 package de.labymod.lennart.modules;
 
 import de.labymod.lennart.addon;
-import de.labymod.lennart.listener.MessageEnemyReceiveListener;
+import de.labymod.lennart.pvp.MessageEnemyReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleTextModule;
 import net.labymod.settings.elements.ControlElement;

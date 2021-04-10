@@ -1,10 +1,8 @@
-package de.labymod.lennart.listener;
+package de.labymod.lennart.pvp;
 
-import de.labymod.lennart.stats.EnemyStat1vs1;
 import de.labymod.lennart.stats.EnemyStats1vs1;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.minecraft.client.Minecraft;
-
 import java.util.ArrayList;
 import java.util.List;
 
