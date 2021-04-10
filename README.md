@@ -2,6 +2,10 @@
 
 ---
 
+## Download
+
+https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
+
 ## Features
 
 - AutoGG
