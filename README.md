@@ -11,6 +11,8 @@ Minecraft restarten, fertig.
 
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
+Immer die neuste Version nehmen am besten
+
 ## Features
 
 - AutoGG
