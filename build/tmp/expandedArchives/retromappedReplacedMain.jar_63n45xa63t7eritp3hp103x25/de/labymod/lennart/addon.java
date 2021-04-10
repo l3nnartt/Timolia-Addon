@@ -2,12 +2,13 @@ package de.labymod.lennart;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import de.labymod.lennart.arena.MessageRecive4renaListener;
+import de.labymod.lennart.listener.MessageRecive4renaListener;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.listener.*;
 import de.labymod.lennart.modules.Enemy;
 import de.labymod.lennart.modules.EnemyStats;
 import de.labymod.lennart.modules.Map;
+import de.labymod.lennart.modules.PxlSpace;
 import de.labymod.lennart.pvp.MessageEnemyReceiveListener;
 import de.labymod.lennart.pvp.MessageRecive1vs1Listener;
 import net.labymod.api.LabyModAddon;
@@ -20,7 +21,14 @@ import java.util.List;
 
 public class addon extends LabyModAddon {
 
+    public int placedBlocks;
     public String[] servers;
+    public static addon INSTANCE;
+    public ModuleCategory timolia;
+    public Gson gson;
+    public AddonConfig addonConfig;
+    public boolean mapAnswer = false;
+
     public boolean enabledAutoGG1vs1;
     public boolean enabledAutoGG4rena;
     public boolean enabledAutoGGCastles;
@@ -47,11 +55,6 @@ public class addon extends LabyModAddon {
     public String gameBrainbow;
     public String gameTSpiele;
     private String gameChainReact;
-    public static addon INSTANCE;
-    public ModuleCategory timolia;
-    public Gson gson;
-    public AddonConfig addonConfig;
-    public boolean mapAnswer = false;
 
     @Override
     public void onEnable() {
@@ -68,13 +71,17 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageRecive4renaListener());
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
+        this.getApi().getEventManager().register(new MessageReceivePixelSpaceListener());
         this.getApi().registerModule(new Map());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());
+        this.getApi().registerModule(new PxlSpace());
     }
 
     @Override
     public void loadConfig() {
+        this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
+
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
         this.lose1vs1 = getConfig().has("lose1vs1") ? getConfig().get("lose1vs1").getAsString() : "gg";
@@ -119,13 +126,13 @@ public class addon extends LabyModAddon {
 
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
-        subSettings.add(new StringElement("1vs1-WinGG", this, new ControlElement.IconData(Material.EMPTY_MAP), "win1vs1", this.win1vs1));
-        subSettings.add(new StringElement("1vs1-LoseGG", this, new ControlElement.IconData(Material.PAPER), "lose1vs1", this.lose1vs1));
+        subSettings.add(new StringElement("1vs1-WinGG", this, new ControlElement.IconData(Material.NAME_TAG), "win1vs1", this.win1vs1));
+        subSettings.add(new StringElement("1vs1-LoseGG", this, new ControlElement.IconData(Material.NAME_TAG), "lose1vs1", this.lose1vs1));
 
         subSettings.add(new HeaderElement("4rena"));
         subSettings.add(new BooleanElement("AutoGG-4rena", this, new ControlElement.IconData(Material.DIAMOND_SWORD), "enabledAutoGG4rena", this.enabledAutoGG4rena));
-        subSettings.add(new StringElement("MatchGG", this, new ControlElement.IconData(Material.EMPTY_MAP), "match4rena", this.match4rena));
-        subSettings.add(new StringElement("GameGG", this, new ControlElement.IconData(Material.PAPER), "game4rena", this.game4rena));
+        subSettings.add(new StringElement("MatchGG", this, new ControlElement.IconData(Material.NAME_TAG), "match4rena", this.match4rena));
+        subSettings.add(new StringElement("GameGG", this, new ControlElement.IconData(Material.NAME_TAG), "game4rena", this.game4rena));
 
         configurSettings(subSettings,
                 new ConfigItem("Castles", this.gameCastles, this.enabledAutoGGCastles, new ControlElement.IconData(Material.BANNER)),
@@ -148,6 +155,13 @@ public class addon extends LabyModAddon {
             subSettings.add(new BooleanElement("AutoGG-" + gamemode.getGamemode(), this, gamemode.getIcon(), "enabledAutoGG" + gamemode.getGamemode(), gamemode.isConfigEnabledValue()));
             subSettings.add(new StringElement("GameGG", this, new ControlElement.IconData(Material.NAME_TAG), "game" + gamemode.getGamemode(), gamemode.getConfigMessage()));
         }
+    }
+
+    public void addplacedBlocks() {
+        placedBlocks++;
+        getConfig().addProperty("placedBlocks", placedBlocks);
+        this.saveConfig();
+        this.loadConfig();
     }
 
 }

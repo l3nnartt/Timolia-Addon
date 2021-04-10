@@ -22,6 +22,7 @@ public class MessageRecive4renaListener implements MessageReceiveEvent {
         if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
             Minecraft.func_71410_x().field_71439_g.func_71165_d(addon.INSTANCE.game4rena);
         }
+
         return false;
     }
 }
