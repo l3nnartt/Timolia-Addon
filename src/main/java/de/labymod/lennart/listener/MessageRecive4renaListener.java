@@ -24,5 +24,6 @@ public class MessageRecive4renaListener implements MessageReceiveEvent {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage(addon.INSTANCE.game4rena);
             }
         } return false;
+        
     }
 }

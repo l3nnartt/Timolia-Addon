@@ -88,6 +88,7 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageSendEventListener());
         this.getApi().getEventManager().register(new MessageRecive1vs1Listener());
         this.getApi().getEventManager().register(new MessageRecive4renaListener());
+        this.getApi().getEventManager().register(new MessageReceiveSplunListener());
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());

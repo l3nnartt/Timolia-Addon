@@ -18,5 +18,11 @@ public class TablistHeaderPixelSpaceListener implements TabListEvent {
             addon.INSTANCE.arena = false;
         }
 
+        if (s.contains("splun")) {
+            addon.INSTANCE.splun = true;
+        } else if (s.contains("games")) {
+            addon.INSTANCE.splun = false;
+        }
+
     }
 }

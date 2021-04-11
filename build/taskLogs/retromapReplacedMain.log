@@ -33432,6 +33432,9 @@ Rename class net/minecraft/util/ResourceLocation[2659,2675]::ResourceLocation->R
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
+[method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
+[method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
+[method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/registerModule, (Lnet/labymod/ingamegui/Module;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/registerModule, (Lnet/labymod/ingamegui/Module;)V]
@@ -33638,6 +33641,19 @@ Warning: de\labymod\lennart\listener\MessageReceivePixelSpacePlacedBlockListener
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageReceivePixelSpacePlacedBlockListener.java
 
+Start Processing: de\labymod\lennart\listener\MessageReceiveSplunListener.java
+Warning: de\labymod\lennart\listener\MessageReceiveSplunListener.java has CRLF line endings; consider switching to LF
+[method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[498,507]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[508,520]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[523,532]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[537,552]::sendChatMessage->func_71165_d
+Import: net.minecraft.client.Minecraft
+Adding 0 imports
+End  Processing: de\labymod\lennart\listener\MessageReceiveSplunListener.java
+
 Start Processing: de\labymod\lennart\listener\MessageRecive4renaListener.java
 Warning: de\labymod\lennart\listener\MessageRecive4renaListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
@@ -33694,6 +33710,8 @@ End  Processing: de\labymod\lennart\listener\TablistHeaderListener.java
 Start Processing: de\labymod\lennart\listener\TablistHeaderPixelSpaceListener.java
 Warning: de\labymod\lennart\listener\TablistHeaderPixelSpaceListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/TabListEvent/onUpdate, (Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
