@@ -19,17 +19,10 @@ public class MessageRecive4renaListener implements MessageReceiveEvent {
             }
         }
 
-        if (addon.INSTANCE.castles) {
-            if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage(addon.INSTANCE.gameCastles);
-            }
-        }
-
         if (addon.INSTANCE.arena) {
             if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage(addon.INSTANCE.game4rena);
             }
-        }
-        return false;
+        } return false;
     }
 }

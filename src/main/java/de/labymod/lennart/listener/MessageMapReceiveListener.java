@@ -17,7 +17,7 @@ public class MessageMapReceiveListener implements MessageReceiveEvent {
 
             if (addon.INSTANCE.mapAnswer) {
                 addon.INSTANCE.mapAnswer = false;
-                return true;
+                return false;
             }
         }
         return false;

@@ -11,5 +11,12 @@ public class TablistHeaderPixelSpaceListener implements TabListEvent {
         } else if (s.contains("games")) {
             addon.INSTANCE.pixelspace = false;
         }
+
+        if (s.contains("4rena")) {
+            addon.INSTANCE.arena = true;
+        } else if (s.contains("games")) {
+            addon.INSTANCE.arena = false;
+        }
+
     }
 }

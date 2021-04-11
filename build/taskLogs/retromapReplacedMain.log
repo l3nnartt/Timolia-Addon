@@ -33656,16 +33656,10 @@ Rename field net/minecraft/client/Minecraft/thePlayer[714,723]::thePlayer->field
 Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[728,743]::sendChatMessage->func_71165_d
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[928,937]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[938,950]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[953,962]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[967,982]::sendChatMessage->func_71165_d
-[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[1166,1175]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1176,1188]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[1191,1200]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[1205,1220]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[926,935]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[936,948]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[951,960]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[965,980]::sendChatMessage->func_71165_d
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageRecive4renaListener.java
@@ -33700,6 +33694,8 @@ End  Processing: de\labymod\lennart\listener\TablistHeaderListener.java
 Start Processing: de\labymod\lennart\listener\TablistHeaderPixelSpaceListener.java
 Warning: de\labymod\lennart\listener\TablistHeaderPixelSpaceListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/TabListEvent/onUpdate, (Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 Adding 0 imports
