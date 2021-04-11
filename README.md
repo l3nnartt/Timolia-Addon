@@ -2,16 +2,14 @@
 
 ---
 
-## Einrichtung
-
-Addon downloaden und in den ``.minecraft\LabyMod\addons-1.8`` Ordner verschieben.
-Minecraft restarten, fertig.
-
 ## Download
-
+Aus diesem Ordner die neuste Version herunterladen (1.6)
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
-Immer die neuste Version nehmen am besten
+## Einrichtung
+
+Die heruntergeladene JAR Datei in  den Appdata Ordner (``.minecraft\LabyMod\addons-1.8``) Ordner verschieben.
+Anschließend Minecraft restarten
 
 ## Features
 
