@@ -1,4 +1,4 @@
-### Labymod Timolia Addon (InOffical)
+# Labymod Timolia Addon (InOffical)
 
 ---
 
@@ -15,7 +15,26 @@ Immer die neuste Version nehmen am besten
 
 ## Features
 
-- AutoGG
-- Block Zähler in PixelSpace
-- Map Anzeige
+### Custom-AutoGG
+- Castles
+- Mineception
+- 4rena
+- JumpWorld
+- 1vs1
+- Suspicious
+- Splun
+- Brainbow
+- InTime
+- TSpiele
+- DNA
+
+### Pxlspace
+- Module "Platzierte Blöcke"
+- Command ``/stats``
+ 
+### Mapanzeige
+- Module "Map"
+
+### 1vs1
 - Statistiken des Gegners in 1vs1
+- Name des Gegners in 1vs1
