@@ -14,6 +14,10 @@ public class TablistHeaderListener implements TabListEvent {
             addon.INSTANCE.mapAnswer = true;
         }
         MessageMapReceiveListener.latestMap = null;
+
+        if (header.contains("pxlspace")) {
+            addon.INSTANCE.pixelspace = true;
+        }
     }
 
     private boolean containsTimoliaServer(String gamemode, String s) {
@@ -30,4 +34,8 @@ public class TablistHeaderListener implements TabListEvent {
         }
         return false;
     }
+
+
+
+
 }

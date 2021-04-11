@@ -33401,7 +33401,7 @@ End  Processing: de\labymod\lennart\ConfigItem.java
 Start Processing: de\labymod\lennart\addon.java
 Warning: de\labymod\lennart\addon.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/LabyModAddon/onEnable, ()V]
-Rename class net/minecraft/util/ResourceLocation[2152,2168]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[2191,2207]::ResourceLocation->ResourceLocation
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, net/labymod/ingamegui/ModuleCategoryRegistry/loadCategory, (Lnet/labymod/ingamegui/ModuleCategory;)V]
 [method, com/google/gson/GsonBuilder/setPrettyPrinting, ()Lcom/google/gson/GsonBuilder;]
@@ -33425,6 +33425,9 @@ Rename class net/minecraft/util/ResourceLocation[2152,2168]::ResourceLocation->R
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
+[method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
+[method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
+[method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageSendEvent;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/registerModule, (Lnet/labymod/ingamegui/Module;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
@@ -33658,6 +33661,16 @@ Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageRecive4renaListener.java
 
+Start Processing: de\labymod\lennart\listener\MessageSendPixelSpaceListener.java
+Warning: de\labymod\lennart\listener\MessageSendPixelSpaceListener.java has CRLF line endings; consider switching to LF
+[method, net/labymod/api/events/MessageSendEvent/onSend, (Ljava/lang/String;)Z]
+[method, java/lang/String/equals, (Ljava/lang/Object;)Z]
+[method, net/labymod/main/LabyMod/getInstance, ()Lnet/labymod/main/LabyMod;]
+[method, net/labymod/main/LabyMod/displayMessageInChat, (Ljava/lang/String;)V]
+[method, java/lang/String/equals, (Ljava/lang/Object;)Z]
+Adding 0 imports
+End  Processing: de\labymod\lennart\listener\MessageSendPixelSpaceListener.java
+
 Start Processing: de\labymod\lennart\listener\TablistHeaderListener.java
 Warning: de\labymod\lennart\listener\TablistHeaderListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/TabListEvent/onUpdate, (Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V]
@@ -33666,6 +33679,7 @@ Rename class net/minecraft/client/Minecraft[375,384]::Minecraft->Minecraft
 Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[385,397]::getMinecraft->func_71410_x
 Rename field net/minecraft/client/Minecraft/thePlayer[400,409]::thePlayer->field_71439_g
 Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[414,429]::sendChatMessage->func_71165_d
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, de/labymod/lennart/listener/TablistHeaderListener/containsTimoliaServer, (Ljava/lang/String;Ljava/lang/String;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, de/labymod/lennart/listener/TablistHeaderListener/containsTimoliaServer, (Ljava/lang/String;)Z]

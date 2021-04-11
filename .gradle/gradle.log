@@ -17,9 +17,9 @@ Warning, useNotchSrg() is deprecated! You should use mappingType instead.Warning
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava UP-TO-DATE
+:sourceMainJava
 :compileJava
-:processResources
+:processResources UP-TO-DATE
 :classes
 :jar
 :sourceTestJava UP-TO-DATE
@@ -35,7 +35,8 @@ Warning, useNotchSrg() is deprecated! You should use mappingType instead.Warning
 :reobfJar
 :extractRangemapReplacedMain
 C:\Users\loesc\Documents\GitHub\labymod-addon\build\sources\main\java
-:retromapReplacedMain UP-TO-DATE
+:retromapReplacedMain
+remapping source...
 :sourceJar
 :assemble
 :check UP-TO-DATE
@@ -43,4 +44,4 @@ C:\Users\loesc\Documents\GitHub\labymod-addon\build\sources\main\java
 
 BUILD SUCCESSFUL
 
-Total time: 9.046 secs
+Total time: 11.887 secs

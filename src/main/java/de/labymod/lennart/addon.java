@@ -22,6 +22,7 @@ import java.util.List;
 public class addon extends LabyModAddon {
 
     public int placedBlocks;
+    public boolean pixelspace = false;
     public String[] servers;
     public static addon INSTANCE;
     public ModuleCategory timolia;
@@ -72,6 +73,7 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().getEventManager().register(new MessageReceivePixelSpaceListener());
+        this.getApi().getEventManager().register(new MessageSendPixelSpaceListener());
         this.getApi().registerModule(new Map());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());

@@ -1,11 +1,12 @@
 Symbol range map extraction starting
-Processing 17 files
+Processing 18 files
 processing de\labymod\lennart\ConfigItem.java
 processing de\labymod\lennart\addon.java
 processing de\labymod\lennart\config\AddonConfig.java
 processing de\labymod\lennart\listener\MessageMapReceiveListener.java
 processing de\labymod\lennart\listener\MessageReceivePixelSpaceListener.java
 processing de\labymod\lennart\listener\MessageRecive4renaListener.java
+processing de\labymod\lennart\listener\MessageSendPixelSpaceListener.java
 processing de\labymod\lennart\listener\TablistHeaderListener.java
 processing de\labymod\lennart\mineception\MessageReciveMineceptionListener.java
 processing de\labymod\lennart\modules\Enemy.java
