@@ -11,6 +11,9 @@ Anschließend Minecraft restarten
 
 ## Features
 
+### Sonstiges
+- Current Map "Map"
+
 ### Custom-AutoGG
 - Castles
 - Mineception
@@ -28,9 +31,6 @@ Anschließend Minecraft restarten
 - Module "Platzierte Blöcke"
 - Command ``/stats``
  
-### Mapanzeige
-- Module "Map"
-
 ### 1vs1
 - Statistiken des Gegners in 1vs1
 - Name des Gegners in 1vs1
