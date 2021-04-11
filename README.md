@@ -1,7 +1,5 @@
 # Labymod Timolia Addon (InOffical)
 
----
-
 ## Download
 Aus diesem Ordner die neuste Version herunterladen (1.6)
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
