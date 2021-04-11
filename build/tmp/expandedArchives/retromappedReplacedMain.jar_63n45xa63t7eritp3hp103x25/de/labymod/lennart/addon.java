@@ -22,7 +22,6 @@ import java.util.List;
 public class addon extends LabyModAddon {
 
     public int placedBlocks;
-    public boolean pixelspace = false;
     public String[] servers;
     public static addon INSTANCE;
     public ModuleCategory timolia;
@@ -30,6 +29,21 @@ public class addon extends LabyModAddon {
     public AddonConfig addonConfig;
     public boolean mapAnswer = false;
 
+    //Header Check
+    public boolean pixelspace = false;
+    public boolean castles = false;
+    public boolean arena = false;
+    public boolean jumpworld = false;
+    public boolean mineception = false;
+    public boolean splun = false;
+    public boolean DNA = false;
+    public boolean brainbow = false;
+    public boolean chainreact = false;
+    public boolean suspicious = false;
+    public boolean tspiele = false;
+    public boolean intime = false;
+
+    //AutoGGEnabled Check
     public boolean enabledAutoGG1vs1;
     public boolean enabledAutoGG4rena;
     public boolean enabledAutoGGCastles;
@@ -42,6 +56,8 @@ public class addon extends LabyModAddon {
     public boolean enabledAutoGGBrainbow;
     public boolean enabledAutoGGTSpiele;
     private boolean enabledAutoGGChainReact;
+
+    //AutoGG Message
     public String win1vs1;
     public String lose1vs1;
     public String match4rena;
@@ -68,12 +84,13 @@ public class addon extends LabyModAddon {
         addonConfig = AddonConfig.read();
 
         this.getApi().getEventManager().register(new TablistHeaderListener());
+        this.getApi().getEventManager().register(new TablistHeaderPixelSpaceListener());
+        this.getApi().getEventManager().register(new MessageSendEventListener());
         this.getApi().getEventManager().register(new MessageRecive1vs1Listener());
         this.getApi().getEventManager().register(new MessageRecive4renaListener());
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
-        this.getApi().getEventManager().register(new MessageReceivePixelSpaceListener());
-        this.getApi().getEventManager().register(new MessageSendPixelSpaceListener());
+        this.getApi().getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
         this.getApi().registerModule(new Map());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());

@@ -20,7 +20,7 @@ public class PxlSpace extends SimpleModule{
 
     @Override
     public String getDisplayValue() {
-        return String.valueOf(addon.INSTANCE.placedBlocks);
+            return String.valueOf(addon.INSTANCE.placedBlocks);
     }
 
     @Override
