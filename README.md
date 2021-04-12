@@ -1,7 +1,7 @@
 # Labymod Timolia Addon (InOffical)
 
 ## Download
-Aus diesem Ordner die neuste Version herunterladen (1.6.2)
+Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.6.3.jar) </br>
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
 ## Einrichtung

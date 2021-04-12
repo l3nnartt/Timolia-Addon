@@ -2,15 +2,14 @@ package de.labymod.lennart;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import de.labymod.lennart.listener.MessageRecive4renaListener;
+import de.labymod.lennart.autogglistener.*;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.listener.*;
 import de.labymod.lennart.modules.Enemy;
 import de.labymod.lennart.modules.EnemyStats;
 import de.labymod.lennart.modules.Map;
 import de.labymod.lennart.modules.PxlSpace;
-import de.labymod.lennart.pvp.MessageEnemyReceiveListener;
-import de.labymod.lennart.pvp.MessageRecive1vs1Listener;
+import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.ModuleCategoryRegistry;
@@ -33,21 +32,18 @@ public class addon extends LabyModAddon {
     public boolean pixelspace = false;
     public boolean castles = false;
     public boolean arena = false;
-    public boolean jumpworld = false;
     public boolean mineception = false;
     public boolean splun = false;
-    public boolean DNA = false;
     public boolean brainbow = false;
-    public boolean chainreact = false;
     public boolean suspicious = false;
     public boolean tspiele = false;
     public boolean intime = false;
+    public boolean dna = false;
 
     //AutoGGEnabled Check
     public boolean enabledAutoGG1vs1;
     public boolean enabledAutoGG4rena;
     public boolean enabledAutoGGCastles;
-    public boolean enabledAutoGGJumpWorld;
     public boolean enabledAutoGGMineception;
     public boolean enabledAutoGGSplun;
     public boolean enabledAutoGGSuspicious;
@@ -55,7 +51,6 @@ public class addon extends LabyModAddon {
     public boolean enabledAutoGGInTime;
     public boolean enabledAutoGGBrainbow;
     public boolean enabledAutoGGTSpiele;
-    private boolean enabledAutoGGChainReact;
 
     //AutoGG Message
     public String win1vs1;
@@ -63,7 +58,6 @@ public class addon extends LabyModAddon {
     public String match4rena;
     public String game4rena;
     public String gameCastles;
-    public String gameJumpWorld;
     public String gameMineception;
     public String gameSplun;
     public String gameSuspicious;
@@ -71,7 +65,6 @@ public class addon extends LabyModAddon {
     public String gameInTime;
     public String gameBrainbow;
     public String gameTSpiele;
-    private String gameChainReact;
 
     @Override
     public void onEnable() {
@@ -83,12 +76,22 @@ public class addon extends LabyModAddon {
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
 
+        this.getApi().getEventManager().register(new TablistHeaderMapListener());
         this.getApi().getEventManager().register(new TablistHeaderListener());
-        this.getApi().getEventManager().register(new TablistHeaderPixelSpaceListener());
         this.getApi().getEventManager().register(new MessageSendEventListener());
+
         this.getApi().getEventManager().register(new MessageRecive1vs1Listener());
         this.getApi().getEventManager().register(new MessageRecive4renaListener());
         this.getApi().getEventManager().register(new MessageReceiveSplunListener());
+        this.getApi().getEventManager().register(new MessageReceiveCastlesListener());
+        this.getApi().getEventManager().register(new MessageReceiveBrainbowListener());
+        this.getApi().getEventManager().register(new MessageReceiveInTimeListener());
+        this.getApi().getEventManager().register(new MessageReceiveTSpieleListener());
+        this.getApi().getEventManager().register(new MessageReceiveMineceptionListener());
+        this.getApi().getEventManager().register(new MessageReceiveDNAListener());
+        this.getApi().getEventManager().register(new MessageReceiveDNAListener());
+        this.getApi().getEventManager().register(new MessageReceiveSuspiciousListener());
+
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
@@ -111,10 +114,7 @@ public class addon extends LabyModAddon {
         this.game4rena = getConfig().has("game4rena") ? getConfig().get("game4rena").getAsString() : "gg";
 
         this.enabledAutoGGCastles = !getConfig().has("enabledAutoGGCastles") || getConfig().get("enabledAutoGGCastles").getAsBoolean();
-        this.gameCastles = getConfig().has("gameCastles") ? getConfig().get("game4rena").getAsString() : "gg";
-
-        this.enabledAutoGGJumpWorld = !getConfig().has("enabledAutoGGJumpWorld") || getConfig().get("enabledAutoGGJumpWorld").getAsBoolean();
-        this.gameJumpWorld = getConfig().has("gameJumpWorld") ? getConfig().get("gameJumpWorld").getAsString() : "gg";
+        this.gameCastles = getConfig().has("gameCastles") ? getConfig().get("gameCastles").getAsString() : "gg";
 
         this.enabledAutoGGMineception = !getConfig().has("enabledAutoGGMineception") || getConfig().get("enabledAutoGGMineception").getAsBoolean();
         this.gameMineception = getConfig().has("gameMineception") ? getConfig().get("gameMineception").getAsString() : "gg";
@@ -136,9 +136,6 @@ public class addon extends LabyModAddon {
 
         this.enabledAutoGGTSpiele = !getConfig().has("enabledAutoGGTSpiele") || getConfig().get("enabledAutoGGTSpiele").getAsBoolean();
         this.gameTSpiele = getConfig().has("gameTSpiele") ? getConfig().get("gameTSpiele").getAsString() : "gg";
-
-        this.enabledAutoGGChainReact = !getConfig().has("enabledAutoGGChainReact") || getConfig().get("enabledAutoGGChainReact").getAsBoolean();
-        this.gameChainReact = getConfig().has("gameChainReact") ? getConfig().get("gameChainReact").getAsString() : "gg";
     }
 
     @Override
@@ -156,15 +153,13 @@ public class addon extends LabyModAddon {
 
         configurSettings(subSettings,
                 new ConfigItem("Castles", this.gameCastles, this.enabledAutoGGCastles, new ControlElement.IconData(Material.BANNER)),
-                new ConfigItem("JumpWorld", this.gameJumpWorld, this.enabledAutoGGJumpWorld, new ControlElement.IconData(Material.GOLD_BOOTS)),
                 new ConfigItem("Mineception", this.gameMineception, this.enabledAutoGGMineception, new ControlElement.IconData(Material.RECORD_8)),
                 new ConfigItem("Splun", this.gameSplun, this.enabledAutoGGSplun, new ControlElement.IconData(Material.STAINED_CLAY)),
                 new ConfigItem("Suspicious", this.gameSuspicious, this.enabledAutoGGSuspicious, new ControlElement.IconData(Material.IRON_DOOR)),
                 new ConfigItem("DNA", this.gameDNA, this.enabledAutoGGDNA, new ControlElement.IconData(Material.GLASS)),
                 new ConfigItem("InTime", this.gameInTime, this.enabledAutoGGInTime, new ControlElement.IconData(Material.WATCH)),
                 new ConfigItem("Brainbow", this.gameBrainbow, this.enabledAutoGGBrainbow, new ControlElement.IconData(Material.BOW)),
-                new ConfigItem("TSpiele", this.gameDNA, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON)),
-                new ConfigItem("ChainReact", this.gameChainReact, this.enabledAutoGGChainReact, new ControlElement.IconData(Material.EYE_OF_ENDER))
+                new ConfigItem("TSpiele", this.gameTSpiele, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
         );
     }
 
