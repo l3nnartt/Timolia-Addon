@@ -2,11 +2,11 @@ package de.labymod.lennart.modules;
 
 import de.labymod.lennart.addon;
 import net.labymod.ingamegui.ModuleCategory;
-import net.labymod.ingamegui.moduletypes.SimpleTextModule;
+import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
 import net.minecraft.util.ResourceLocation;
 
-public class PlayerStats extends SimpleTextModule {
+public class Killstreak extends SimpleModule{
 
     @Override
     public ModuleCategory getCategory() {
@@ -14,28 +14,23 @@ public class PlayerStats extends SimpleTextModule {
     }
 
     @Override
-    public String[] getValues() {
-        return new String[0];
+    public String getDisplayName() {
+        return "Killstreak";
     }
 
     @Override
-    public String[] getDefaultValues() {
-        return new String[0];
+    public String getDisplayValue() {
+        return String.valueOf(addon.INSTANCE.killstreak);
     }
 
     @Override
-    public String[] getKeys() {
-        return new String[0];
-    }
-
-    @Override
-    public String[] getDefaultKeys() {
-        return new String[0];
+    public String getDefaultValue() {
+        return "???";
     }
 
     @Override
     public ControlElement.IconData getIconData() {
-        return new ControlElement.IconData(new ResourceLocation("icons/timolia/stats128.png"));
+        return new ControlElement.IconData(new ResourceLocation("icons/timolia/enemy128.png"));
     }
 
     @Override
@@ -45,7 +40,7 @@ public class PlayerStats extends SimpleTextModule {
 
     @Override
     public String getSettingName() {
-        return "Own Stats";
+        return "Killstreak";
     }
 
     @Override
@@ -55,7 +50,7 @@ public class PlayerStats extends SimpleTextModule {
 
     @Override
     public String getDescription() {
-        return "Displays your own Stats";
+        return "Zeigt dir deine aktuelle Killstreak an";
     }
 
     @Override

@@ -34,3 +34,4 @@ Anschließend Minecraft restarten
 ### 1vs1
 - Statistiken des Gegners in 1vs1
 - Name des Gegners in 1vs1
+- Killstreak

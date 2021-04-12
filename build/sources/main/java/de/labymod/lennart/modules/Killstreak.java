@@ -1,13 +1,12 @@
 package de.labymod.lennart.modules;
 
 import de.labymod.lennart.addon;
-import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
 import net.minecraft.util.ResourceLocation;
 
-public class Enemy extends SimpleModule {
+public class Killstreak extends SimpleModule{
 
     @Override
     public ModuleCategory getCategory() {
@@ -16,12 +15,12 @@ public class Enemy extends SimpleModule {
 
     @Override
     public String getDisplayName() {
-        return "Gegner";
+        return "Killstreak";
     }
 
     @Override
     public String getDisplayValue() {
-        return MessageEnemyReceiveListener.enemy;
+        return String.valueOf(addon.INSTANCE.killstreak);
     }
 
     @Override
@@ -36,11 +35,12 @@ public class Enemy extends SimpleModule {
 
     @Override
     public void loadSettings() {
+
     }
 
     @Override
     public String getSettingName() {
-        return "Gegner(1vs1)";
+        return "Killstreak";
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Enemy extends SimpleModule {
 
     @Override
     public String getDescription() {
-        return "Zeigt dir den Namen deines Gegners an";
+        return "Zeigt dir deine aktuelle Killstreak an";
     }
 
     @Override

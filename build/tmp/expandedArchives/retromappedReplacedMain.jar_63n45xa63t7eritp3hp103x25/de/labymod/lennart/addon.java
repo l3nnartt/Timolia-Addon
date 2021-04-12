@@ -1,14 +1,12 @@
 package de.labymod.lennart;
 
+import akka.actor.Kill;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.autogglistener.*;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.listener.*;
-import de.labymod.lennart.modules.Enemy;
-import de.labymod.lennart.modules.EnemyStats;
-import de.labymod.lennart.modules.Map;
-import de.labymod.lennart.modules.PxlSpace;
+import de.labymod.lennart.modules.*;
 import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
@@ -21,6 +19,8 @@ import java.util.List;
 public class addon extends LabyModAddon {
 
     public int placedBlocks;
+    public int killstreak;
+
     public String[] servers;
     public static addon INSTANCE;
     public ModuleCategory timolia;
@@ -96,6 +96,7 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
         this.getApi().registerModule(new Map());
+        this.getApi().registerModule(new Killstreak());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());
         this.getApi().registerModule(new PxlSpace());
@@ -104,6 +105,7 @@ public class addon extends LabyModAddon {
     @Override
     public void loadConfig() {
         this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
+        this.killstreak = getConfig().has("killstreak") ? getConfig().get("killstreak").getAsInt() : 0;
 
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";

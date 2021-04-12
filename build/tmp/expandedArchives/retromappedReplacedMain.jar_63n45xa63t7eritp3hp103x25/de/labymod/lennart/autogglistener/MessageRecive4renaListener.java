@@ -8,6 +8,8 @@ public class MessageRecive4renaListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 
+        if (Minecraft.func_71410_x().field_71439_g.field_71075_bZ.field_75101_c) return false;
+
         if (!addon.INSTANCE.enabledAutoGG4rena) return false;
 
         if (s1.contains("4rena") && s1.contains("»")) {
