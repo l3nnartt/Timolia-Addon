@@ -6,20 +6,27 @@ https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
 ## Einrichtung
 
-Die heruntergeladene JAR Datei in  den Appdata Ordner (``.minecraft\LabyMod\addons-1.8``) Ordner verschieben.
-Anschließend Minecraft restarten
+Die heruntergeladene JAR Datei in  den Appdata Ordner (``.minecraft\LabyMod\addons-1.8``) Ordner verschieben. <br>
+Anschließend Minecraft restarten und Einstellungen vornehmen. <br>
+<br>
+Solltet ihr das Addon updaten, löscht ihr die alte Version(.jar Datei) aus eurem Ordner und fügt die neue hinzu.
+
+## Discord/News/Updates/Bugs/Ideen
+
+Habt ihr einen Bug gefunden? Ihr wollt ein Feature vorschlagen, oder ihr braucht einfach Hilfe bei der Installation?
+Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6UvWbq) melden und es wird euch geholfen.
 
 ## Features
 
 ### Sonstiges
-- Current Map "Map"
+- GUI-Module "Map"
 
 ### Custom-AutoGG
 - Castles
 - Mineception
-- 4rena
+- 4rena (Jede Runde, Ende des Matches)
 - JumpWorld
-- 1vs1
+- 1vs1 (Lose/Win)
 - Suspicious
 - Splun
 - Brainbow
@@ -29,9 +36,9 @@ Anschließend Minecraft restarten
 
 ### Pxlspace
 - Module "Platzierte Blöcke"
-- Command ``/stats``
+- Command ``/stats`` (Zählt Blöcke ab Installation des Addons)
  
 ### 1vs1
-- Statistiken des Gegners in 1vs1
-- Name des Gegners in 1vs1
-- Killstreak
+- GUI-Module "Statistiken des Gegners in 1vs1"
+- GUI-Module "Gegner"
+- GUI-Module "Killstreak"
