@@ -33401,7 +33401,7 @@ End  Processing: de\labymod\lennart\ConfigItem.java
 Start Processing: de\labymod\lennart\addon.java
 Warning: de\labymod\lennart\addon.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/LabyModAddon/onEnable, ()V]
-Rename class net/minecraft/util/ResourceLocation[2274,2290]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[2289,2305]::ResourceLocation->ResourceLocation
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, net/labymod/ingamegui/ModuleCategoryRegistry/loadCategory, (Lnet/labymod/ingamegui/ModuleCategory;)V]
 [method, com/google/gson/GsonBuilder/setPrettyPrinting, ()Lcom/google/gson/GsonBuilder;]
@@ -33458,6 +33458,10 @@ Rename class net/minecraft/util/ResourceLocation[2274,2290]::ResourceLocation->R
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
+[method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
+[method, net/labymod/api/LabyModAPI/registerModule, (Lnet/labymod/ingamegui/Module;)V]
+[method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
+[method, net/labymod/api/LabyModAPI/registerModule, (Lnet/labymod/ingamegui/Module;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/registerModule, (Lnet/labymod/ingamegui/Module;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
@@ -33731,15 +33735,15 @@ Warning: de\labymod\lennart\autogglistener\MessageRecive1vs1Listener.java has CR
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[583,592]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[593,605]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[608,617]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[622,637]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[647,656]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[657,669]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[672,681]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[686,701]::sendChatMessage->func_71165_d
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[784,793]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[794,806]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[809,818]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[823,838]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[848,857]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[858,870]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[873,882]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[887,902]::sendChatMessage->func_71165_d
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageRecive1vs1Listener.java
@@ -33799,13 +33803,18 @@ Warning: de\labymod\lennart\listener\MessageEnemyReceiveListener.java has CRLF l
 [method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
 [method, java/lang/String/substring, (II)Ljava/lang/String;]
 [method, java/lang/CharSequence/length, ()I]
-[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[1104,1113]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1114,1126]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[1129,1138]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[1143,1158]::sendChatMessage->func_71165_d
+[method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
+[method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
+[method, java/lang/String/substring, (II)Ljava/lang/String;]
+[method, java/lang/CharSequence/length, ()I]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+Rename class net/minecraft/client/Minecraft[1373,1382]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1383,1395]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[1398,1407]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[1412,1427]::sendChatMessage->func_71165_d
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
@@ -33849,6 +33858,10 @@ End  Processing: de\labymod\lennart\listener\MessageSendEventListener.java
 Start Processing: de\labymod\lennart\listener\TablistHeaderListener.java
 Warning: de\labymod\lennart\listener\TablistHeaderListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/TabListEvent/onUpdate, (Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
+[method, java/lang/String/substring, (II)Ljava/lang/String;]
+[method, java/lang/CharSequence/length, ()I]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
@@ -33896,7 +33909,7 @@ Warning: de\labymod\lennart\modules\Enemy.java has CRLF line endings; consider s
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[861,877]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[862,878]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -33928,15 +33941,14 @@ Import: net.minecraft.util.ResourceLocation
 Adding 0 imports
 End  Processing: de\labymod\lennart\modules\EnemyStats.java
 
-Start Processing: de\labymod\lennart\modules\Killstreak.java
-Warning: de\labymod\lennart\modules\Killstreak.java has CRLF line endings; consider switching to LF
+Start Processing: de\labymod\lennart\modules\Kit.java
+Warning: de\labymod\lennart\modules\Kit.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
-[method, java/lang/String/valueOf, (I)Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[814,830]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[855,871]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -33945,7 +33957,7 @@ Rename class net/minecraft/util/ResourceLocation[814,830]::ResourceLocation->Res
 [method, net/labymod/ingamegui/Module/getSortingId, ()I]
 Import: net.minecraft.util.ResourceLocation
 Adding 0 imports
-End  Processing: de\labymod\lennart\modules\Killstreak.java
+End  Processing: de\labymod\lennart\modules\Kit.java
 
 Start Processing: de\labymod\lennart\modules\Map.java
 Warning: de\labymod\lennart\modules\Map.java has CRLF line endings; consider switching to LF
@@ -33965,25 +33977,6 @@ Import: net.minecraft.util.ResourceLocation
 Adding 0 imports
 End  Processing: de\labymod\lennart\modules\Map.java
 
-Start Processing: de\labymod\lennart\modules\PlayerStats.java
-Warning: de\labymod\lennart\modules\PlayerStats.java has CRLF line endings; consider switching to LF
-[method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
-[method, net/labymod/ingamegui/moduletypes/SimpleTextModule/getValues, ()[Ljava/lang/String;]
-[method, net/labymod/ingamegui/moduletypes/SimpleTextModule/getDefaultValues, ()[Ljava/lang/String;]
-[method, net/labymod/ingamegui/moduletypes/TextModule/getKeys, ()[Ljava/lang/String;]
-[method, net/labymod/ingamegui/moduletypes/TextModule/getDefaultKeys, ()[Ljava/lang/String;]
-[method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[889,905]::ResourceLocation->ResourceLocation
-[method, net/labymod/ingamegui/Module/loadSettings, ()V]
-[method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
-[method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
-[method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
-[method, net/labymod/ingamegui/Module/getDescription, ()Ljava/lang/String;]
-[method, net/labymod/ingamegui/Module/getSortingId, ()I]
-Import: net.minecraft.util.ResourceLocation
-Adding 0 imports
-End  Processing: de\labymod\lennart\modules\PlayerStats.java
-
 Start Processing: de\labymod\lennart\modules\PxlSpace.java
 Warning: de\labymod\lennart\modules\PxlSpace.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
@@ -34002,6 +33995,43 @@ Rename class net/minecraft/util/ResourceLocation[825,841]::ResourceLocation->Res
 Import: net.minecraft.util.ResourceLocation
 Adding 0 imports
 End  Processing: de\labymod\lennart\modules\PxlSpace.java
+
+Start Processing: de\labymod\lennart\modules\Server.java
+Warning: de\labymod\lennart\modules\Server.java has CRLF line endings; consider switching to LF
+[method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
+Rename class net/minecraft/util/ResourceLocation[857,873]::ResourceLocation->ResourceLocation
+[method, net/labymod/ingamegui/Module/loadSettings, ()V]
+[method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getDescription, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getSortingId, ()I]
+Import: net.minecraft.util.ResourceLocation
+Adding 0 imports
+End  Processing: de\labymod\lennart\modules\Server.java
+
+Start Processing: de\labymod\lennart\modules\Winstreak.java
+Warning: de\labymod\lennart\modules\Winstreak.java has CRLF line endings; consider switching to LF
+[method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
+[method, java/lang/String/valueOf, (I)Ljava/lang/String;]
+[method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
+Rename class net/minecraft/util/ResourceLocation[812,828]::ResourceLocation->ResourceLocation
+[method, net/labymod/ingamegui/Module/loadSettings, ()V]
+[method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getDescription, ()Ljava/lang/String;]
+[method, net/labymod/ingamegui/Module/getSortingId, ()I]
+Import: net.minecraft.util.ResourceLocation
+Adding 0 imports
+End  Processing: de\labymod\lennart\modules\Winstreak.java
 
 Start Processing: de\labymod\lennart\stats\EnemyStat1vs1.java
 Warning: de\labymod\lennart\stats\EnemyStat1vs1.java has CRLF line endings; consider switching to LF

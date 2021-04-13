@@ -1,6 +1,7 @@
 package de.labymod.lennart.autogglistener;
 
 import de.labymod.lennart.addon;
+import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.minecraft.client.Minecraft;
 

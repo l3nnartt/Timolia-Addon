@@ -1,7 +1,7 @@
 # Labymod Timolia Addon (InOffical)
 
 ## Download
-Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.6.3.jar) </br>
+Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.7.jar) </br>
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
 ## Einrichtung
@@ -20,6 +20,7 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 
 ### Sonstiges
 - GUI-Module "Map"
+- GUI-Module "Server"
 
 ### Custom-AutoGG
 - Castles
@@ -41,4 +42,5 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 ### 1vs1
 - GUI-Module "Statistiken des Gegners in 1vs1"
 - GUI-Module "Gegner"
-- GUI-Module "Killstreak"
+- GUI-Module "Winstreak"
+- GUI-Module "Kit"

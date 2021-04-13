@@ -9,6 +9,7 @@ import java.util.List;
 public class MessageEnemyReceiveListener implements MessageReceiveEvent {
 
     public static String enemy = null;
+    public static String kit = null;
     public static EnemyStats1vs1 stats = null;
     private boolean listenForStats = false;
     private List<String> latestStats = new ArrayList<>();
@@ -16,11 +17,19 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String strippedMessage) {
         if (strippedMessage.contains("1vs1") && strippedMessage.contains("»")) {
+
+            if (strippedMessage.contains("Kit") && strippedMessage.contains("Einstellungen")) {
+
+                String kitname = s.split("§6")[1].split("§8")[0];
+                kitname = kitname.substring(0, kitname.length()-1);
+                kit = kitname;
+
+            }
+
             if (strippedMessage.contains("Kampf") && strippedMessage.contains("beginnt")) {
 
                 String enemyname = s.split("§6")[1].split("§7")[0];
                 enemyname = enemyname.substring(0, enemyname.length()-2);
-                System.out.println(enemyname);
                 enemy = enemyname;
 
                 if (enemy.contains("&") && enemy.contains(" ")) {
@@ -29,9 +38,11 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
                 Minecraft.func_71410_x().field_71439_g.func_71165_d("/stats " + enemy);
                 listenForStats = true;
             }
+
             else if (strippedMessage.contains("Du") && strippedMessage.contains("hast den Kampf gegen")) {
                 stats = null;
                 enemy = null;
+                kit = null;
             }
         }
 

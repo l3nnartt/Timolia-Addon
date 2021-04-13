@@ -1,6 +1,5 @@
 package de.labymod.lennart;
 
-import akka.actor.Kill;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.autogglistener.*;
@@ -27,6 +26,7 @@ public class addon extends LabyModAddon {
     public Gson gson;
     public AddonConfig addonConfig;
     public boolean mapAnswer = false;
+    public String latestserver = null;
 
     //Header Check
     public boolean pixelspace = false;
@@ -96,10 +96,12 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
         this.getApi().getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
         this.getApi().registerModule(new Map());
-        this.getApi().registerModule(new Killstreak());
+        this.getApi().registerModule(new Winstreak());
         this.getApi().registerModule(new Enemy());
         this.getApi().registerModule(new EnemyStats());
         this.getApi().registerModule(new PxlSpace());
+        this.getApi().registerModule(new Server());
+        this.getApi().registerModule(new Kit());
     }
 
     @Override

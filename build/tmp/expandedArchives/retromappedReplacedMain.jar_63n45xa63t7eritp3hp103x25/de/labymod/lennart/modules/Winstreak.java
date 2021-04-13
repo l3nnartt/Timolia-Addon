@@ -6,7 +6,7 @@ import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
 import net.minecraft.util.ResourceLocation;
 
-public class Killstreak extends SimpleModule{
+public class Winstreak extends SimpleModule{
 
     @Override
     public ModuleCategory getCategory() {
@@ -15,7 +15,7 @@ public class Killstreak extends SimpleModule{
 
     @Override
     public String getDisplayName() {
-        return "Killstreak";
+        return "Winstreak";
     }
 
     @Override

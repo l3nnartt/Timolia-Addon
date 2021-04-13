@@ -77,7 +77,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String getSettingName() {
-        return "Stats of the Enemy(1vs1)";
+        return "Stats deines Gegners(1vs1)";
     }
 
     @Override
@@ -87,7 +87,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String getDescription() {
-        return "Displays the Stats of the enemy";
+        return "Zeigt dir die Stats deines Gegners";
     }
 
     @Override

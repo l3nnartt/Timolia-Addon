@@ -16,7 +16,7 @@ public class Enemy extends SimpleModule {
 
     @Override
     public String getDisplayName() {
-        return "Enemy";
+        return "Gegner";
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Enemy extends SimpleModule {
 
     @Override
     public String getSettingName() {
-        return "Enemy Name/s";
+        return "Gegner(1vs1)";
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Enemy extends SimpleModule {
 
     @Override
     public String getDescription() {
-        return "Displays the name of the enemy/s";
+        return "Zeigt dir den Namen deines Gegners an";
     }
 
     @Override

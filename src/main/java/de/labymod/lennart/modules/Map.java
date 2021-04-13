@@ -42,7 +42,7 @@ public class Map extends SimpleModule {
 
     @Override
     public String getSettingName() {
-        return "Current Map";
+        return "Aktuelle Map";
     }
 
     @Override
