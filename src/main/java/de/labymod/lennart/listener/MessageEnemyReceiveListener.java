@@ -39,7 +39,7 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
                 listenForStats = true;
             }
 
-            else if (strippedMessage.contains("Du") && strippedMessage.contains("hast den Kampf gegen")) {
+            else if (strippedMessage.contains("den Kampf gegen")) {
                 stats = null;
                 enemy = null;
                 kit = null;

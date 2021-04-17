@@ -1,11 +1,10 @@
 package de.labymod.lennart.autogglistener;
 
 import de.labymod.lennart.addon;
-import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.minecraft.client.Minecraft;
 
-public class MessageRecive1vs1Listener implements MessageReceiveEvent {
+public class MessageReceive1vs1Listener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 

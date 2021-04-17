@@ -7,6 +7,8 @@ import net.labymod.ingamegui.moduletypes.SimpleTextModule;
 import net.labymod.settings.elements.ControlElement;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.function.Consumer;
+
 public class EnemyStats extends SimpleTextModule {
 
     @Override

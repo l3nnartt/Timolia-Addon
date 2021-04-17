@@ -2,6 +2,8 @@ Symbol range map extraction starting
 Processing 28 files
 processing de\labymod\lennart\ConfigItem.java
 processing de\labymod\lennart\addon.java
+processing de\labymod\lennart\autogglistener\MessageReceive1vs1Listener.java
+processing de\labymod\lennart\autogglistener\MessageReceive4renaListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveBrainbowListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveCastlesListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveDNAListener.java
@@ -10,8 +12,6 @@ processing de\labymod\lennart\autogglistener\MessageReceiveMineceptionListener.j
 processing de\labymod\lennart\autogglistener\MessageReceiveSplunListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveSuspiciousListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveTSpieleListener.java
-processing de\labymod\lennart\autogglistener\MessageRecive1vs1Listener.java
-processing de\labymod\lennart\autogglistener\MessageRecive4renaListener.java
 processing de\labymod\lennart\config\AddonConfig.java
 processing de\labymod\lennart\listener\MessageEnemyReceiveListener.java
 processing de\labymod\lennart\listener\MessageMapReceiveListener.java

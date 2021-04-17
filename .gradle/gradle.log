@@ -13,16 +13,16 @@ Warning, useNotchSrg() is deprecated! You should use mappingType instead.Warning
 #################################################
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
-:sourceApiJava UP-TO-DATE
+:sourceApiJava
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
 :sourceMainJava
 :compileJava
-:processResources UP-TO-DATE
+:processResources
 :classes
 :jar
-:sourceTestJava UP-TO-DATE
+:sourceTestJava
 :compileTestJava UP-TO-DATE
 :processTestResources UP-TO-DATE
 :testClasses UP-TO-DATE
@@ -34,7 +34,7 @@ Warning, useNotchSrg() is deprecated! You should use mappingType instead.Warning
 :genSrgs SKIPPED
 :reobfJar
 :extractRangemapReplacedMain
-C:\Users\loesc\Documents\GitHub\labymod-addon\build\sources\main\java
+C:\Users\loesc\Documents\GitHub\timolia-addon-1.8\build\sources\main\java
 :retromapReplacedMain
 remapping source...
 :sourceJar
@@ -44,4 +44,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 10.163 secs
+Total time: 12.864 secs

@@ -5,7 +5,13 @@ import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleTextModule;
 import net.labymod.settings.elements.ControlElement;
+import net.labymod.settings.elements.NumberElement;
+import net.labymod.settings.elements.SettingsElement;
+import net.labymod.settings.elements.StringElement;
+import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
+
+import java.util.function.Consumer;
 
 public class EnemyStats extends SimpleTextModule {
 
@@ -73,6 +79,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public void loadSettings() {
+        new StringElement("Test", new ControlElement.IconData(Material.NAME_TAG));
     }
 
     @Override

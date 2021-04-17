@@ -4,7 +4,7 @@ import de.labymod.lennart.addon;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.minecraft.client.Minecraft;
 
-public class MessageRecive4renaListener implements MessageReceiveEvent {
+public class MessageReceive4renaListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 
