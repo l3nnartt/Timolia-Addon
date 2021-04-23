@@ -1,19 +1,17 @@
 package de.labymod.lennart.modules;
 
-import de.labymod.lennart.addon;
+import de.labymod.lennart.TimoliaAddon;
 import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleTextModule;
 import net.labymod.settings.elements.ControlElement;
 import net.minecraft.util.ResourceLocation;
 
-import java.util.function.Consumer;
-
 public class EnemyStats extends SimpleTextModule {
 
     @Override
     public ModuleCategory getCategory() {
-        return addon.INSTANCE.timolia;
+        return TimoliaAddon.getINSTANCE().getTimolia();
     }
 
     @Override

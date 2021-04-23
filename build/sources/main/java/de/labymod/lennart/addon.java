@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.autogglistener.*;
 import de.labymod.lennart.config.AddonConfig;
+import de.labymod.lennart.karmatop.KarmaListener;
+import de.labymod.lennart.karmatop.KarmaTablistListener;
 import de.labymod.lennart.listener.*;
 import de.labymod.lennart.modules.*;
 import de.labymod.lennart.listener.MessageEnemyReceiveListener;
@@ -27,6 +29,8 @@ public class addon extends LabyModAddon {
     public AddonConfig addonConfig;
     public boolean mapAnswer = false;
     public String latestserver = null;
+
+    public boolean karmaAnswer = false;
 
     //Header Check
     public boolean pixelspace = false;
@@ -91,6 +95,9 @@ public class addon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageReceiveDNAListener());
         this.getApi().getEventManager().register(new MessageReceiveDNAListener());
         this.getApi().getEventManager().register(new MessageReceiveSuspiciousListener());
+
+        this.getApi().getEventManager().register(new KarmaListener());
+        this.getApi().getEventManager().register(new KarmaTablistListener());
 
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
