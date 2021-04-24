@@ -1,6 +1,6 @@
 package de.labymod.lennart.listener;
 
-import de.labymod.lennart.addon;
+import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.MessageReceiveEvent;
 
 public class MessageMapReceiveListener implements MessageReceiveEvent {
@@ -15,8 +15,8 @@ public class MessageMapReceiveListener implements MessageReceiveEvent {
             mapoutput = mapoutput.substring(0,mapoutput.length()-5);
             latestMap = mapoutput;
 
-            if (addon.INSTANCE.mapAnswer) {
-                addon.INSTANCE.mapAnswer = false;
+            if (TimoliaAddon.getINSTANCE().isMapAnswer()) {
+                TimoliaAddon.getINSTANCE().setMapAnswer(false);
                 return false;
             }
         }

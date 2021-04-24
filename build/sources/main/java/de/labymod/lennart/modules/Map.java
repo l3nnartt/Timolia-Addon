@@ -1,6 +1,6 @@
 package de.labymod.lennart.modules;
 
-import de.labymod.lennart.addon;
+import de.labymod.lennart.TimoliaAddon;
 import de.labymod.lennart.listener.MessageMapReceiveListener;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
@@ -12,7 +12,7 @@ public class Map extends SimpleModule {
 
     @Override
     public ModuleCategory getCategory() {
-        return addon.INSTANCE.timolia;
+        return TimoliaAddon.getINSTANCE().getTimolia();
     }
 
     @Override

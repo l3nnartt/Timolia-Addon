@@ -1,7 +1,7 @@
 Symbol range map extraction starting
-Processing 30 files
+Processing 31 files
 processing de\labymod\lennart\ConfigItem.java
-processing de\labymod\lennart\addon.java
+processing de\labymod\lennart\TimoliaAddon.java
 processing de\labymod\lennart\autogglistener\MessageReceive1vs1Listener.java
 processing de\labymod\lennart\autogglistener\MessageReceive4renaListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveBrainbowListener.java
@@ -13,8 +13,9 @@ processing de\labymod\lennart\autogglistener\MessageReceiveSplunListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveSuspiciousListener.java
 processing de\labymod\lennart\autogglistener\MessageReceiveTSpieleListener.java
 processing de\labymod\lennart\config\AddonConfig.java
+processing de\labymod\lennart\karmatop\Authenticator.java
 processing de\labymod\lennart\karmatop\KarmaListener.java
-processing de\labymod\lennart\karmatop\KarmaTablistListener.java
+processing de\labymod\lennart\karmatop\KarmaUpdater.java
 processing de\labymod\lennart\listener\MessageEnemyReceiveListener.java
 processing de\labymod\lennart\listener\MessageMapReceiveListener.java
 processing de\labymod\lennart\listener\MessageReceivePixelSpacePlacedBlockListener.java

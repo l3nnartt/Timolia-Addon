@@ -717,13 +717,168 @@
         "visibility": "DEFAULT",
         "itemSlot": "0"
       }
+    },
+    "Map": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
+    },
+    "Winstreak": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
+    },
+    "Enemy": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
+    },
+    "EnemyStats": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
+    },
+    "PxlSpace": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
+    },
+    "Server": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
+    },
+    "Kit": {
+      "enabled": [],
+      "regions": [
+        "TOP_LEFT",
+        "TOP_LEFT"
+      ],
+      "alignment": [
+        "DEFAULT",
+        "DEFAULT"
+      ],
+      "x": [
+        2.0,
+        0.0
+      ],
+      "y": [
+        4.0,
+        0.0
+      ],
+      "useExtendedSettings": false,
+      "scale": 100,
+      "attributes": {}
     }
   },
   "moduleCategories": {
     "Information": true,
     "Items": true,
     "External services": true,
-    "Miscellaneous": true
+    "Miscellaneous": true,
+    "Timolia": true
   },
   "modulesEnabled": true,
   "gridEnabled": false,

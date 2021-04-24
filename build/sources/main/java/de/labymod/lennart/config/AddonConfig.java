@@ -1,7 +1,7 @@
 package de.labymod.lennart.config;
 
 import com.google.common.io.Resources;
-import de.labymod.lennart.addon;
+import de.labymod.lennart.TimoliaAddon;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,7 +25,7 @@ public class AddonConfig {
             e.printStackTrace();
         }
 
-        return addon.INSTANCE.gson.fromJson(content, AddonConfig.class);
+        return TimoliaAddon.getINSTANCE().getGson().fromJson(content, AddonConfig.class);
     }
 
     public List<String> getServers() {

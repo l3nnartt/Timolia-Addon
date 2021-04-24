@@ -106,7 +106,7 @@ public class TimoliaAddon extends LabyModAddon {
         this.getApi().getEventManager().register(new MessageReceiveSuspiciousListener());
 
         this.getApi().getEventManager().register(new KarmaListener());
-        this.getApi().getEventManager().registerOnJoin(KarmaUpdater);
+        this.getApi().getEventManager().registerOnJoin(new KarmaUpdater());
 
         this.getApi().getEventManager().register(new MessageMapReceiveListener());
         this.getApi().getEventManager().register(new MessageEnemyReceiveListener());

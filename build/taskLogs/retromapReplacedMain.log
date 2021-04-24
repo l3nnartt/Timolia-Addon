@@ -33398,10 +33398,11 @@ FOUND CONSTR method de/labymod/lennart/ConfigItem/ConfigItem (Ljava/lang/String;
 Adding 0 imports
 End  Processing: de\labymod\lennart\ConfigItem.java
 
-Start Processing: de\labymod\lennart\addon.java
-Warning: de\labymod\lennart\addon.java has CRLF line endings; consider switching to LF
+Start Processing: de\labymod\lennart\TimoliaAddon.java
+Warning: de\labymod\lennart\TimoliaAddon.java has CRLF line endings; consider switching to LF
+[method, java/util/concurrent/Executors/newCachedThreadPool, ()Ljava/util/concurrent/ExecutorService;]
 [method, net/labymod/api/LabyModAddon/onEnable, ()V]
-Rename class net/minecraft/util/ResourceLocation[2437,2453]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[2787,2803]::ResourceLocation->ResourceLocation
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, net/labymod/ingamegui/ModuleCategoryRegistry/loadCategory, (Lnet/labymod/ingamegui/ModuleCategory;)V]
 [method, com/google/gson/GsonBuilder/setPrettyPrinting, ()Lcom/google/gson/GsonBuilder;]
@@ -33454,7 +33455,7 @@ Rename class net/minecraft/util/ResourceLocation[2437,2453]::ResourceLocation->R
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
-[method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/TabListEvent;)V]
+[method, net/labymod/api/EventManager/registerOnJoin, (Lnet/labymod/utils/Consumer;)V]
 [method, net/labymod/api/LabyModAddon/getApi, ()Lnet/labymod/api/LabyModAPI;]
 [method, net/labymod/api/LabyModAPI/getEventManager, ()Lnet/labymod/api/EventManager;]
 [method, net/labymod/api/EventManager/register, (Lnet/labymod/api/events/MessageReceiveEvent;)V]
@@ -33608,8 +33609,8 @@ Rename class net/minecraft/util/ResourceLocation[2437,2453]::ResourceLocation->R
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
-[method, de/labymod/lennart/addon/configurSettings, (Ljava/util/List;[Lde/labymod/lennart/ConfigItem;)V]
-[method, de/labymod/lennart/addon/configurSettings, (Ljava/util/List;[Lde/labymod/lennart/ConfigItem;)V]
+[method, de/labymod/lennart/TimoliaAddon/configurSettings, (Ljava/util/List;[Lde/labymod/lennart/ConfigItem;)V]
+[method, de/labymod/lennart/TimoliaAddon/configurSettings, (Ljava/util/List;[Lde/labymod/lennart/ConfigItem;)V]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, de/labymod/lennart/ConfigItem/getGamemode, ()Ljava/lang/String;]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
@@ -33620,32 +33621,128 @@ Rename class net/minecraft/util/ResourceLocation[2437,2453]::ResourceLocation->R
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, de/labymod/lennart/ConfigItem/getGamemode, ()Ljava/lang/String;]
 [method, de/labymod/lennart/ConfigItem/getConfigMessage, ()Ljava/lang/String;]
-[method, de/labymod/lennart/addon/addplacedBlocks, ()V]
+[method, de/labymod/lennart/TimoliaAddon/addplacedBlocks, ()V]
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
 [method, com/google/gson/JsonObject/addProperty, (Ljava/lang/String;Ljava/lang/Number;)V]
 [method, net/labymod/api/LabyModAddon/saveConfig, ()V]
 [method, net/labymod/api/LabyModAddon/loadConfig, ()V]
+[method, de/labymod/lennart/TimoliaAddon/getPlacedBlocks, ()I]
+[method, de/labymod/lennart/TimoliaAddon/setPlacedBlocks, (I)V]
+[method, de/labymod/lennart/TimoliaAddon/getKillstreak, ()I]
+[method, de/labymod/lennart/TimoliaAddon/setKillstreak, (I)V]
+[method, de/labymod/lennart/TimoliaAddon/getServers, ()[Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setServers, ([Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setINSTANCE, (Lde/labymod/lennart/TimoliaAddon;)V]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/setTimolia, (Lnet/labymod/ingamegui/ModuleCategory;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGson, ()Lcom/google/gson/Gson;]
+[method, de/labymod/lennart/TimoliaAddon/setGson, (Lcom/google/gson/Gson;)V]
+[method, de/labymod/lennart/TimoliaAddon/getAddonConfig, ()Lde/labymod/lennart/config/AddonConfig;]
+[method, de/labymod/lennart/TimoliaAddon/setAddonConfig, (Lde/labymod/lennart/config/AddonConfig;)V]
+[method, de/labymod/lennart/TimoliaAddon/isMapAnswer, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setMapAnswer, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/getLatestserver, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setLatestserver, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/isKarmaAnswer, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setKarmaAnswer, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isPixelspace, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setPixelspace, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isCastles, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setCastles, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isArena, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setArena, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isMineception, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setMineception, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isSplun, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setSplun, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isBrainbow, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setBrainbow, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isSuspicious, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setSuspicious, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isTspiele, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setTspiele, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isIntime, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setIntime, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isDna, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setDna, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGG1vs1, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGG1vs1, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGG4rena, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGG4rena, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGCastles, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGCastles, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGMineception, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGMineception, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGSplun, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGSplun, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGSuspicious, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGSuspicious, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGDNA, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGDNA, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGInTime, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGInTime, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGBrainbow, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGBrainbow, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGTSpiele, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledAutoGGTSpiele, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/getWin1vs1, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setWin1vs1, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getLose1vs1, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setLose1vs1, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getMatch4rena, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setMatch4rena, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGame4rena, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGame4rena, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameCastles, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameCastles, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameMineception, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameMineception, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameSplun, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameSplun, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameSuspicious, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameSuspicious, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameDNA, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameDNA, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameInTime, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameInTime, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameBrainbow, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameBrainbow, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getGameTSpiele, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/setGameTSpiele, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getExService, ()Ljava/util/concurrent/ExecutorService;]
+[method, de/labymod/lennart/TimoliaAddon/getAuthenticator, ()Lde/labymod/lennart/karmatop/Authenticator;]
 Import: net.minecraft.util.ResourceLocation
 Adding 0 imports
-End  Processing: de\labymod\lennart\addon.java
+End  Processing: de\labymod\lennart\TimoliaAddon.java
 
 Start Processing: de\labymod\lennart\autogglistener\MessageReceive1vs1Listener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceive1vs1Listener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGG1vs1, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[584,593]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[594,606]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[609,618]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[623,638]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[607,616]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[617,629]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[632,641]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[646,661]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getWin1vs1, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setKillstreak, (I)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[785,794]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[795,807]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[810,819]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[824,839]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[841,850]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[851,863]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[866,875]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[880,895]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getLose1vs1, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setKillstreak, (I)V]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceive1vs1Listener.java
@@ -33653,43 +33750,64 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceive1vs1Listener.ja
 Start Processing: de\labymod\lennart\autogglistener\MessageReceive4renaListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceive4renaListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
-Rename class net/minecraft/client/Minecraft[321,330]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[331,343]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[346,355]::thePlayer->field_71439_g
-Rename field net/minecraft/entity/player/EntityPlayer/capabilities[360,372]::capabilities->field_71075_bZ
-Rename field net/minecraft/entity/player/PlayerCapabilities/allowFlying[375,386]::allowFlying->field_75101_c
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isArena, ()Z]
+Rename class net/minecraft/client/Minecraft[425,434]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[435,447]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[450,459]::thePlayer->field_71439_g
+Rename field net/minecraft/entity/player/EntityPlayer/inventory[464,473]::inventory->field_71071_by
+Rename method net/minecraft/entity/player/InventoryPlayer/hasItem (Lnet/minecraft/item/Item;)Z[479,486]::hasItem->func_146028_b
+Rename class net/minecraft/item/Item[493,497]::Item->Item
+Rename method net/minecraft/item/Item/getItemById (I)Lnet/minecraft/item/Item;[498,509]::getItemById->func_150899_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGG4rena, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[617,626]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[627,639]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[642,651]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[656,671]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[761,770]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[771,783]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[786,795]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[800,815]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getMatch4rena, ()Ljava/lang/String;]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[792,801]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[802,814]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[817,826]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[831,846]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[953,962]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[963,975]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[978,987]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[992,1007]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getMatch4rena, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isArena, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[1029,1038]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1039,1051]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[1054,1063]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[1068,1083]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[1223,1232]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[1233,1245]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[1248,1257]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[1262,1277]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGame4rena, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
+Import: net.minecraft.item.Item
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceive4renaListener.java
 
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveBrainbowListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveBrainbowListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGBrainbow, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isBrainbow, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[513,522]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[523,535]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[538,547]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[552,567]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[552,561]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[562,574]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[577,586]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[591,606]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameBrainbow, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveBrainbowListener.java
@@ -33697,12 +33815,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveBrainbowListene
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveCastlesListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveCastlesListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGCastles, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isCastles, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[510,519]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[520,532]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[535,544]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[549,564]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[549,558]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[559,571]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[574,583]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[588,603]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameCastles, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveCastlesListener.java
@@ -33710,12 +33834,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveCastlesListener
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveDNAListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveDNAListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGDNA, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isDna, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[498,507]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[508,520]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[523,532]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[537,552]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[537,546]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[547,559]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[562,571]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[576,591]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameDNA, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveDNAListener.java
@@ -33723,12 +33853,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveDNAListener.jav
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveInTimeListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveInTimeListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGInTime, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isIntime, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[507,516]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[517,529]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[532,541]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[546,561]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[546,555]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[556,568]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[571,580]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[585,600]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameInTime, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveInTimeListener.java
@@ -33736,12 +33872,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveInTimeListener.
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveMineceptionListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveMineceptionListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGMineception, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isMineception, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[521,530]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[531,543]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[546,555]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[560,575]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[560,569]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[570,582]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[585,594]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[599,614]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameMineception, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveMineceptionListener.java
@@ -33749,12 +33891,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveMineceptionList
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveSplunListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveSplunListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGSplun, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isSplun, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[504,513]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[514,526]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[529,538]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[543,558]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[543,552]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[553,565]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[568,577]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[582,597]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameSplun, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveSplunListener.java
@@ -33762,12 +33910,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveSplunListener.j
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveSuspiciousListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveSuspiciousListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGSuspicious, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isSuspicious, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[519,528]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[529,541]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[544,553]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[558,573]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[558,567]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[568,580]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[583,592]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[597,612]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameSuspicious, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveSuspiciousListener.java
@@ -33775,12 +33929,18 @@ End  Processing: de\labymod\lennart\autogglistener\MessageReceiveSuspiciousListe
 Start Processing: de\labymod\lennart\autogglistener\MessageReceiveTSpieleListener.java
 Warning: de\labymod\lennart\autogglistener\MessageReceiveTSpieleListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledAutoGGTSpiele, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isTspiele, ()Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-Rename class net/minecraft/client/Minecraft[510,519]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[520,532]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[535,544]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[549,564]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[549,558]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[559,571]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[574,583]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[588,603]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGameTSpiele, ()Ljava/lang/String;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\autogglistener\MessageReceiveTSpieleListener.java
@@ -33793,35 +33953,57 @@ FOUND CONSTR method de/labymod/lennart/config/AddonConfig/AddonConfig ()V de/lab
 [method, com/google/common/io/Resources/getResource, (Ljava/lang/String;)Ljava/net/URL;]
 [method, com/google/common/io/Resources/toString, (Ljava/net/URL;Ljava/nio/charset/Charset;)Ljava/lang/String;]
 [method, java/lang/Throwable/printStackTrace, ()V]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getGson, ()Lcom/google/gson/Gson;]
 [method, com/google/gson/Gson/fromJson, (Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;]
 [method, de/labymod/lennart/config/AddonConfig/getServers, ()Ljava/util/List;]
 Adding 0 imports
 End  Processing: de\labymod\lennart\config\AddonConfig.java
 
+Start Processing: de\labymod\lennart\karmatop\Authenticator.java
+Warning: de\labymod\lennart\karmatop\Authenticator.java has CRLF line endings; consider switching to LF
+[method, de/labymod/lennart/karmatop/Authenticator/authenticate, ()Z]
+Rename class net/minecraft/client/Minecraft[249,258]::Minecraft->Minecraft
+Rename class net/minecraft/client/Minecraft[264,273]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[274,286]::getMinecraft->func_71410_x
+Rename class net/minecraft/util/Session[298,305]::Session->Session
+Rename method net/minecraft/client/Minecraft/getSession ()Lnet/minecraft/util/Session;[319,329]::getSession->func_110432_I
+Rename method net/minecraft/client/Minecraft/getSessionService ()Lcom/mojang/authlib/minecraft/MinecraftSessionService;[432,449]::getSessionService->func_152347_ac
+[method, com/mojang/authlib/minecraft/MinecraftSessionService/joinServer, (Lcom/mojang/authlib/GameProfile;Ljava/lang/String;Ljava/lang/String;)V]
+Rename method net/minecraft/util/Session/getProfile ()Lcom/mojang/authlib/GameProfile;[468,478]::getProfile->func_148256_e
+Rename method net/minecraft/util/Session/getToken ()Ljava/lang/String;[493,501]::getToken->func_148254_d
+[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+[method, java/lang/Throwable/printStackTrace, ()V]
+[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+Import: net.minecraft.client.Minecraft
+Import: net.minecraft.util.Session
+Adding 0 imports
+End  Processing: de\labymod\lennart\karmatop\Authenticator.java
+
 Start Processing: de\labymod\lennart\karmatop\KarmaListener.java
 Warning: de\labymod\lennart\karmatop\KarmaListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
-[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-[method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
-[method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
-[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
-Import: net.minecraft.client.Minecraft
 Adding 0 imports
 End  Processing: de\labymod\lennart\karmatop\KarmaListener.java
 
-Start Processing: de\labymod\lennart\karmatop\KarmaTablistListener.java
-Warning: de\labymod\lennart\karmatop\KarmaTablistListener.java has CRLF line endings; consider switching to LF
-[method, net/labymod/api/events/TabListEvent/onUpdate, (Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V]
+Start Processing: de\labymod\lennart\karmatop\KarmaUpdater.java
+Warning: de\labymod\lennart\karmatop\KarmaUpdater.java has CRLF line endings; consider switching to LF
+[method, java/util/function/Consumer/accept, (Ljava/lang/Object;)V]
+[method, net/labymod/utils/ServerData/getIp, ()Ljava/lang/String;]
+[method, java/lang/String/toLowerCase, ()Ljava/lang/String;]
+[method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
-Rename class net/minecraft/client/Minecraft[351,360]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[361,373]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[376,385]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[390,405]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[496,505]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[506,518]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[521,530]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[535,550]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setKarmaAnswer, (Z)V]
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+[method, java/util/function/Consumer/andThen, (Ljava/util/function/Consumer;)Ljava/util/function/Consumer;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports
-End  Processing: de\labymod\lennart\karmatop\KarmaTablistListener.java
+End  Processing: de\labymod\lennart\karmatop\KarmaUpdater.java
 
 Start Processing: de\labymod\lennart\listener\MessageEnemyReceiveListener.java
 Warning: de\labymod\lennart\listener\MessageEnemyReceiveListener.java has CRLF line endings; consider switching to LF
@@ -33864,6 +34046,10 @@ Warning: de\labymod\lennart\listener\MessageMapReceiveListener.java has CRLF lin
 [method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
 [method, java/lang/String/substring, (II)Ljava/lang/String;]
 [method, java/lang/CharSequence/length, ()I]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isMapAnswer, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setMapAnswer, (Z)V]
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageMapReceiveListener.java
 
@@ -33871,16 +34057,21 @@ Start Processing: de\labymod\lennart\listener\MessageReceivePixelSpacePlacedBloc
 Warning: de\labymod\lennart\listener\MessageReceivePixelSpacePlacedBlockListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageReceiveEvent/onReceive, (Ljava/lang/String;Ljava/lang/String;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-[method, de/labymod/lennart/addon/addplacedBlocks, ()V]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/addplacedBlocks, ()V]
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageReceivePixelSpacePlacedBlockListener.java
 
 Start Processing: de\labymod\lennart\listener\MessageSendEventListener.java
 Warning: de\labymod\lennart\listener\MessageSendEventListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/MessageSendEvent/onSend, (Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isPixelspace, ()Z]
 [method, java/lang/String/equalsIgnoreCase, (Ljava/lang/String;)Z]
 [method, net/labymod/main/LabyMod/getInstance, ()Lnet/labymod/main/LabyMod;]
 [method, net/labymod/main/LabyMod/displayMessageInChat, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getPlacedBlocks, ()I]
 [method, java/lang/String/equalsIgnoreCase, (Ljava/lang/String;)Z]
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageSendEventListener.java
@@ -33892,26 +34083,68 @@ Warning: de\labymod\lennart\listener\TablistHeaderListener.java has CRLF line en
 [method, java/lang/String/split, (Ljava/lang/String;)[Ljava/lang/String;]
 [method, java/lang/String/substring, (II)Ljava/lang/String;]
 [method, java/lang/CharSequence/length, ()I]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setLatestserver, (Ljava/lang/String;)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setPixelspace, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setPixelspace, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setArena, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setArena, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setSplun, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setSplun, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setCastles, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setCastles, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setSuspicious, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setSuspicious, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setBrainbow, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setBrainbow, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setIntime, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setIntime, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setTspiele, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setTspiele, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setDna, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setDna, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setMineception, (Z)V]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setMineception, (Z)V]
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\TablistHeaderListener.java
 
@@ -33919,13 +34152,17 @@ Start Processing: de\labymod\lennart\listener\TablistHeaderMapListener.java
 Warning: de\labymod\lennart\listener\TablistHeaderMapListener.java has CRLF line endings; consider switching to LF
 [method, net/labymod/api/events/TabListEvent/onUpdate, (Lnet/labymod/api/events/TabListEvent$Type;Ljava/lang/String;Ljava/lang/String;)V]
 [method, de/labymod/lennart/listener/TablistHeaderMapListener/containsTimoliaServer, (Ljava/lang/String;)Z]
-Rename class net/minecraft/client/Minecraft[379,388]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[389,401]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[404,413]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[418,433]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[387,396]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[397,409]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[412,421]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[426,441]::sendChatMessage->func_71165_d
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/setMapAnswer, (Z)V]
 [method, de/labymod/lennart/listener/TablistHeaderMapListener/containsTimoliaServer, (Ljava/lang/String;Ljava/lang/String;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, de/labymod/lennart/listener/TablistHeaderMapListener/containsTimoliaServer, (Ljava/lang/String;)Z]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getAddonConfig, ()Lde/labymod/lennart/config/AddonConfig;]
 [method, de/labymod/lennart/config/AddonConfig/getServers, ()Ljava/util/List;]
 [method, de/labymod/lennart/listener/TablistHeaderMapListener/containsTimoliaServer, (Ljava/lang/String;Ljava/lang/String;)Z]
 Import: net.minecraft.client.Minecraft
@@ -33935,11 +34172,13 @@ End  Processing: de\labymod\lennart\listener\TablistHeaderMapListener.java
 Start Processing: de\labymod\lennart\modules\Enemy.java
 Warning: de\labymod\lennart\modules\Enemy.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[862,878]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[886,902]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -33953,6 +34192,8 @@ End  Processing: de\labymod\lennart\modules\Enemy.java
 Start Processing: de\labymod\lennart\modules\EnemyStats.java
 Warning: de\labymod\lennart\modules\EnemyStats.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleTextModule/getValues, ()[Ljava/lang/String;]
 [method, de/labymod/lennart/stats/EnemyStats1vs1/getEnemyStatsValues, ()[Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleTextModule/getDefaultValues, ()[Ljava/lang/String;]
@@ -33960,7 +34201,7 @@ Warning: de\labymod\lennart\modules\EnemyStats.java has CRLF line endings; consi
 [method, de/labymod/lennart/stats/EnemyStats1vs1/getEnemyStatsName, ()[Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/TextModule/getDefaultKeys, ()[Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[1922,1938]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[1909,1925]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -33974,11 +34215,13 @@ End  Processing: de\labymod\lennart\modules\EnemyStats.java
 Start Processing: de\labymod\lennart\modules\Kit.java
 Warning: de\labymod\lennart\modules\Kit.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[855,871]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[879,895]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -33992,11 +34235,13 @@ End  Processing: de\labymod\lennart\modules\Kit.java
 Start Processing: de\labymod\lennart\modules\Map.java
 Warning: de\labymod\lennart\modules\Map.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[858,874]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[882,898]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -34010,12 +34255,16 @@ End  Processing: de\labymod\lennart\modules\Map.java
 Start Processing: de\labymod\lennart\modules\PxlSpace.java
 Warning: de\labymod\lennart\modules\PxlSpace.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
 [method, java/lang/String/valueOf, (I)Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getPlacedBlocks, ()I]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[825,841]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[866,882]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -34029,11 +34278,15 @@ End  Processing: de\labymod\lennart\modules\PxlSpace.java
 Start Processing: de\labymod\lennart\modules\Server.java
 Warning: de\labymod\lennart\modules\Server.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getLatestserver, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[793,809]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[834,850]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]
@@ -34047,12 +34300,16 @@ End  Processing: de\labymod\lennart\modules\Server.java
 Start Processing: de\labymod\lennart\modules\Winstreak.java
 Warning: de\labymod\lennart\modules\Winstreak.java has CRLF line endings; consider switching to LF
 [method, net/labymod/ingamegui/Module/getCategory, ()Lnet/labymod/ingamegui/ModuleCategory;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getTimolia, ()Lnet/labymod/ingamegui/ModuleCategory;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDisplayValue, ()Ljava/lang/String;]
 [method, java/lang/String/valueOf, (I)Ljava/lang/String;]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/getKillstreak, ()I]
 [method, net/labymod/ingamegui/moduletypes/SimpleModule/getDefaultValue, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getIconData, ()Lnet/labymod/settings/elements/ControlElement$IconData;]
-Rename class net/minecraft/util/ResourceLocation[812,828]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[853,869]::ResourceLocation->ResourceLocation
 [method, net/labymod/ingamegui/Module/loadSettings, ()V]
 [method, net/labymod/ingamegui/Module/getSettingName, ()Ljava/lang/String;]
 [method, net/labymod/ingamegui/Module/getControlName, ()Ljava/lang/String;]

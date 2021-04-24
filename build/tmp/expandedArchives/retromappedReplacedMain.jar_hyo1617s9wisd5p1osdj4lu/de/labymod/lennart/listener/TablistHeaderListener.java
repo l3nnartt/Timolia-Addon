@@ -1,6 +1,6 @@
 package de.labymod.lennart.listener;
 
-import de.labymod.lennart.addon;
+import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.TabListEvent;
 
 public class TablistHeaderListener implements TabListEvent {
@@ -12,67 +12,67 @@ public class TablistHeaderListener implements TabListEvent {
             String[] servername = s.split("§6");
             String serveroutput = servername[servername.length-1];
             serveroutput = serveroutput.substring(0,serveroutput.length()-4);
-            addon.INSTANCE.latestserver = serveroutput;
+            TimoliaAddon.getINSTANCE().setLatestserver(serveroutput);
         }
 
         if (s.contains("pxlspace")) {
-            addon.INSTANCE.pixelspace = true;
+            TimoliaAddon.getINSTANCE().setPixelspace(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.pixelspace = false;
+            TimoliaAddon.getINSTANCE().setPixelspace(false);
         }
 
         if (s.contains("4rena")) {
-            addon.INSTANCE.arena = true;
+            TimoliaAddon.getINSTANCE().setArena(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.arena = false;
+            TimoliaAddon.getINSTANCE().setArena(false);
         }
 
         if (s.contains("splun")) {
-            addon.INSTANCE.splun = true;
+            TimoliaAddon.getINSTANCE().setSplun(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.splun = false;
+            TimoliaAddon.getINSTANCE().setSplun(false);
         }
 
         if (s.contains("castles")) {
-            addon.INSTANCE.castles = true;
+            TimoliaAddon.getINSTANCE().setCastles(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.castles = false;
+            TimoliaAddon.getINSTANCE().setCastles(false);
         }
 
         if (s.contains("suspicious")) {
-            addon.INSTANCE.suspicious = true;
+            TimoliaAddon.getINSTANCE().setSuspicious(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.suspicious = false;
+            TimoliaAddon.getINSTANCE().setSuspicious(false);
         }
 
         if (s.contains("brainbow")) {
-            addon.INSTANCE.brainbow = true;
+            TimoliaAddon.getINSTANCE().setBrainbow(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.brainbow = false;
+            TimoliaAddon.getINSTANCE().setBrainbow(false);
         }
 
         if (s.contains("intime")) {
-            addon.INSTANCE.intime = true;
+            TimoliaAddon.getINSTANCE().setIntime(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.intime = false;
+            TimoliaAddon.getINSTANCE().setIntime(false);
         }
 
         if (s.contains("tspiele")) {
-            addon.INSTANCE.tspiele = true;
+            TimoliaAddon.getINSTANCE().setTspiele(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.tspiele = false;
+            TimoliaAddon.getINSTANCE().setTspiele(false);
         }
 
         if (s.contains("dna")) {
-            addon.INSTANCE.dna = true;
+            TimoliaAddon.getINSTANCE().setDna(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.dna = false;
+            TimoliaAddon.getINSTANCE().setDna(false);
         }
 
         if (s.contains("mineception")) {
-            addon.INSTANCE.mineception = true;
+            TimoliaAddon.getINSTANCE().setMineception(true);
         } else if (s.contains("games")) {
-            addon.INSTANCE.mineception = false;
+            TimoliaAddon.getINSTANCE().setMineception(false);
         }
 
     }

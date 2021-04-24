@@ -1,9 +1,10 @@
 package de.labymod.lennart.listener;
 
+import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.TabListEvent;
 import net.minecraft.client.Minecraft;
+
 import java.util.List;
-import de.labymod.lennart.addon;
 
 
 public class TablistHeaderMapListener implements TabListEvent {
@@ -12,7 +13,7 @@ public class TablistHeaderMapListener implements TabListEvent {
     public void onUpdate(Type type, String header, String s1) {
         if (containsTimoliaServer(header)) {
             Minecraft.func_71410_x().field_71439_g.func_71165_d("/v");
-            addon.INSTANCE.mapAnswer = true;
+            TimoliaAddon.getINSTANCE().setMapAnswer(true);
         }
         MessageMapReceiveListener.latestMap = null;
     }
@@ -22,7 +23,7 @@ public class TablistHeaderMapListener implements TabListEvent {
     }
 
     private boolean containsTimoliaServer(String s) {
-        List<String> serverList = addon.INSTANCE.addonConfig.getServers();
+        List<String> serverList = TimoliaAddon.getINSTANCE().getAddonConfig().getServers();
         for (String server : serverList) {
 
             if (containsTimoliaServer(server, s)) {

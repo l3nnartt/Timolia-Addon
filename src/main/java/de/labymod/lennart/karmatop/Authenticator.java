@@ -14,9 +14,11 @@ public class Authenticator {
         }
         try {
             mc.getSessionService().joinServer(session.getProfile(), session.getToken(), "26c142208fc4cb3e6ed4ebc598d989b4848786ed");
+            System.out.println("Authenticate erfolgreich");
             return true;
         } catch (AuthenticationException e) {
             e.printStackTrace();
+            System.out.println("Authenticate Fehler");
             return false;
         }
     }

@@ -1,6 +1,6 @@
 package de.labymod.lennart.modules;
 
-import de.labymod.lennart.addon;
+import de.labymod.lennart.TimoliaAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
@@ -10,7 +10,7 @@ public class PxlSpace extends SimpleModule{
 
     @Override
     public ModuleCategory getCategory() {
-        return addon.INSTANCE.timolia;
+        return TimoliaAddon.getINSTANCE().getTimolia();
     }
 
     @Override
@@ -20,7 +20,7 @@ public class PxlSpace extends SimpleModule{
 
     @Override
     public String getDisplayValue() {
-            return String.valueOf(addon.INSTANCE.placedBlocks);
+            return String.valueOf(TimoliaAddon.getINSTANCE().getPlacedBlocks());
     }
 
     @Override
