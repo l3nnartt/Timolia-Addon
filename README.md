@@ -1,7 +1,7 @@
 # Labymod Timolia Addon 1.8 (InOffical)
 
 ## Download
-Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.7.1.jar) </br>
+Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.7.4.jar) </br>
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
 ## Einrichtung
@@ -21,6 +21,7 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 ### Sonstiges
 - GUI-Module "Map"
 - GUI-Module "Server"
+- Automatischer Karma Updater [(karmatop.de)](https://karmatop.de/)
 
 ### Custom-AutoGG
 - Castles
