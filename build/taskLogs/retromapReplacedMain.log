@@ -34003,14 +34003,12 @@ Warning: de\labymod\lennart\karmatop\KarmaUpdater.java has CRLF line endings; co
 [method, net/labymod/utils/ServerData/getIp, ()Ljava/lang/String;]
 [method, java/lang/String/toLowerCase, ()Ljava/lang/String;]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
-[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
-Rename class net/minecraft/client/Minecraft[574,583]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[584,596]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[599,608]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[613,628]::sendChatMessage->func_71165_d
 [method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
 [method, de/labymod/lennart/TimoliaAddon/setKarmaAnswer, (Z)V]
-[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+Rename class net/minecraft/client/Minecraft[576,585]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[586,598]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[601,610]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[615,630]::sendChatMessage->func_71165_d
 [method, java/util/function/Consumer/andThen, (Ljava/util/function/Consumer;)Ljava/util/function/Consumer;]
 Import: net.minecraft.client.Minecraft
 Adding 0 imports

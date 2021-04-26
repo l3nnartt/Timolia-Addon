@@ -12,10 +12,8 @@ public class KarmaUpdater implements Consumer<ServerData>, net.labymod.utils.Con
     public void accept(ServerData serverData) {
         if (TimoliaAddon.getINSTANCE().isEnabledKarmaUpdater()) {
             if(serverData.getIp().toLowerCase().contains("timolia.de")) {
-                System.out.println("Karma abfrage gestartet");
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("/karma");
                 TimoliaAddon.getINSTANCE().setKarmaAnswer(true);
-                System.out.println("Karma abgefragt");
+                Minecraft.getMinecraft().thePlayer.sendChatMessage("/karma");
             }
         }
     }

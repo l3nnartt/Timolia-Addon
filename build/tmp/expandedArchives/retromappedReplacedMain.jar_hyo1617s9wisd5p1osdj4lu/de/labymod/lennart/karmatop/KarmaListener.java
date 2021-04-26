@@ -39,9 +39,10 @@ public class KarmaListener implements MessageReceiveEvent {
                 });
 
             }
-
-            return true;
-
+            if (TimoliaAddon.getINSTANCE().isKarmaAnswer()) {
+                TimoliaAddon.getINSTANCE().setKarmaAnswer(false);
+                return true;
+            }
         } return false;
 
     }

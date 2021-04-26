@@ -1470,30 +1470,24 @@ Class Start: de.labymod.lennart.karmatop.KarmaUpdater
       @|de\labymod\lennart\karmatop\KarmaUpdater.java|447|452|getIp|method|net.labymod.utils.ServerData|getIp|()Ljava/lang/String;
       @|de\labymod\lennart\karmatop\KarmaUpdater.java|455|466|toLowerCase|method|java.lang.String|toLowerCase|()Ljava/lang/String;
       @|de\labymod\lennart\karmatop\KarmaUpdater.java|469|477|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|511|517|System|class|java.lang.System
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|518|521|out|field|java.lang.System|out
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|522|529|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|574|583|Minecraft|class|net.minecraft.client.Minecraft
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|584|596|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|599|608|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|609|624|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|652|664|TimoliaAddon|class|de.labymod.lennart.TimoliaAddon
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|665|676|getINSTANCE|method|de.labymod.lennart.TimoliaAddon|getINSTANCE|()Lde/labymod/lennart/TimoliaAddon;
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|679|693|setKarmaAnswer|method|de.labymod.lennart.TimoliaAddon|setKarmaAnswer|(Z)V
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|717|723|System|class|java.lang.System
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|724|727|out|field|java.lang.System|out
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|728|735|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|511|523|TimoliaAddon|class|de.labymod.lennart.TimoliaAddon
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|524|535|getINSTANCE|method|de.labymod.lennart.TimoliaAddon|getINSTANCE|()Lde/labymod/lennart/TimoliaAddon;
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|538|552|setKarmaAnswer|method|de.labymod.lennart.TimoliaAddon|setKarmaAnswer|(Z)V
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|576|585|Minecraft|class|net.minecraft.client.Minecraft
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|586|598|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|601|610|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|611|626|sendChatMessage|method|net.minecraft.client.entity.EntityPlayerSP|sendChatMessage|(Ljava/lang/String;)V
    Method End: accept(Lnet/labymod/utils/ServerData;)V
    Method Start: andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|833|840|andThen|method|java.util.function.Consumer|andThen|(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|821|831|ServerData|class|net.labymod.utils.ServerData
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|812|820|Consumer|class|java.util.function.Consumer
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|858|868|ServerData|class|net.labymod.utils.ServerData
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|841|849|Consumer|class|java.util.function.Consumer
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|870|875|after|param|de.labymod.lennart.karmatop.KarmaUpdater|andThen|(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;|after|0
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|894|902|Consumer|class|java.util.function.Consumer
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|715|722|andThen|method|java.util.function.Consumer|andThen|(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|703|713|ServerData|class|net.labymod.utils.ServerData
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|694|702|Consumer|class|java.util.function.Consumer
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|740|750|ServerData|class|net.labymod.utils.ServerData
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|723|731|Consumer|class|java.util.function.Consumer
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|752|757|after|param|de.labymod.lennart.karmatop.KarmaUpdater|andThen|(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;|after|0
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|776|784|Consumer|class|java.util.function.Consumer
       ERROR SimpleName: andThen null
-      @|de\labymod\lennart\karmatop\KarmaUpdater.java|917|922|after|param|de.labymod.lennart.karmatop.KarmaUpdater|andThen|(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;|after|0
+      @|de\labymod\lennart\karmatop\KarmaUpdater.java|799|804|after|param|de.labymod.lennart.karmatop.KarmaUpdater|andThen|(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;|after|0
    Method End: andThen(Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
 Class End  : de.labymod.lennart.karmatop.KarmaUpdater
 endProcessing de\labymod\lennart\karmatop\KarmaUpdater.java

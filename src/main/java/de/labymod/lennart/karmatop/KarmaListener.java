@@ -29,7 +29,7 @@ public class KarmaListener implements MessageReceiveEvent {
                         con.connect();
                         int code = con.getResponseCode();
                         if (code == 200) {
-                            System.out.println("TimoliaAddon » Karma gesendet");
+                            System.out.println("Timolia Addon » Karma gesendet");
                         } else {
                             System.out.println(code);
                         }
@@ -39,9 +39,10 @@ public class KarmaListener implements MessageReceiveEvent {
                 });
 
             }
-
-            return true;
-
+            if (TimoliaAddon.getINSTANCE().isKarmaAnswer()) {
+                TimoliaAddon.getINSTANCE().setKarmaAnswer(false);
+                return true;
+            }
         } return false;
 
     }
