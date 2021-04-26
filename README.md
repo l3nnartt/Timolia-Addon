@@ -25,8 +25,6 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - 4rena (Nach jeder Runde, nach dem gesamten Match)
 - Castles
 - Mineception
-- JumpWorld
-- 1vs1 (Lose/Win)
 - Suspicious
 - Splun
 - Brainbow
