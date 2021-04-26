@@ -1,7 +1,7 @@
 # Labymod Timolia Addon 1.8 (InOffical)
 
 ## Download
-Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.7.4.jar) </br>
+Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.7.5.jar) </br>
 https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
 
 ## Einrichtung
@@ -24,9 +24,10 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - Automatischer Karma Updater [(karmatop.de)](https://karmatop.de/)
 
 ### Custom-AutoGG
+- 1vs1 (Verloren, Gewonnen)
+- 4rena (Nach jeder Runde, nach dem gesamten Match)
 - Castles
 - Mineception
-- 4rena (Jede Runde, Ende des Matches)
 - JumpWorld
 - 1vs1 (Lose/Win)
 - Suspicious
