@@ -1,8 +1,8 @@
 # Labymod Timolia Addon 1.8 (InOffical)
 
 ## Download
-Aus diesem Ordner die neuste Version herunterladen (Timolia-Addon-1.7.5.jar) </br>
-https://github.com/l3nnartt/timolia-addon/tree/main/build/libs
+Die neuste Version herunterladen (Timolia-Addon-1.7.5.jar) </br>
+https://github.com/l3nnartt/timolia-addon-1.8/releases/tag/1.7.5
 
 ## Einrichtung
 
