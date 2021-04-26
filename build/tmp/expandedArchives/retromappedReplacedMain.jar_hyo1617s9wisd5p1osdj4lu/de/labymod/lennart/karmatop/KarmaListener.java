@@ -13,7 +13,7 @@ public class KarmaListener implements MessageReceiveEvent {
     
     @Override
     public boolean onReceive(String s, String strippedMessage) {
-        if (strippedMessage.contains("Erfolgspunkte:") && strippedMessage.contains("│")) {
+        if (strippedMessage.contains("Erfolgspunkte") && strippedMessage.contains("│")) {
             String karmapunkte = s.split("§6")[1].split("§r")[0];
             karma = karmapunkte;
             System.out.println(karma);
@@ -40,10 +40,7 @@ public class KarmaListener implements MessageReceiveEvent {
 
             }
 
-            if (TimoliaAddon.getINSTANCE().isKarmaAnswer()) {
-                TimoliaAddon.getINSTANCE().setKarmaAnswer(false);
-                return false;
-            }
+            return true;
 
         } return false;
 

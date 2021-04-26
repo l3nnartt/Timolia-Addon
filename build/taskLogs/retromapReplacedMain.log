@@ -33402,7 +33402,7 @@ Start Processing: de\labymod\lennart\TimoliaAddon.java
 Warning: de\labymod\lennart\TimoliaAddon.java has CRLF line endings; consider switching to LF
 [method, java/util/concurrent/Executors/newCachedThreadPool, ()Ljava/util/concurrent/ExecutorService;]
 [method, net/labymod/api/LabyModAddon/onEnable, ()V]
-Rename class net/minecraft/util/ResourceLocation[2787,2803]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[2848,2864]::ResourceLocation->ResourceLocation
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
 [method, net/labymod/ingamegui/ModuleCategoryRegistry/loadCategory, (Lnet/labymod/ingamegui/ModuleCategory;)V]
 [method, com/google/gson/GsonBuilder/setPrettyPrinting, ()Lcom/google/gson/GsonBuilder;]
@@ -33490,6 +33490,11 @@ Rename class net/minecraft/util/ResourceLocation[2787,2803]::ResourceLocation->R
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
 [method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
 [method, com/google/gson/JsonElement/getAsInt, ()I]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
+[method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
+[method, com/google/gson/JsonObject/get, (Ljava/lang/String;)Lcom/google/gson/JsonElement;]
+[method, com/google/gson/JsonElement/getAsBoolean, ()Z]
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
 [method, com/google/gson/JsonObject/has, (Ljava/lang/String;)Z]
 [method, net/labymod/api/LabyModAddon/getConfig, ()Lcom/google/gson/JsonObject;]
@@ -33610,6 +33615,8 @@ Rename class net/minecraft/util/ResourceLocation[2787,2803]::ResourceLocation->R
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, de/labymod/lennart/TimoliaAddon/configurSettings, (Ljava/util/List;[Lde/labymod/lennart/ConfigItem;)V]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
+[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, de/labymod/lennart/TimoliaAddon/configurSettings, (Ljava/util/List;[Lde/labymod/lennart/ConfigItem;)V]
 [method, java/util/Collection/add, (Ljava/lang/Object;)Z]
 [method, de/labymod/lennart/ConfigItem/getGamemode, ()Ljava/lang/String;]
@@ -33640,8 +33647,8 @@ Rename class net/minecraft/util/ResourceLocation[2787,2803]::ResourceLocation->R
 [method, de/labymod/lennart/TimoliaAddon/setGson, (Lcom/google/gson/Gson;)V]
 [method, de/labymod/lennart/TimoliaAddon/getAddonConfig, ()Lde/labymod/lennart/config/AddonConfig;]
 [method, de/labymod/lennart/TimoliaAddon/setAddonConfig, (Lde/labymod/lennart/config/AddonConfig;)V]
-[method, de/labymod/lennart/TimoliaAddon/isMapAnswer, ()Z]
-[method, de/labymod/lennart/TimoliaAddon/setMapAnswer, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/isListenForMap, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setListenForMap, (Z)V]
 [method, de/labymod/lennart/TimoliaAddon/getLatestserver, ()Ljava/lang/String;]
 [method, de/labymod/lennart/TimoliaAddon/setLatestserver, (Ljava/lang/String;)V]
 [method, de/labymod/lennart/TimoliaAddon/isKarmaAnswer, ()Z]
@@ -33710,6 +33717,8 @@ Rename class net/minecraft/util/ResourceLocation[2787,2803]::ResourceLocation->R
 [method, de/labymod/lennart/TimoliaAddon/setGameBrainbow, (Ljava/lang/String;)V]
 [method, de/labymod/lennart/TimoliaAddon/getGameTSpiele, ()Ljava/lang/String;]
 [method, de/labymod/lennart/TimoliaAddon/setGameTSpiele, (Ljava/lang/String;)V]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledKarmaUpdater, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/setEnabledKarmaUpdater, (Z)V]
 [method, de/labymod/lennart/TimoliaAddon/getExService, ()Ljava/util/concurrent/ExecutorService;]
 [method, de/labymod/lennart/TimoliaAddon/getAuthenticator, ()Lde/labymod/lennart/karmatop/Authenticator;]
 Import: net.minecraft.util.ResourceLocation
@@ -33989,14 +33998,16 @@ End  Processing: de\labymod\lennart\karmatop\KarmaListener.java
 Start Processing: de\labymod\lennart\karmatop\KarmaUpdater.java
 Warning: de\labymod\lennart\karmatop\KarmaUpdater.java has CRLF line endings; consider switching to LF
 [method, java/util/function/Consumer/accept, (Ljava/lang/Object;)V]
+[method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
+[method, de/labymod/lennart/TimoliaAddon/isEnabledKarmaUpdater, ()Z]
 [method, net/labymod/utils/ServerData/getIp, ()Ljava/lang/String;]
 [method, java/lang/String/toLowerCase, ()Ljava/lang/String;]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
-Rename class net/minecraft/client/Minecraft[496,505]::Minecraft->Minecraft
-Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[506,518]::getMinecraft->func_71410_x
-Rename field net/minecraft/client/Minecraft/thePlayer[521,530]::thePlayer->field_71439_g
-Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[535,550]::sendChatMessage->func_71165_d
+Rename class net/minecraft/client/Minecraft[574,583]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[584,596]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[599,608]::thePlayer->field_71439_g
+Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[613,628]::sendChatMessage->func_71165_d
 [method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
 [method, de/labymod/lennart/TimoliaAddon/setKarmaAnswer, (Z)V]
 [method, java/io/PrintStream/println, (Ljava/lang/String;)V]
@@ -34047,9 +34058,9 @@ Warning: de\labymod\lennart\listener\MessageMapReceiveListener.java has CRLF lin
 [method, java/lang/String/substring, (II)Ljava/lang/String;]
 [method, java/lang/CharSequence/length, ()I]
 [method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
-[method, de/labymod/lennart/TimoliaAddon/isMapAnswer, ()Z]
+[method, de/labymod/lennart/TimoliaAddon/isListenForMap, ()Z]
 [method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
-[method, de/labymod/lennart/TimoliaAddon/setMapAnswer, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/setListenForMap, (Z)V]
 Adding 0 imports
 End  Processing: de\labymod\lennart\listener\MessageMapReceiveListener.java
 
@@ -34157,7 +34168,7 @@ Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/clien
 Rename field net/minecraft/client/Minecraft/thePlayer[412,421]::thePlayer->field_71439_g
 Rename method net/minecraft/client/entity/EntityPlayerSP/sendChatMessage (Ljava/lang/String;)V[426,441]::sendChatMessage->func_71165_d
 [method, de/labymod/lennart/TimoliaAddon/getINSTANCE, ()Lde/labymod/lennart/TimoliaAddon;]
-[method, de/labymod/lennart/TimoliaAddon/setMapAnswer, (Z)V]
+[method, de/labymod/lennart/TimoliaAddon/setListenForMap, (Z)V]
 [method, de/labymod/lennart/listener/TablistHeaderMapListener/containsTimoliaServer, (Ljava/lang/String;Ljava/lang/String;)Z]
 [method, java/lang/String/contains, (Ljava/lang/CharSequence;)Z]
 [method, de/labymod/lennart/listener/TablistHeaderMapListener/containsTimoliaServer, (Ljava/lang/String;)Z]

@@ -48,9 +48,7 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
 
         if (strippedMessage.contains("░▒▓Stats von")) {
             latestStats.clear();
-        }
-
-        else if (strippedMessage.contains("╚═════")) {
+        } else if (strippedMessage.contains("╚═════")) {
             listenForStats = false;
             stats = new EnemyStats1vs1(latestStats);
             return true;

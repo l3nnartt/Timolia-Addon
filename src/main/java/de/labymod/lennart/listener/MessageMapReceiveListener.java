@@ -15,11 +15,11 @@ public class MessageMapReceiveListener implements MessageReceiveEvent {
             mapoutput = mapoutput.substring(0,mapoutput.length()-5);
             latestMap = mapoutput;
 
-            if (TimoliaAddon.getINSTANCE().isMapAnswer()) {
-                TimoliaAddon.getINSTANCE().setMapAnswer(false);
-                return false;
+            if (TimoliaAddon.getINSTANCE().isListenForMap()) {
+                TimoliaAddon.getINSTANCE().setListenForMap(false);
+                return true;
             }
-        }
-        return false;
+
+        } return false;
     }
 }

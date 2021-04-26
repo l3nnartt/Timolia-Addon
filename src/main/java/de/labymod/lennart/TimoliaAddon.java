@@ -32,7 +32,7 @@ public class TimoliaAddon extends LabyModAddon {
     private ModuleCategory timolia;
     private Gson gson;
     private AddonConfig addonConfig;
-    private boolean mapAnswer = false;
+    private boolean listenForMap = false;
     private String latestserver = null;
 
     private boolean karmaAnswer = false;
@@ -48,6 +48,9 @@ public class TimoliaAddon extends LabyModAddon {
     private boolean tspiele = false;
     private boolean intime = false;
     private boolean dna = false;
+
+    //Sonstiges
+    private boolean enabledKarmaUpdater;
 
     //AutoGGEnabled Check
     private boolean enabledAutoGG1vs1;
@@ -124,6 +127,7 @@ public class TimoliaAddon extends LabyModAddon {
     public void loadConfig() {
         this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
         this.killstreak = getConfig().has("killstreak") ? getConfig().get("killstreak").getAsInt() : 0;
+        this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
 
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
@@ -181,6 +185,9 @@ public class TimoliaAddon extends LabyModAddon {
                 new ConfigItem("Brainbow", this.gameBrainbow, this.enabledAutoGGBrainbow, new ControlElement.IconData(Material.BOW)),
                 new ConfigItem("TSpiele", this.gameTSpiele, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
         );
+
+        subSettings.add(new HeaderElement("Sonstiges"));
+        subSettings.add(new BooleanElement("Auto KarmaUpdater", this, new ControlElement.IconData(Material.LEVER), "enabledKarmaUpdater", this.enabledKarmaUpdater));
     }
 
     private void configurSettings(List<SettingsElement> subSettings, ConfigItem... gamemodes) {
@@ -255,12 +262,12 @@ public class TimoliaAddon extends LabyModAddon {
         this.addonConfig = addonConfig;
     }
 
-    public boolean isMapAnswer() {
-        return mapAnswer;
+    public boolean isListenForMap() {
+        return listenForMap;
     }
 
-    public void setMapAnswer(boolean mapAnswer) {
-        this.mapAnswer = mapAnswer;
+    public void setListenForMap(boolean listenForMap) {
+        this.listenForMap = listenForMap;
     }
 
     public String getLatestserver() {
@@ -533,6 +540,14 @@ public class TimoliaAddon extends LabyModAddon {
 
     public void setGameTSpiele(String gameTSpiele) {
         this.gameTSpiele = gameTSpiele;
+    }
+
+    public boolean isEnabledKarmaUpdater() {
+        return enabledKarmaUpdater;
+    }
+
+    public void setEnabledKarmaUpdater(boolean enabledKarmaUpdater) {
+        this.enabledKarmaUpdater = enabledKarmaUpdater;
     }
 
     public ExecutorService getExService() {
