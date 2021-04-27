@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.autogglistener.*;
 import de.labymod.lennart.config.AddonConfig;
+import de.labymod.lennart.group.CustomGroup;
+import de.labymod.lennart.group.GroupManager;
 import de.labymod.lennart.karmatop.Authenticator;
 import de.labymod.lennart.karmatop.KarmaListener;
 import de.labymod.lennart.karmatop.KarmaUpdater;
@@ -14,9 +16,13 @@ import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.ModuleCategoryRegistry;
 import net.labymod.settings.elements.*;
+import net.labymod.user.group.LabyGroup;
 import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
+
+import java.awt.*;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -32,6 +38,9 @@ public class TimoliaAddon extends LabyModAddon {
     private String latestserver = null;
     private boolean listenForMap = false;
     private boolean karmaAnswer = false;
+
+    //Group
+    private LabyGroup group;
 
     //Header Check
     private boolean pixelspace = false;
@@ -87,6 +96,9 @@ public class TimoliaAddon extends LabyModAddon {
 
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
+
+        //Group
+        new GroupManager();
 
         this.getApi().getEventManager().register(new TablistHeaderMapListener());
         this.getApi().getEventManager().register(new TablistHeaderListener());
@@ -202,6 +214,16 @@ public class TimoliaAddon extends LabyModAddon {
         getConfig().addProperty("placedBlocks", placedBlocks);
         this.saveConfig();
         this.loadConfig();
+    }
+
+    public LabyGroup getCustomGroup(int id, String name, char colorChar, Color color) {
+        return (LabyGroup)new CustomGroup(id, name, colorChar, color);
+    }
+
+    public void setGroup(UUID uuid) {
+        if (this.group == null)
+            this.group = getCustomGroup(169, "TimoliaTeam", 'c', new Color(0));
+        this.api.getUserManager().getUser(uuid).setGroup(this.group);
     }
 
     public int getPlacedBlocks() {
