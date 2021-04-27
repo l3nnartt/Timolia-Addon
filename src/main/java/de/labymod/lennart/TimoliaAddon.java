@@ -16,26 +16,21 @@ import net.labymod.ingamegui.ModuleCategoryRegistry;
 import net.labymod.settings.elements.*;
 import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
-
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class TimoliaAddon extends LabyModAddon {
-
-    private final ExecutorService exService = Executors.newCachedThreadPool();
-
+    private final ExecutorService exService = Executors.newSingleThreadExecutor();
     private int placedBlocks;
     private int killstreak;
-
     private String[] servers;
     private static TimoliaAddon INSTANCE;
     private ModuleCategory timolia;
     private Gson gson;
     private AddonConfig addonConfig;
-    private boolean listenForMap = false;
     private String latestserver = null;
-
+    private boolean listenForMap = false;
     private boolean karmaAnswer = false;
 
     //Header Check
@@ -79,8 +74,8 @@ public class TimoliaAddon extends LabyModAddon {
     private String gameBrainbow;
     private String gameTSpiele;
 
+    //Authenticator
     private Authenticator authenticator;
-
 
     @Override
     public void onEnable() {
@@ -560,4 +555,5 @@ public class TimoliaAddon extends LabyModAddon {
     public Authenticator getAuthenticator() {
         return authenticator;
     }
+
 }

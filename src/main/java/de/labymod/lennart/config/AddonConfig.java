@@ -10,9 +10,7 @@ import java.util.List;
 
 public class AddonConfig {
 
-
     private final List<String> servers = new ArrayList<>();
-
     private AddonConfig(){};
 
     public static AddonConfig read() {
@@ -23,10 +21,8 @@ public class AddonConfig {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return TimoliaAddon.getINSTANCE().getGson().fromJson(content, AddonConfig.class);
     }
-
     public List<String> getServers() {
         return servers;
     }
