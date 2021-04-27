@@ -7,7 +7,6 @@ public class TablistHeaderListener implements TabListEvent {
 
     @Override
     public void onUpdate(Type type, String s, String s1) {
-
         if (s.contains("Du spielst auf")) {
             String[] servername = s.split("§6");
             String serveroutput = servername[servername.length-1];
@@ -74,6 +73,5 @@ public class TablistHeaderListener implements TabListEvent {
         } else if (s.contains("games")) {
             TimoliaAddon.getINSTANCE().setMineception(false);
         }
-
     }
 }

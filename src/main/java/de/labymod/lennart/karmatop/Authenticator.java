@@ -5,7 +5,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.Session;
 
 public class Authenticator {
-
     public boolean authenticate() {
         Minecraft mc = Minecraft.getMinecraft();
         Session session = mc.getSession();
@@ -20,5 +19,4 @@ public class Authenticator {
             return false;
         }
     }
-
 }

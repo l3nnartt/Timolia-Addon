@@ -3,12 +3,9 @@ package de.labymod.lennart.listener;
 import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.TabListEvent;
 import net.minecraft.client.Minecraft;
-
 import java.util.List;
 
-
 public class TablistHeaderMapListener implements TabListEvent {
-
     @Override
     public void onUpdate(Type type, String header, String s1) {
         if (containsTimoliaServer(header)) {
@@ -32,5 +29,4 @@ public class TablistHeaderMapListener implements TabListEvent {
         }
         return false;
     }
-
 }
