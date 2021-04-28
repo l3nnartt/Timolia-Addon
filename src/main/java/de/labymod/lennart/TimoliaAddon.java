@@ -41,6 +41,7 @@ public class TimoliaAddon extends LabyModAddon {
     private boolean listenForMap = false;
     private boolean karmaAnswer = false;
     private boolean enabledTeamBadge = false;
+    private boolean enabledPxlSpaceStats = false;
 
     //Group
     private LabyGroup group;
@@ -105,10 +106,7 @@ public class TimoliaAddon extends LabyModAddon {
         new GroupManager();
         api.getEventManager().register(new GroupOnRender());
 
-        api.getEventManager().register(new TablistHeaderMapListener());
-        api.getEventManager().register(new TablistHeaderListener());
-        api.getEventManager().register(new MessageSendEventListener());
-
+        //AutoGG
         api.getEventManager().register(new MessageReceive1vs1Listener());
         api.getEventManager().register(new MessageReceive4renaListener());
         api.getEventManager().register(new MessageReceiveSplunListener());
@@ -121,12 +119,19 @@ public class TimoliaAddon extends LabyModAddon {
         api.getEventManager().register(new MessageReceiveDNAListener());
         api.getEventManager().register(new MessageReceiveSuspiciousListener());
 
+        //Automatic Karma Updater
         api.getEventManager().register(new KarmaListener());
         api.getEventManager().registerOnJoin(new KarmaUpdater());
 
+        //Other
         api.getEventManager().register(new MessageMapReceiveListener());
         api.getEventManager().register(new MessageEnemyReceiveListener());
         api.getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
+        api.getEventManager().register(new TablistHeaderMapListener());
+        api.getEventManager().register(new TablistHeaderListener());
+        api.getEventManager().register(new MessageSendEventListener());
+
+        //Modules
         api.registerModule(new Map());
         api.registerModule(new Winstreak());
         api.registerModule(new Enemy());
@@ -142,6 +147,7 @@ public class TimoliaAddon extends LabyModAddon {
         this.killstreak = getConfig().has("killstreak") ? getConfig().get("killstreak").getAsInt() : 0;
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
         this.enabledTeamBadge = !getConfig().has("enabledTeamBadge") || getConfig().get("enabledTeamBadge").getAsBoolean();
+        this.enabledPxlSpaceStats = !getConfig().has("enabledPxlSpaceStats") || getConfig().get("enabledPxlSpaceStats").getAsBoolean();
 
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
@@ -179,6 +185,11 @@ public class TimoliaAddon extends LabyModAddon {
     @Override
     protected void fillSettings( List<SettingsElement> subSettings ) {
 
+        subSettings.add(new HeaderElement("Allgemein"));
+        subSettings.add(new BooleanElement("Auto KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
+        subSettings.add(new BooleanElement("Team Badges(Restart required)", this, new ControlElement.IconData(Material.RECORD_4), "enabledTeamBadge", this.enabledTeamBadge));
+        subSettings.add(new BooleanElement("PxlSpace Stats", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
+
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
         subSettings.add(new StringElement("1vs1-WinGG", this, new ControlElement.IconData(Material.NAME_TAG), "win1vs1", this.win1vs1));
@@ -200,10 +211,6 @@ public class TimoliaAddon extends LabyModAddon {
                 new ConfigItem("TSpiele", this.gameTSpiele, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
         );
 
-        subSettings.add(new HeaderElement("Sonstiges"));
-        subSettings.add(new BooleanElement("Auto KarmaUpdater", this, new ControlElement.IconData(Material.LEVER), "enabledKarmaUpdater", this.enabledKarmaUpdater));
-        subSettings.add(new BooleanElement("Team Badges(Restart required)", this, new ControlElement.IconData(Material.LEVER), "enabledTeamBadge", this.enabledTeamBadge));
-
         subSettings.add(new WebsiteSettingsModule("Website", "karmatop.de Website", "Website"));
     }
 
@@ -223,6 +230,7 @@ public class TimoliaAddon extends LabyModAddon {
         this.loadConfig();
     }
 
+    //Group for Timolia Teamler
     public LabyGroup getCustomGroup(int id, String name, char colorChar, Color color) {
         return (LabyGroup)new CustomGroup(id, name, colorChar, color);
     }
@@ -239,10 +247,6 @@ public class TimoliaAddon extends LabyModAddon {
         return placedBlocks;
     }
 
-    public void setPlacedBlocks(int placedBlocks) {
-        this.placedBlocks = placedBlocks;
-    }
-
     public int getKillstreak() {
         return killstreak;
     }
@@ -251,20 +255,8 @@ public class TimoliaAddon extends LabyModAddon {
         this.killstreak = killstreak;
     }
 
-    public String[] getServers() {
-        return servers;
-    }
-
-    public void setServers(String[] servers) {
-        this.servers = servers;
-    }
-
     public static TimoliaAddon getINSTANCE() {
         return INSTANCE;
-    }
-
-    public static void setINSTANCE(TimoliaAddon INSTANCE) {
-        TimoliaAddon.INSTANCE = INSTANCE;
     }
 
     public ModuleCategory getTimolia() {
@@ -279,16 +271,8 @@ public class TimoliaAddon extends LabyModAddon {
         return gson;
     }
 
-    public void setGson(Gson gson) {
-        this.gson = gson;
-    }
-
     public AddonConfig getAddonConfig() {
         return addonConfig;
-    }
-
-    public void setAddonConfig(AddonConfig addonConfig) {
-        this.addonConfig = addonConfig;
     }
 
     public boolean isListenForMap() {
@@ -399,192 +383,100 @@ public class TimoliaAddon extends LabyModAddon {
         return enabledAutoGG1vs1;
     }
 
-    public void setEnabledAutoGG1vs1(boolean enabledAutoGG1vs1) {
-        this.enabledAutoGG1vs1 = enabledAutoGG1vs1;
-    }
-
     public boolean isEnabledAutoGG4rena() {
         return enabledAutoGG4rena;
-    }
-
-    public void setEnabledAutoGG4rena(boolean enabledAutoGG4rena) {
-        this.enabledAutoGG4rena = enabledAutoGG4rena;
     }
 
     public boolean isEnabledAutoGGCastles() {
         return enabledAutoGGCastles;
     }
 
-    public void setEnabledAutoGGCastles(boolean enabledAutoGGCastles) {
-        this.enabledAutoGGCastles = enabledAutoGGCastles;
-    }
-
     public boolean isEnabledAutoGGMineception() {
         return enabledAutoGGMineception;
-    }
-
-    public void setEnabledAutoGGMineception(boolean enabledAutoGGMineception) {
-        this.enabledAutoGGMineception = enabledAutoGGMineception;
     }
 
     public boolean isEnabledAutoGGSplun() {
         return enabledAutoGGSplun;
     }
 
-    public void setEnabledAutoGGSplun(boolean enabledAutoGGSplun) {
-        this.enabledAutoGGSplun = enabledAutoGGSplun;
-    }
-
     public boolean isEnabledAutoGGSuspicious() {
         return enabledAutoGGSuspicious;
-    }
-
-    public void setEnabledAutoGGSuspicious(boolean enabledAutoGGSuspicious) {
-        this.enabledAutoGGSuspicious = enabledAutoGGSuspicious;
     }
 
     public boolean isEnabledAutoGGDNA() {
         return enabledAutoGGDNA;
     }
 
-    public void setEnabledAutoGGDNA(boolean enabledAutoGGDNA) {
-        this.enabledAutoGGDNA = enabledAutoGGDNA;
-    }
-
     public boolean isEnabledAutoGGInTime() {
         return enabledAutoGGInTime;
-    }
-
-    public void setEnabledAutoGGInTime(boolean enabledAutoGGInTime) {
-        this.enabledAutoGGInTime = enabledAutoGGInTime;
     }
 
     public boolean isEnabledAutoGGBrainbow() {
         return enabledAutoGGBrainbow;
     }
 
-    public void setEnabledAutoGGBrainbow(boolean enabledAutoGGBrainbow) {
-        this.enabledAutoGGBrainbow = enabledAutoGGBrainbow;
-    }
-
     public boolean isEnabledAutoGGTSpiele() {
         return enabledAutoGGTSpiele;
-    }
-
-    public void setEnabledAutoGGTSpiele(boolean enabledAutoGGTSpiele) {
-        this.enabledAutoGGTSpiele = enabledAutoGGTSpiele;
     }
 
     public String getWin1vs1() {
         return win1vs1;
     }
 
-    public void setWin1vs1(String win1vs1) {
-        this.win1vs1 = win1vs1;
-    }
-
     public String getLose1vs1() {
         return lose1vs1;
-    }
-
-    public void setLose1vs1(String lose1vs1) {
-        this.lose1vs1 = lose1vs1;
     }
 
     public String getMatch4rena() {
         return match4rena;
     }
 
-    public void setMatch4rena(String match4rena) {
-        this.match4rena = match4rena;
-    }
-
     public String getGame4rena() {
         return game4rena;
-    }
-
-    public void setGame4rena(String game4rena) {
-        this.game4rena = game4rena;
     }
 
     public String getGameCastles() {
         return gameCastles;
     }
 
-    public void setGameCastles(String gameCastles) {
-        this.gameCastles = gameCastles;
-    }
-
     public String getGameMineception() {
         return gameMineception;
-    }
-
-    public void setGameMineception(String gameMineception) {
-        this.gameMineception = gameMineception;
     }
 
     public String getGameSplun() {
         return gameSplun;
     }
 
-    public void setGameSplun(String gameSplun) {
-        this.gameSplun = gameSplun;
-    }
-
     public String getGameSuspicious() {
         return gameSuspicious;
-    }
-
-    public void setGameSuspicious(String gameSuspicious) {
-        this.gameSuspicious = gameSuspicious;
     }
 
     public String getGameDNA() {
         return gameDNA;
     }
 
-    public void setGameDNA(String gameDNA) {
-        this.gameDNA = gameDNA;
-    }
-
     public String getGameInTime() {
         return gameInTime;
-    }
-
-    public void setGameInTime(String gameInTime) {
-        this.gameInTime = gameInTime;
     }
 
     public String getGameBrainbow() {
         return gameBrainbow;
     }
 
-    public void setGameBrainbow(String gameBrainbow) {
-        this.gameBrainbow = gameBrainbow;
-    }
-
     public String getGameTSpiele() {
         return gameTSpiele;
-    }
-
-    public void setGameTSpiele(String gameTSpiele) {
-        this.gameTSpiele = gameTSpiele;
     }
 
     public boolean isEnabledKarmaUpdater() {
         return enabledKarmaUpdater;
     }
 
-    public void setEnabledKarmaUpdater(boolean enabledKarmaUpdater) {
-        this.enabledKarmaUpdater = enabledKarmaUpdater;
-    }
-
     public boolean isEnabledTeamBadge() {
         return enabledTeamBadge;
     }
 
-    public void setEnabledTeamBadge(boolean enabledTeamBadge) {
-        this.enabledTeamBadge = enabledTeamBadge;
+    public boolean isEnabledPxlSpaceStats() {
+        return enabledPxlSpaceStats;
     }
 
     public HashMap<UUID, Boolean> getCachedTimoliaTeam() {
