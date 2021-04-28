@@ -38,6 +38,7 @@ public class TimoliaAddon extends LabyModAddon {
     private String latestserver = null;
     private boolean listenForMap = false;
     private boolean karmaAnswer = false;
+    private boolean enabledTeamBadge = false;
 
     //Group
     private LabyGroup group;
@@ -136,6 +137,7 @@ public class TimoliaAddon extends LabyModAddon {
         this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
         this.killstreak = getConfig().has("killstreak") ? getConfig().get("killstreak").getAsInt() : 0;
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
+        this.enabledTeamBadge = !getConfig().has("enabledTeamBadge") || getConfig().get("enabledTeamBadge").getAsBoolean();
 
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
@@ -196,6 +198,7 @@ public class TimoliaAddon extends LabyModAddon {
 
         subSettings.add(new HeaderElement("Sonstiges"));
         subSettings.add(new BooleanElement("Auto KarmaUpdater", this, new ControlElement.IconData(Material.LEVER), "enabledKarmaUpdater", this.enabledKarmaUpdater));
+        subSettings.add(new BooleanElement("Team Badges(Restart required)", this, new ControlElement.IconData(Material.LEVER), "enabledTeamBadge", this.enabledTeamBadge));
 
         subSettings.add(new WebsiteSettingsModule("Website", "karmatop.de Website", "Website"));
     }
@@ -221,9 +224,11 @@ public class TimoliaAddon extends LabyModAddon {
     }
 
     public void setGroup(UUID uuid) {
-        if (this.group == null)
-            this.group = getCustomGroup(169, "TimoliaTeam", 'c', new Color(0));
-        this.api.getUserManager().getUser(uuid).setGroup(this.group);
+        if (this.isEnabledTeamBadge()) {
+            if (this.group == null)
+                this.group = getCustomGroup(169, "TimoliaTeam", 'c', new Color(5));
+            this.api.getUserManager().getUser(uuid).setGroup(this.group);
+        }
     }
 
     public int getPlacedBlocks() {
@@ -568,6 +573,14 @@ public class TimoliaAddon extends LabyModAddon {
 
     public void setEnabledKarmaUpdater(boolean enabledKarmaUpdater) {
         this.enabledKarmaUpdater = enabledKarmaUpdater;
+    }
+
+    public boolean isEnabledTeamBadge() {
+        return enabledTeamBadge;
+    }
+
+    public void setEnabledTeamBadge(boolean enabledTeamBadge) {
+        this.enabledTeamBadge = enabledTeamBadge;
     }
 
     public ExecutorService getExService() {
