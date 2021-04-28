@@ -6,6 +6,7 @@ import de.labymod.lennart.autogglistener.*;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.group.CustomGroup;
 import de.labymod.lennart.group.GroupManager;
+import de.labymod.lennart.group.GroupOnRender;
 import de.labymod.lennart.karmatop.Authenticator;
 import de.labymod.lennart.karmatop.KarmaListener;
 import de.labymod.lennart.karmatop.KarmaUpdater;
@@ -21,6 +22,7 @@ import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
 
 import java.awt.*;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
@@ -42,6 +44,7 @@ public class TimoliaAddon extends LabyModAddon {
 
     //Group
     private LabyGroup group;
+    private HashMap<UUID, Boolean> cachedTimoliaTeam = new HashMap<>();
 
     //Header Check
     private boolean pixelspace = false;
@@ -100,36 +103,37 @@ public class TimoliaAddon extends LabyModAddon {
 
         //Group
         new GroupManager();
+        api.getEventManager().register(new GroupOnRender());
 
-        this.getApi().getEventManager().register(new TablistHeaderMapListener());
-        this.getApi().getEventManager().register(new TablistHeaderListener());
-        this.getApi().getEventManager().register(new MessageSendEventListener());
+        api.getEventManager().register(new TablistHeaderMapListener());
+        api.getEventManager().register(new TablistHeaderListener());
+        api.getEventManager().register(new MessageSendEventListener());
 
-        this.getApi().getEventManager().register(new MessageReceive1vs1Listener());
-        this.getApi().getEventManager().register(new MessageReceive4renaListener());
-        this.getApi().getEventManager().register(new MessageReceiveSplunListener());
-        this.getApi().getEventManager().register(new MessageReceiveCastlesListener());
-        this.getApi().getEventManager().register(new MessageReceiveBrainbowListener());
-        this.getApi().getEventManager().register(new MessageReceiveInTimeListener());
-        this.getApi().getEventManager().register(new MessageReceiveTSpieleListener());
-        this.getApi().getEventManager().register(new MessageReceiveMineceptionListener());
-        this.getApi().getEventManager().register(new MessageReceiveDNAListener());
-        this.getApi().getEventManager().register(new MessageReceiveDNAListener());
-        this.getApi().getEventManager().register(new MessageReceiveSuspiciousListener());
+        api.getEventManager().register(new MessageReceive1vs1Listener());
+        api.getEventManager().register(new MessageReceive4renaListener());
+        api.getEventManager().register(new MessageReceiveSplunListener());
+        api.getEventManager().register(new MessageReceiveCastlesListener());
+        api.getEventManager().register(new MessageReceiveBrainbowListener());
+        api.getEventManager().register(new MessageReceiveInTimeListener());
+        api.getEventManager().register(new MessageReceiveTSpieleListener());
+        api.getEventManager().register(new MessageReceiveMineceptionListener());
+        api.getEventManager().register(new MessageReceiveDNAListener());
+        api.getEventManager().register(new MessageReceiveDNAListener());
+        api.getEventManager().register(new MessageReceiveSuspiciousListener());
 
-        this.getApi().getEventManager().register(new KarmaListener());
-        this.getApi().getEventManager().registerOnJoin(new KarmaUpdater());
+        api.getEventManager().register(new KarmaListener());
+        api.getEventManager().registerOnJoin(new KarmaUpdater());
 
-        this.getApi().getEventManager().register(new MessageMapReceiveListener());
-        this.getApi().getEventManager().register(new MessageEnemyReceiveListener());
-        this.getApi().getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
-        this.getApi().registerModule(new Map());
-        this.getApi().registerModule(new Winstreak());
-        this.getApi().registerModule(new Enemy());
-        this.getApi().registerModule(new EnemyStats());
-        this.getApi().registerModule(new PxlSpace());
-        this.getApi().registerModule(new Server());
-        this.getApi().registerModule(new Kit());
+        api.getEventManager().register(new MessageMapReceiveListener());
+        api.getEventManager().register(new MessageEnemyReceiveListener());
+        api.getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
+        api.registerModule(new Map());
+        api.registerModule(new Winstreak());
+        api.registerModule(new Enemy());
+        api.registerModule(new EnemyStats());
+        api.registerModule(new PxlSpace());
+        api.registerModule(new Server());
+        api.registerModule(new Kit());
     }
 
     @Override
@@ -226,7 +230,7 @@ public class TimoliaAddon extends LabyModAddon {
     public void setGroup(UUID uuid) {
         if (this.isEnabledTeamBadge()) {
             if (this.group == null)
-                this.group = getCustomGroup(169, "TimoliaTeam", 'c', new Color(5));
+                this.group = getCustomGroup(145, "TimoliaTeam", '3', new Color(1));
             this.api.getUserManager().getUser(uuid).setGroup(this.group);
         }
     }
@@ -581,6 +585,10 @@ public class TimoliaAddon extends LabyModAddon {
 
     public void setEnabledTeamBadge(boolean enabledTeamBadge) {
         this.enabledTeamBadge = enabledTeamBadge;
+    }
+
+    public HashMap<UUID, Boolean> getCachedTimoliaTeam() {
+        return cachedTimoliaTeam;
     }
 
     public ExecutorService getExService() {

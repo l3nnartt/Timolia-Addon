@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import de.labymod.lennart.TimoliaAddon;
 import org.apache.commons.io.IOUtils;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -23,6 +24,7 @@ public class GroupManager {
                 object.forEach(jsonElement -> {
                     String uuid = jsonElement.getAsString();
                     TimoliaAddon.getINSTANCE().setGroup(UUID.fromString(uuid));
+                    TimoliaAddon.getINSTANCE().getCachedTimoliaTeam().put(UUID.fromString(uuid), false);
                 });
             } catch (IOException e) {
                 e.printStackTrace();

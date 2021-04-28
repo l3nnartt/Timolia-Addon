@@ -10,7 +10,7 @@ public class MessageReceive4renaListener implements MessageReceiveEvent {
     public boolean onReceive(String s, String s1) {
 
         if (!TimoliaAddon.getINSTANCE().isArena()) return false;
-        if (Minecraft.getMinecraft().thePlayer.inventory.hasItem(Item.getItemById(345))) return false;
+        if (Minecraft.getMinecraft().thePlayer.inventory.hasItem(Item.getItemById(345)) || Minecraft.getMinecraft().thePlayer.inventory.hasItem(Item.getItemById(347))) return false;
         if (!TimoliaAddon.getINSTANCE().isEnabledAutoGG4rena()) return false;
 
         if (s1.contains("4rena") && s1.contains("»")) {
