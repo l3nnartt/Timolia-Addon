@@ -19,6 +19,7 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - GUI-Module "Map"
 - GUI-Module "Server"
 - Automatischer Karma Updater [(karmatop.de)](https://karmatop.de/)
+- Badges vor den Namen eines Labymod Teammitglieds
 
 ### Custom-AutoGG
 - 1vs1 (Verloren, Gewonnen)
