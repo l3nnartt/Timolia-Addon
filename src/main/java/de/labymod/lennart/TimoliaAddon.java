@@ -13,6 +13,9 @@ import de.labymod.lennart.karmatop.KarmaUpdater;
 import de.labymod.lennart.karmatop.WebsiteSettingsModule;
 import de.labymod.lennart.listener.*;
 import de.labymod.lennart.modules.*;
+import de.labymod.lennart.pixelspace.MessageReceivePixelSpacePlacedBlockListener;
+import de.labymod.lennart.pixelspace.MessageSendStats;
+import de.labymod.lennart.pixelspace.MessageSendTop;
 import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.ModuleCategoryRegistry;
@@ -123,13 +126,17 @@ public class TimoliaAddon extends LabyModAddon {
         api.getEventManager().register(new KarmaListener());
         api.getEventManager().registerOnJoin(new KarmaUpdater());
 
+        //pxlspace
+        api.getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
+        api.getEventManager().register(new MessageSendStats());
+        api.getEventManager().register(new MessageSendTop());
+
         //Other
         api.getEventManager().register(new MessageMapReceiveListener());
         api.getEventManager().register(new MessageEnemyReceiveListener());
-        api.getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
         api.getEventManager().register(new TablistHeaderMapListener());
         api.getEventManager().register(new TablistHeaderListener());
-        api.getEventManager().register(new MessageSendEventListener());
+
 
         //Modules
         api.registerModule(new Map());
@@ -186,9 +193,9 @@ public class TimoliaAddon extends LabyModAddon {
     protected void fillSettings( List<SettingsElement> subSettings ) {
 
         subSettings.add(new HeaderElement("Allgemein"));
-        subSettings.add(new BooleanElement("Auto KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
-        subSettings.add(new BooleanElement("Team Badges(Restart required)", this, new ControlElement.IconData(Material.RECORD_4), "enabledTeamBadge", this.enabledTeamBadge));
-        subSettings.add(new BooleanElement("PxlSpace Stats", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
+        subSettings.add(new BooleanElement("Karma-Updater(karmatop.de)", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
+        subSettings.add(new BooleanElement("PxlSpace Custom-Commands", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
+        subSettings.add(new BooleanElement("Team Badges (Restart required)", this, new ControlElement.IconData(Material.RECORD_4), "enabledTeamBadge", this.enabledTeamBadge));
 
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
