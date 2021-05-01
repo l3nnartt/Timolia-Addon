@@ -10,7 +10,9 @@ public class MessageSendTop implements MessageSendEvent {
         if (TimoliaAddon.getINSTANCE().isEnabledPxlSpaceStats()) {
             if (!TimoliaAddon.getINSTANCE().isPixelspace()) return false;
             if (message.equalsIgnoreCase("/top")) {
-                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Befehl in Arbeit!");
+                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Die Top §610 §7Spieler mit den meisten platzierten Blöcken");
+                LabyMod.getInstance().displayMessageInChat("§1│ §61 §7- Keksbier: §6BLOCKS §7Blöcke");
+                LabyMod.getInstance().displayMessageInChat("§1│ §62 §7- FlauschiegesBiest: §6BLOCKS §7Blöcke");
             } return message.equalsIgnoreCase("/top");
         } return false;
     }

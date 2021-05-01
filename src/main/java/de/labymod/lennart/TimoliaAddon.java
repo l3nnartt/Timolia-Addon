@@ -193,7 +193,7 @@ public class TimoliaAddon extends LabyModAddon {
     protected void fillSettings( List<SettingsElement> subSettings ) {
 
         subSettings.add(new HeaderElement("Allgemein"));
-        subSettings.add(new BooleanElement("Karma-Updater(karmatop.de)", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
+        subSettings.add(new BooleanElement("KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
         subSettings.add(new BooleanElement("PxlSpace Custom-Commands", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
         subSettings.add(new BooleanElement("Team Badges (Restart required)", this, new ControlElement.IconData(Material.RECORD_4), "enabledTeamBadge", this.enabledTeamBadge));
 
