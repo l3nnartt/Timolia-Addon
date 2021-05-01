@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.autogglistener.*;
 import de.labymod.lennart.config.AddonConfig;
-import de.labymod.lennart.group.CustomGroup;
 import de.labymod.lennart.group.GroupManager;
 import de.labymod.lennart.group.GroupOnRender;
 import de.labymod.lennart.karmatop.Authenticator;
@@ -23,8 +22,6 @@ import net.labymod.settings.elements.*;
 import net.labymod.user.group.LabyGroup;
 import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
-
-import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
