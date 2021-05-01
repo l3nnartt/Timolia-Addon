@@ -9,9 +9,9 @@ public class KarmaUpdater implements Consumer<ServerData>, net.labymod.utils.Con
 
     @Override
     public void accept(ServerData serverData) {
-        if (TimoliaAddon.getINSTANCE().isEnabledKarmaUpdater()) {
+        if (TimoliaAddon.getInstance().isEnabledKarmaUpdater()) {
             if(serverData.getIp().toLowerCase().contains("timolia.de")) {
-                TimoliaAddon.getINSTANCE().setKarmaAnswer(true);
+                TimoliaAddon.getInstance().setKarmaAnswer(true);
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("/karma");
             }
         }

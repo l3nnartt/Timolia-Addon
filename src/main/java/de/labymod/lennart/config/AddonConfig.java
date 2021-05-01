@@ -21,7 +21,7 @@ public class AddonConfig {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return TimoliaAddon.getINSTANCE().getGson().fromJson(content, AddonConfig.class);
+        return TimoliaAddon.getInstance().getGson().fromJson(content, AddonConfig.class);
     }
     public List<String> getServers() {
         return servers;

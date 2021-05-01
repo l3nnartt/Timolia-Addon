@@ -32,35 +32,39 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class TimoliaAddon extends LabyModAddon {
+
+    private static TimoliaAddon instance;
+
     private final ExecutorService exService = Executors.newSingleThreadExecutor();
+
     private int placedBlocks;
     private int killstreak;
-    private String[] servers;
-    private static TimoliaAddon INSTANCE;
     private ModuleCategory timolia;
     private Gson gson;
     private AddonConfig addonConfig;
     private String latestserver = null;
-    private boolean listenForMap = false;
-    private boolean karmaAnswer = false;
-    private boolean enabledTeamBadge = false;
-    private boolean enabledPxlSpaceStats = false;
+    private boolean listenForMap;
+    private boolean karmaAnswer;
+    private boolean enabledTeamBadge;
+    private boolean enabledPxlSpaceStats;
 
     //Group
     private LabyGroup group;
-    private HashMap<UUID, Boolean> cachedTimoliaTeam = new HashMap<>();
+    private final HashMap<UUID, Boolean> cachedTimoliaTeam = new HashMap<>();
+    private GroupManager groupManager;
+
 
     //Header Check
-    private boolean pixelspace = false;
-    private boolean castles = false;
-    private boolean arena = false;
-    private boolean mineception = false;
-    private boolean splun = false;
-    private boolean brainbow = false;
-    private boolean suspicious = false;
-    private boolean tspiele = false;
-    private boolean intime = false;
-    private boolean dna = false;
+    private boolean pixelspace;
+    private boolean castles;
+    private boolean arena;
+    private boolean mineception;
+    private boolean splun;
+    private boolean brainbow;
+    private boolean suspicious;
+    private boolean tspiele;
+    private boolean intime;
+    private boolean dna;
 
     //Sonstiges
     private boolean enabledKarmaUpdater;
@@ -96,17 +100,16 @@ public class TimoliaAddon extends LabyModAddon {
 
     @Override
     public void onEnable() {
-        INSTANCE = this;
+        instance = this;
         authenticator = new Authenticator();
         timolia = new ModuleCategory("Timolia", true, new ControlElement.IconData(new ResourceLocation("icons/timolia/timolia128.png")));
-        System.out.println("Timolia-Addon enabled");
         ModuleCategoryRegistry.loadCategory(timolia);
 
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
 
         //Group
-        new GroupManager();
+        groupManager = new GroupManager();
         api.getEventManager().register(new GroupOnRender());
 
         //AutoGG
@@ -146,6 +149,7 @@ public class TimoliaAddon extends LabyModAddon {
         api.registerModule(new PxlSpace());
         api.registerModule(new Server());
         api.registerModule(new Kit());
+        System.out.println("Timolia-Addon enabled");
     }
 
     @Override
@@ -190,7 +194,7 @@ public class TimoliaAddon extends LabyModAddon {
     }
 
     @Override
-    protected void fillSettings( List<SettingsElement> subSettings ) {
+    protected void fillSettings(List<SettingsElement> subSettings) {
 
         subSettings.add(new HeaderElement("Allgemein"));
         subSettings.add(new BooleanElement("KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
@@ -217,12 +221,10 @@ public class TimoliaAddon extends LabyModAddon {
                 new ConfigItem("Brainbow", this.gameBrainbow, this.enabledAutoGGBrainbow, new ControlElement.IconData(Material.BOW)),
                 new ConfigItem("TSpiele", this.gameTSpiele, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
         );
-
         subSettings.add(new WebsiteSettingsModule("Website", "karmatop.de Website", "Website"));
     }
 
     private void configurSettings(List<SettingsElement> subSettings, ConfigItem... gamemodes) {
-
         for (ConfigItem gamemode : gamemodes) {
             subSettings.add(new HeaderElement(gamemode.getGamemode()));
             subSettings.add(new BooleanElement("AutoGG-" + gamemode.getGamemode(), this, gamemode.getIcon(), "enabledAutoGG" + gamemode.getGamemode(), gamemode.isConfigEnabledValue()));
@@ -237,17 +239,8 @@ public class TimoliaAddon extends LabyModAddon {
         this.loadConfig();
     }
 
-    //Group for Timolia Teamler
-    public LabyGroup getCustomGroup(int id, String name, char colorChar, Color color) {
-        return (LabyGroup)new CustomGroup(id, name, colorChar, color);
-    }
-
-    public void setGroup(UUID uuid) {
-        if (this.isEnabledTeamBadge()) {
-            if (this.group == null)
-                this.group = getCustomGroup(145, "TimoliaTeam", '3', new Color(1));
-            this.api.getUserManager().getUser(uuid).setGroup(this.group);
-        }
+    public static TimoliaAddon getInstance() {
+        return instance;
     }
 
     public int getPlacedBlocks() {
@@ -260,10 +253,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     public void setKillstreak(int killstreak) {
         this.killstreak = killstreak;
-    }
-
-    public static TimoliaAddon getINSTANCE() {
-        return INSTANCE;
     }
 
     public ModuleCategory getTimolia() {
@@ -498,4 +487,15 @@ public class TimoliaAddon extends LabyModAddon {
         return authenticator;
     }
 
+    public LabyGroup getGroup() {
+        return group;
+    }
+
+    public void setGroup(LabyGroup group) {
+        this.group = group;
+    }
+
+    public GroupManager getGroupManager() {
+        return groupManager;
+    }
 }

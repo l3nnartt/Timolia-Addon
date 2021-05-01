@@ -15,8 +15,8 @@ public class MessageMapReceiveListener implements MessageReceiveEvent {
             mapoutput = mapoutput.substring(0,mapoutput.length()-5);
             latestMap = mapoutput;
 
-            if (TimoliaAddon.getINSTANCE().isListenForMap()) {
-                TimoliaAddon.getINSTANCE().setListenForMap(false);
+            if (TimoliaAddon.getInstance().isListenForMap()) {
+                TimoliaAddon.getInstance().setListenForMap(false);
                 return true;
             }
 

@@ -11,7 +11,7 @@ public class Enemy extends SimpleModule {
 
     @Override
     public ModuleCategory getCategory() {
-        return TimoliaAddon.getINSTANCE().getTimolia();
+        return TimoliaAddon.getInstance().getTimolia();
     }
 
     @Override

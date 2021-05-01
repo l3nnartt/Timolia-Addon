@@ -10,7 +10,7 @@ public class Winstreak extends SimpleModule{
 
     @Override
     public ModuleCategory getCategory() {
-        return TimoliaAddon.getINSTANCE().getTimolia();
+        return TimoliaAddon.getInstance().getTimolia();
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Winstreak extends SimpleModule{
 
     @Override
     public String getDisplayValue() {
-        return String.valueOf(TimoliaAddon.getINSTANCE().getKillstreak());
+        return String.valueOf(TimoliaAddon.getInstance().getKillstreak());
     }
 
     @Override

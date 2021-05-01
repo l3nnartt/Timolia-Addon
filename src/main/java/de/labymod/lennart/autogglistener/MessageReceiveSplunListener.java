@@ -8,13 +8,13 @@ public class MessageReceiveSplunListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 
-        if (!TimoliaAddon.getINSTANCE().isEnabledAutoGGSplun()) return false;
+        if (!TimoliaAddon.getInstance().isEnabledAutoGGSplun()) return false;
 
-        if (TimoliaAddon.getINSTANCE().isSplun()) {
+        if (TimoliaAddon.getInstance().isSplun()) {
             if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getINSTANCE().getGameSplun());
+                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getGameSplun());
             }
-        } return false;
-
+        }
+        return false;
     }
 }

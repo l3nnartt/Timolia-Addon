@@ -8,13 +8,13 @@ public class MessageReceiveInTimeListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 
-        if (!TimoliaAddon.getINSTANCE().isEnabledAutoGGInTime()) return false;
+        if (!TimoliaAddon.getInstance().isEnabledAutoGGInTime()) return false;
 
-        if (TimoliaAddon.getINSTANCE().isIntime()) {
+        if (TimoliaAddon.getInstance().isIntime()) {
             if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getINSTANCE().getGameInTime());
+                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getGameInTime());
             }
-        } return false;
-
+        }
+        return false;
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MovingObjectPosition;
+
 import java.util.Map;
 
 public class MessageReceivePixelSpacePlacedBlockListener implements MessageReceiveEvent {
@@ -17,7 +18,7 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
     public boolean onReceive(String s, String msg) {
         if (msg.contains("Timolia» Du hast einen Block platziert! In 20 Sekunden kannst du den nächsten bauen!")) {
             getBlockColor();
-            TimoliaAddon.getINSTANCE().addplacedBlocks();
+            TimoliaAddon.getInstance().addplacedBlocks();
         }
         return false;
     }
@@ -28,14 +29,14 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
         IBlockState iblockstate = Minecraft.getMinecraft().theWorld.getBlockState(blockPos);
 
         for (Map.Entry<IProperty, Comparable> entry : iblockstate.getProperties().entrySet()) {
-            String s = ((Comparable) entry.getValue()).toString();
+            String s = entry.getValue().toString();
 
             if (entry.getValue() == Boolean.TRUE) {
                 s = EnumChatFormatting.GREEN + s;
             } else if (entry.getValue() == Boolean.FALSE) {
                 s = EnumChatFormatting.RED + s;
             }
-            LabyMod.getInstance().displayMessageInChat((((IProperty) entry.getKey()).getName() + ": " + s));
+            LabyMod.getInstance().displayMessageInChat(((entry.getKey()).getName() + ": " + s));
         }
     }
 

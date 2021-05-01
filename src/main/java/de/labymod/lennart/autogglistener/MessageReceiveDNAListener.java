@@ -8,13 +8,13 @@ public class MessageReceiveDNAListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 
-        if (!TimoliaAddon.getINSTANCE().isEnabledAutoGGDNA()) return false;
+        if (!TimoliaAddon.getInstance().isEnabledAutoGGDNA()) return false;
 
-        if (TimoliaAddon.getINSTANCE().isDna()) {
+        if (TimoliaAddon.getInstance().isDna()) {
             if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getINSTANCE().getGameDNA());
+                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getGameDNA());
             }
-        } return false;
-
+        }
+        return false;
     }
 }

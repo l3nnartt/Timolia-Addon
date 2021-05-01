@@ -10,7 +10,7 @@ public class Server extends SimpleModule {
 
     @Override
     public ModuleCategory getCategory() {
-        return TimoliaAddon.getINSTANCE().getTimolia();
+        return TimoliaAddon.getInstance().getTimolia();
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Server extends SimpleModule {
 
     @Override
     public String getDisplayValue() {
-        return TimoliaAddon.getINSTANCE().getLatestserver();
+        return TimoliaAddon.getInstance().getLatestserver();
     }
 
     @Override

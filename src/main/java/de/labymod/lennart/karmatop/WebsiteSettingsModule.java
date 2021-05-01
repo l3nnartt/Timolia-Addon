@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class WebsiteSettingsModule extends SettingsElement {
 
-    private static final ResourceLocation DISCORDICON = new ResourceLocation("settings/timoliastats.png");
+    private static final ResourceLocation TIMOLIA_STATS = new ResourceLocation("settings/timoliastats.png");
 
     public WebsiteSettingsModule(String displayName, String description, String configEntryName) {
         super(displayName, description, configEntryName);
@@ -56,7 +56,7 @@ public class WebsiteSettingsModule extends SettingsElement {
         int add = isMouseOver() ? 1 : 0;
         GlStateManager.pushMatrix();
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-        Minecraft.getMinecraft().getTextureManager().bindTexture(DISCORDICON);
+        Minecraft.getMinecraft().getTextureManager().bindTexture(TIMOLIA_STATS);
         LabyMod.getInstance().getDrawUtils().drawTexture((add + 3), (height - 40 - add), 245.0D, 255.0D, (25 + add * 2), (25 + add * 2));
         if(isMouseOver()) {
             LabyMod.getInstance().getDrawUtils().drawHoveringText(mouseX, mouseY, new String[] { "OUR WEBSITE" });

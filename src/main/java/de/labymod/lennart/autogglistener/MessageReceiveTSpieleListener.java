@@ -8,13 +8,13 @@ public class MessageReceiveTSpieleListener implements MessageReceiveEvent {
     @Override
     public boolean onReceive(String s, String s1) {
 
-        if (!TimoliaAddon.getINSTANCE().isEnabledAutoGGTSpiele()) return false;
+        if (!TimoliaAddon.getInstance().isEnabledAutoGGTSpiele()) return false;
 
-        if (TimoliaAddon.getINSTANCE().isTspiele()) {
+        if (TimoliaAddon.getInstance().isTspiele()) {
             if (s1.contains("Noch") && s1.contains("bis zum nächsten Rang!")) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getINSTANCE().getGameTSpiele());
+                Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getGameTSpiele());
             }
-        } return false;
-
+        }
+        return false;
     }
 }

@@ -12,7 +12,7 @@ public class KarmaListener implements MessageReceiveEvent {
 
     @Override
     public boolean onReceive(String s, String strippedMessage) {
-        if (TimoliaAddon.getINSTANCE().isEnabledKarmaUpdater()) {
+        if (TimoliaAddon.getInstance().isEnabledKarmaUpdater()) {
             if (s.contains("Deine Erfolgspunkte-Informationen")) return true;
             if (s.contains("Erfolgspunkte") && s.contains("│") && s.contains(":")) {
                 if (s.contains("-")) return false;
@@ -21,8 +21,8 @@ public class KarmaListener implements MessageReceiveEvent {
                 karmaoutput = karmaoutput.substring(0, karmaoutput.length() - 2);
                 karma = karmaoutput;
 
-                if (TimoliaAddon.getINSTANCE().getAuthenticator().authenticate()) {
-                    TimoliaAddon.getINSTANCE().getExService().execute(() -> {
+                if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
+                    TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
                             HttpURLConnection con = (HttpURLConnection) (new URL(
                                     "http://karmatop.de/addon/auth.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&karma=" + karma + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
@@ -41,8 +41,8 @@ public class KarmaListener implements MessageReceiveEvent {
                     });
                 }
 
-                if (TimoliaAddon.getINSTANCE().isKarmaAnswer()) {
-                    TimoliaAddon.getINSTANCE().setKarmaAnswer(false);
+                if (TimoliaAddon.getInstance().isKarmaAnswer()) {
+                    TimoliaAddon.getInstance().setKarmaAnswer(false);
                     return true;
                 }
             }

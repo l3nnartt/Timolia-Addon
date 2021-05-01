@@ -10,7 +10,7 @@ public class TablistHeaderMapListener implements TabListEvent {
     public void onUpdate(Type type, String header, String s1) {
         if (containsTimoliaServer(header)) {
             Minecraft.getMinecraft().thePlayer.sendChatMessage("/v");
-            TimoliaAddon.getINSTANCE().setListenForMap(true);
+            TimoliaAddon.getInstance().setListenForMap(true);
         }
         MessageMapReceiveListener.latestMap = null;
     }
@@ -20,7 +20,7 @@ public class TablistHeaderMapListener implements TabListEvent {
     }
 
     private boolean containsTimoliaServer(String s) {
-        List<String> serverList = TimoliaAddon.getINSTANCE().getAddonConfig().getServers();
+        List<String> serverList = TimoliaAddon.getInstance().getAddonConfig().getServers();
         for (String server : serverList) {
 
             if (containsTimoliaServer(server, s)) {

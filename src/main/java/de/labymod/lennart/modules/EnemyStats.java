@@ -11,7 +11,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public ModuleCategory getCategory() {
-        return TimoliaAddon.getINSTANCE().getTimolia();
+        return TimoliaAddon.getInstance().getTimolia();
     }
 
     @Override
@@ -26,18 +26,7 @@ public class EnemyStats extends SimpleTextModule {
 
     @Override
     public String[] getDefaultValues() {
-        return new String[]{
-                "000",
-                "000",
-                "000",
-                "000",
-                "000",
-                "000",
-                "000",
-                "000",
-                "000",
-                "000"
-        };
+        return null;
     }
 
     @Override

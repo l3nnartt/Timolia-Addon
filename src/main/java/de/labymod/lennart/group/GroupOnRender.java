@@ -14,13 +14,12 @@ public class GroupOnRender implements RenderEntityEvent {
         ticker++;
         if (ticker % 10 == 0) return;
 
-        if (TimoliaAddon.getINSTANCE().getCachedTimoliaTeam().isEmpty()) return;
-        if (TimoliaAddon.getINSTANCE().getCachedTimoliaTeam().containsKey(entity.getUniqueID())) {
-            if (!TimoliaAddon.getINSTANCE().getCachedTimoliaTeam().get(entity.getUniqueID())) {
-                TimoliaAddon.getINSTANCE().getCachedTimoliaTeam().replace(entity.getUniqueID(), true);
-                TimoliaAddon.getINSTANCE().setGroup(entity.getUniqueID());
+        if (TimoliaAddon.getInstance().getCachedTimoliaTeam().isEmpty()) return;
+        if (TimoliaAddon.getInstance().getCachedTimoliaTeam().containsKey(entity.getUniqueID())) {
+            if (!TimoliaAddon.getInstance().getCachedTimoliaTeam().get(entity.getUniqueID())) {
+                TimoliaAddon.getInstance().getCachedTimoliaTeam().replace(entity.getUniqueID(), true);
+                TimoliaAddon.getInstance().getGroupManager().setGroup(entity.getUniqueID());
             }
         }
-
     }
 }
