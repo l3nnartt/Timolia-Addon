@@ -1,4 +1,4 @@
-# Labymod Timolia Addon 1.8 (InOffical)
+# Labymod Timolia Addon 1.8.9/~~1.12.2/1.16.5~~ (InOffical)
 
 ## Download & Einrichtung
 Lade dir zuerst die neuste Version des Addons herunter.</br>
