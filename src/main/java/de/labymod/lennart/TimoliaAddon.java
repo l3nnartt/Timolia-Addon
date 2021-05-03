@@ -2,7 +2,7 @@ package de.labymod.lennart;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import de.labymod.lennart.autogglistener.*;
+import de.labymod.lennart.autogg.*;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.group.GroupManager;
 import de.labymod.lennart.group.GroupOnRender;
@@ -33,7 +33,6 @@ public class TimoliaAddon extends LabyModAddon {
     private static TimoliaAddon instance;
     private final ExecutorService exService = Executors.newSingleThreadExecutor();
 
-    private int killstreak;
     private ModuleCategory timolia;
     private Gson gson;
     private AddonConfig addonConfig;
@@ -130,11 +129,9 @@ public class TimoliaAddon extends LabyModAddon {
         api.getEventManager().register(new MessageSendTop());
 
         //Other
-        api.getEventManager().register(new MessageMapReceiveListener());
         api.getEventManager().register(new MessageEnemyReceiveListener());
         api.getEventManager().register(new TablistHeaderMapListener());
         api.getEventManager().register(new TablistHeaderListener());
-
 
         //Modules
         api.registerServerSupport(this, new ServerSupport());
@@ -144,7 +141,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     @Override
     public void loadConfig() {
-        this.killstreak = getConfig().has("killstreak") ? getConfig().get("killstreak").getAsInt() : 0;
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
         this.enabledTeamBadge = !getConfig().has("enabledTeamBadge") || getConfig().get("enabledTeamBadge").getAsBoolean();
         this.enabledPxlSpaceStats = !getConfig().has("enabledPxlSpaceStats") || getConfig().get("enabledPxlSpaceStats").getAsBoolean();
@@ -223,14 +219,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     public static TimoliaAddon getInstance() {
         return instance;
-    }
-
-    public String getKillstreak() {
-        return String.valueOf(killstreak);
-    }
-
-    public void setKillstreak(int killstreak) {
-        this.killstreak = killstreak;
     }
 
     public ModuleCategory getTimolia() {

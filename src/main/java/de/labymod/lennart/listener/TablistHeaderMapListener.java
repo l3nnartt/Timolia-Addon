@@ -1,6 +1,7 @@
 package de.labymod.lennart.listener;
 
 import de.labymod.lennart.TimoliaAddon;
+import de.labymod.lennart.modules.ServerSupport;
 import net.labymod.api.events.TabListEvent;
 import net.minecraft.client.Minecraft;
 import java.util.List;
@@ -12,7 +13,7 @@ public class TablistHeaderMapListener implements TabListEvent {
             Minecraft.getMinecraft().thePlayer.sendChatMessage("/v");
             TimoliaAddon.getInstance().setListenForMap(true);
         }
-        MessageMapReceiveListener.latestMap = null;
+        ServerSupport.latestMap = null;
     }
 
     private boolean containsTimoliaServer(String gamemode, String s) {

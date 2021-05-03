@@ -1,4 +1,4 @@
-package de.labymod.lennart.autogglistener;
+package de.labymod.lennart.autogg;
 
 import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.MessageReceiveEvent;

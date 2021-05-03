@@ -2,7 +2,6 @@ package de.labymod.lennart.modules;
 
 import de.labymod.lennart.TimoliaAddon;
 import de.labymod.lennart.listener.MessageEnemyReceiveListener;
-import de.labymod.lennart.listener.MessageMapReceiveListener;
 import net.labymod.api.events.TabListEvent;
 import net.labymod.ingamegui.moduletypes.ColoredTextModule;
 import net.labymod.servermanager.ChatDisplayAction;
@@ -24,6 +23,10 @@ public class ServerSupport extends Server {
     private boolean displayKit;
     private boolean displayMap;
 
+    public static String enemy = null;
+    public static String kit = null;
+    public static String latestMap = null;
+
     public ServerSupport() {
         super("timolia", new String[] { "timolia.de", "play.timolia.de", "*.timolia.de" });
     }
@@ -36,8 +39,8 @@ public class ServerSupport extends Server {
                 lines.add(new Server.DisplayLine("Enemy", Collections.singletonList(ColoredTextModule.Text.getText(MessageEnemyReceiveListener.enemy))));
             if (MessageEnemyReceiveListener.kit != null)
                 lines.add(new Server.DisplayLine("Kit", Collections.singletonList(ColoredTextModule.Text.getText(MessageEnemyReceiveListener.kit))));
-            if (MessageMapReceiveListener.latestMap != null)
-                lines.add(new Server.DisplayLine("Map", Collections.singletonList(ColoredTextModule.Text.getText(MessageMapReceiveListener.latestMap))));
+            if (latestMap != null)
+                lines.add(new Server.DisplayLine("Map", Collections.singletonList(ColoredTextModule.Text.getText(latestMap))));
         } catch (Exception error) {
             error.printStackTrace();
         }
@@ -57,8 +60,37 @@ public class ServerSupport extends Server {
     }
 
     public ChatDisplayAction handleChatMessage(String clean, String formatted) {
+        if (formatted.contains("1vs1") && formatted.contains("»")) {
+            if (formatted.contains("Kit") && formatted.contains("Einstellungen")) {
+                String kitname = clean.split("§6")[1].split("§8")[0];
+                kitname = kitname.substring(0, kitname.length()-1);
+                kit = kitname;
+            }
+            if (formatted.contains("Kampf") && formatted.contains("beginnt")) {
+                String enemyname = clean.split("§6")[1].split("§7")[0];
+                enemyname = enemyname.substring(0, enemyname.length()-2);
+                enemy = enemyname;
+            }
+            else if (formatted.contains("den Kampf gegen")) {
+                enemy = null;
+                kit = null;
+            }
+        }
+
+        if (clean.contains("Mapvoting") && clean.contains("»") && clean.contains("beendet")) {
+            String[] mapname = formatted.split("§6");
+            String mapoutput = mapname[mapname.length-1];
+            mapoutput = mapoutput.substring(0,mapoutput.length()-5);
+            latestMap = mapoutput;
+
+            if (TimoliaAddon.getInstance().isListenForMap()) {
+                TimoliaAddon.getInstance().setListenForMap(false);
+            }
+        }
+
         return ChatDisplayAction.NORMAL;
     }
+
 
     @Override
     public void handlePluginMessage(String s, PacketBuffer packetBuffer) throws Exception {
