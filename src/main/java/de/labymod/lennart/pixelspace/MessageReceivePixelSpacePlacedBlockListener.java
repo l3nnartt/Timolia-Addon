@@ -24,26 +24,27 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
         if (msg.contains("Timolia» Du hast einen Block platziert! In 20 Sekunden kannst du den nächsten bauen!")) {
             getBlockColor();
             System.out.println(farbe);
-        }
 
-        if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
-            TimoliaAddon.getInstance().getExService().execute(() -> {
-                try {
-                    HttpURLConnection con = (HttpURLConnection) (new URL(
-                            "http://karmatop.de/addon/pixelspace.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&color=" + farbe + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
-                    con.setRequestProperty("User-Agent",
-                            "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2");
-                    con.connect();
-                    int code = con.getResponseCode();
-                    if (code == 200) {
-                        System.out.println("Timolia Addon » Stats sended");
-                    } else {
-                        System.out.println(code);
+            if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
+                TimoliaAddon.getInstance().getExService().execute(() -> {
+                    try {
+                        HttpURLConnection con = (HttpURLConnection) (new URL(
+                                "http://karmatop.de/addon/pxl.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&color=" + farbe + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
+                        con.setRequestProperty("User-Agent",
+                                "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2");
+                        con.connect();
+                        int code = con.getResponseCode();
+                        if (code == 200) {
+                            System.out.println("Timolia Addon » Stats gesendet");
+                        } else {
+                            System.out.println(code);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
+                });
+            }
+
         } return false;
     }
 

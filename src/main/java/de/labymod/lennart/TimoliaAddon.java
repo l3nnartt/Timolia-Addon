@@ -31,10 +31,8 @@ import java.util.concurrent.Executors;
 public class TimoliaAddon extends LabyModAddon {
 
     private static TimoliaAddon instance;
-
     private final ExecutorService exService = Executors.newSingleThreadExecutor();
 
-    private int placedBlocks;
     private int killstreak;
     private ModuleCategory timolia;
     private Gson gson;
@@ -139,19 +137,13 @@ public class TimoliaAddon extends LabyModAddon {
 
 
         //Modules
-        api.registerModule(new Map());
-        api.registerModule(new Winstreak());
-        api.registerModule(new Enemy());
+        api.registerServerSupport(this, new ServerSupport());
         api.registerModule(new EnemyStats());
-        api.registerModule(new PxlSpace());
-        api.registerModule(new Server());
-        api.registerModule(new Kit());
         System.out.println("Timolia-Addon enabled");
     }
 
     @Override
     public void loadConfig() {
-        this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
         this.killstreak = getConfig().has("killstreak") ? getConfig().get("killstreak").getAsInt() : 0;
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
         this.enabledTeamBadge = !getConfig().has("enabledTeamBadge") || getConfig().get("enabledTeamBadge").getAsBoolean();
@@ -229,23 +221,12 @@ public class TimoliaAddon extends LabyModAddon {
         }
     }
 
-    public void addplacedBlocks() {
-        placedBlocks++;
-        getConfig().addProperty("placedBlocks", placedBlocks);
-        this.saveConfig();
-        this.loadConfig();
-    }
-
     public static TimoliaAddon getInstance() {
         return instance;
     }
 
-    public int getPlacedBlocks() {
-        return placedBlocks;
-    }
-
-    public int getKillstreak() {
-        return killstreak;
+    public String getKillstreak() {
+        return String.valueOf(killstreak);
     }
 
     public void setKillstreak(int killstreak) {

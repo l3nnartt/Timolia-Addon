@@ -10,7 +10,7 @@ public class MessageSendStats implements MessageSendEvent {
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (!TimoliaAddon.getInstance().isPixelspace()) return false;
             if (message.equalsIgnoreCase("/stats")) {
-                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Du hast bereits §6" + TimoliaAddon.getInstance().getPlacedBlocks() + "§7 platziert!");
+                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Du hast bereits §6" + "BLOCKS" + "§7 platziert!");
             }
             return message.equalsIgnoreCase("/stats");
         }
