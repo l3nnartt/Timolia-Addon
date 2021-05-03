@@ -15,11 +15,11 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 
 ## Features
 
-### Sonstiges
-- GUI-Module "Map"
-- GUI-Module "Server"
-- Automatischer Karma Updater [(karmatop.de)](https://karmatop.de/)
-- Badges vor den Namen eines Labymod Teammitglieds
+### Server Support
+- Map
+- Server
+- Kit
+- Enemy
 
 ### Custom-AutoGG
 - 1vs1 (Verloren, Gewonnen)
@@ -34,11 +34,11 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - DNA
 
 ### Pxlspace
-- Module "Platzierte Blöcke"
-- Command ``/stats`` (Zählt Blöcke ab Installation des Addons)
+- Command ``/stats`` (DEFEKT)
  
 ### 1vs1
 - GUI-Module "Statistiken des Gegners in 1vs1"
-- GUI-Module "Gegner"
-- GUI-Module "Winstreak"
-- GUI-Module "Kit"
+
+### Sonstiges
+- Automatischer Karma Updater [(karmatop.de)](https://karmatop.de/)
+- Badges vor den Namen eines Labymod Teammitglieds
