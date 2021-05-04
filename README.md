@@ -1,4 +1,4 @@
-# Labymod Timolia Addon 1.8.9/~~1.12.2/1.16.5~~ (InOffical)
+# Labymod Timolia Addon 1.8.9
 
 ## Download & Einrichtung
 Lade dir zuerst die neuste Version des Addons herunter.</br>
@@ -34,7 +34,7 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - DNA
 
 ### Pxlspace
-- Command ``/stats`` (DEFEKT)
+~~- Command ``/stats``~~
  
 ### 1vs1
 - GUI-Module "Statistiken des Gegners in 1vs1"
