@@ -35,6 +35,7 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 
 ### Pxlspace
 ~~- Command ``/stats``~~
+~~- Command ``/top``~~
  
 ### 1vs1
 - GUI-Module "Statistiken des Gegners in 1vs1"
