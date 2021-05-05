@@ -46,18 +46,17 @@ public class MessageEnemyReceiveListener implements MessageReceiveEvent {
             }
         }
 
-       //if (strippedMessage.contains("░▒▓Stats von")) {
-       //    latestStats.clear();
-       //} else if (strippedMessage.contains("╚═════")) {
-       //    listenForStats = false;
-       //    stats = new EnemyStats1vs1(latestStats);
-       //    return true;
-       //}
+        if (strippedMessage.contains("░▒▓Stats von")) {
+            latestStats.clear();
+        } else if (strippedMessage.contains("╚═════")) {
+            listenForStats = false;
+            stats = new EnemyStats1vs1(latestStats);
+            return true;
+        }
 
-       //if (listenForStats) {
-       //    latestStats.add(strippedMessage);
-       //    return true;
-       //}
-        return false;
+        if (listenForStats) {
+            latestStats.add(strippedMessage);
+            return true;
+        } return false;
     }
 }

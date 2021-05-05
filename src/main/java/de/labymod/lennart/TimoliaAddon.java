@@ -2,7 +2,6 @@ package de.labymod.lennart;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import de.labymod.lennart.autogg.*;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.group.GroupManager;
 import de.labymod.lennart.group.GroupOnRender;
@@ -10,8 +9,12 @@ import de.labymod.lennart.karmatop.Authenticator;
 import de.labymod.lennart.karmatop.KarmaListener;
 import de.labymod.lennart.karmatop.KarmaUpdater;
 import de.labymod.lennart.karmatop.WebsiteSettingsModule;
-import de.labymod.lennart.listener.*;
-import de.labymod.lennart.modules.*;
+import de.labymod.lennart.listener.MessageEnemyReceiveListener;
+import de.labymod.lennart.listener.AutoGG;
+import de.labymod.lennart.listener.TablistHeaderListener;
+import de.labymod.lennart.listener.TablistHeaderMapListener;
+import de.labymod.lennart.modules.EnemyStats;
+import de.labymod.lennart.modules.ServerSupport;
 import de.labymod.lennart.pixelspace.MessageReceivePixelSpacePlacedBlockListener;
 import de.labymod.lennart.pixelspace.MessageSendStats;
 import de.labymod.lennart.pixelspace.MessageSendTop;
@@ -41,6 +44,9 @@ public class TimoliaAddon extends LabyModAddon {
     private boolean karmaAnswer;
     private boolean enabledTeamBadge;
     private boolean enabledPxlSpaceStats;
+
+    //Stats
+    private int placedBlocks;
 
     //Group
     private LabyGroup group;
@@ -107,17 +113,7 @@ public class TimoliaAddon extends LabyModAddon {
         api.getEventManager().register(new GroupOnRender());
 
         //AutoGG
-        api.getEventManager().register(new MessageReceive1vs1Listener());
-        api.getEventManager().register(new MessageReceive4renaListener());
-        api.getEventManager().register(new MessageReceiveSplunListener());
-        api.getEventManager().register(new MessageReceiveCastlesListener());
-        api.getEventManager().register(new MessageReceiveBrainbowListener());
-        api.getEventManager().register(new MessageReceiveInTimeListener());
-        api.getEventManager().register(new MessageReceiveTSpieleListener());
-        api.getEventManager().register(new MessageReceiveMineceptionListener());
-        api.getEventManager().register(new MessageReceiveDNAListener());
-        api.getEventManager().register(new MessageReceiveDNAListener());
-        api.getEventManager().register(new MessageReceiveSuspiciousListener());
+        api.getEventManager().register(new AutoGG());
 
         //Automatic Karma Updater
         api.getEventManager().register(new KarmaListener());
@@ -141,6 +137,9 @@ public class TimoliaAddon extends LabyModAddon {
 
     @Override
     public void loadConfig() {
+
+        this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
+
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
         this.enabledTeamBadge = !getConfig().has("enabledTeamBadge") || getConfig().get("enabledTeamBadge").getAsBoolean();
         this.enabledPxlSpaceStats = !getConfig().has("enabledPxlSpaceStats") || getConfig().get("enabledPxlSpaceStats").getAsBoolean();
@@ -215,6 +214,17 @@ public class TimoliaAddon extends LabyModAddon {
             subSettings.add(new BooleanElement("AutoGG-" + gamemode.getGamemode(), this, gamemode.getIcon(), "enabledAutoGG" + gamemode.getGamemode(), gamemode.isConfigEnabledValue()));
             subSettings.add(new StringElement("GameGG", this, new ControlElement.IconData(Material.NAME_TAG), "game" + gamemode.getGamemode(), gamemode.getConfigMessage()));
         }
+    }
+
+    public void addplacedBlocks() {
+        placedBlocks++;
+        getConfig().addProperty("placedBlocks", placedBlocks);
+        this.saveConfig();
+        this.loadConfig();
+    }
+
+    public int getPlacedBlocks() {
+        return placedBlocks;
     }
 
     public static TimoliaAddon getInstance() {

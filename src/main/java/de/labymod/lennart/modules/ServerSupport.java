@@ -70,8 +70,7 @@ public class ServerSupport extends Server {
                 String enemyname = clean.split("§6")[1].split("§7")[0];
                 enemyname = enemyname.substring(0, enemyname.length()-2);
                 enemy = enemyname;
-            }
-            else if (formatted.contains("den Kampf gegen")) {
+            }  else if (formatted.contains("den Kampf gegen")) {
                 enemy = null;
                 kit = null;
             }
@@ -86,11 +85,8 @@ public class ServerSupport extends Server {
             if (TimoliaAddon.getInstance().isListenForMap()) {
                 TimoliaAddon.getInstance().setListenForMap(false);
             }
-        }
-
-        return ChatDisplayAction.NORMAL;
+        } return ChatDisplayAction.NORMAL;
     }
-
 
     @Override
     public void handlePluginMessage(String s, PacketBuffer packetBuffer) throws Exception {
