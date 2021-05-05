@@ -41,6 +41,8 @@ public class ServerSupport extends Server {
                 lines.add(new Server.DisplayLine("Kit", Collections.singletonList(ColoredTextModule.Text.getText(MessageEnemyReceiveListener.kit))));
             if (latestMap != null)
                 lines.add(new Server.DisplayLine("Map", Collections.singletonList(ColoredTextModule.Text.getText(latestMap))));
+            if (TimoliaAddon.getInstance().isPixelspace())
+                lines.add(new Server.DisplayLine("Blocks", Collections.singletonList(ColoredTextModule.Text.getText(String.valueOf(TimoliaAddon.getInstance().getPlacedBlocks())))));
         } catch (Exception error) {
             error.printStackTrace();
         }

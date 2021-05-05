@@ -21,6 +21,7 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
             if (msg.contains("Timolia» Du hast einen Block platziert! In 20 Sekunden kannst du den nächsten bauen!")) {
                 getBlockColor();
                 System.out.println(farbe);
+                TimoliaAddon.getInstance().addplacedBlocks();
             }
         } else {
             return false;
