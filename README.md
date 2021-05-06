@@ -34,12 +34,12 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - DNA
 
 ### Pxlspace
-~~- Command ``/stats``~~
-~~- Command ``/top``~~
+- Custom Command ``/stats``
  
 ### 1vs1
-- GUI-Module "Statistiken des Gegners in 1vs1"
+- GUI-Module "Enemy Stats for 1vs1"
 
 ### Sonstiges
-- Automatischer Karma Updater [(karmatop.de)](https://karmatop.de/)
-- Badges vor den Namen eines Labymod Teammitglieds
+- Automatic Karma Updater [(karmatop.de)](https://karmatop.de/)
+- Badges for Timolia Teamler
+- Stats for PxlSpace
