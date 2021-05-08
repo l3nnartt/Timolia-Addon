@@ -1,4 +1,4 @@
-package de.labymod.lennart.pixelspace;
+package de.labymod.lennart.pxlspace;
 
 import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.MessageSendEvent;
