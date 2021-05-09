@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import de.labymod.lennart.config.AddonConfig;
 import de.labymod.lennart.group.GroupManager;
 import de.labymod.lennart.group.GroupOnRender;
+import de.labymod.lennart.jumpworld.CheckpointListener;
 import de.labymod.lennart.karmatop.Authenticator;
 import de.labymod.lennart.karmatop.KarmaListener;
 import de.labymod.lennart.karmatop.KarmaUpdater;
@@ -107,6 +108,9 @@ public class TimoliaAddon extends LabyModAddon {
 
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
+
+        //JumpWorld
+        api.getEventManager().register(new CheckpointListener());
 
         //Group
         groupManager = new GroupManager();
