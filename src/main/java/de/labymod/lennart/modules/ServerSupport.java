@@ -28,7 +28,7 @@ public class ServerSupport extends Server {
     public static String latestMap = null;
 
     public ServerSupport() {
-        super("timolia", new String[] { "timolia.de", "play.timolia.de", "*.timolia.de" });
+        super("timolia", "timolia.de", "play.timolia.de", "*.timolia.de", "%.timolia.de", "85.190.150.145", "95.156.239.20");
     }
 
     public void addModuleLines(List<Server.DisplayLine> lines) {
