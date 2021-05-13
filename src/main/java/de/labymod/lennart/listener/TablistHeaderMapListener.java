@@ -12,8 +12,7 @@ public class TablistHeaderMapListener implements TabListEvent {
         if (containsTimoliaServer(header)) {
             Minecraft.getMinecraft().thePlayer.sendChatMessage("/v");
             TimoliaAddon.getInstance().setListenForMap(true);
-        }
-        ServerSupport.latestMap = null;
+        } ServerSupport.latestMap = null;
     }
 
     private boolean containsTimoliaServer(String gamemode, String s) {
@@ -23,11 +22,9 @@ public class TablistHeaderMapListener implements TabListEvent {
     private boolean containsTimoliaServer(String s) {
         List<String> serverList = TimoliaAddon.getInstance().getAddonConfig().getServers();
         for (String server : serverList) {
-
             if (containsTimoliaServer(server, s)) {
                 return true;
             }
-        }
-        return false;
+        } return false;
     }
 }
