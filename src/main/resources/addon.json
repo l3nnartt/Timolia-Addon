@@ -1,10 +1,10 @@
 {
   "uuid": "%uuid%",
-  "name": "Timolia",
-  "mainClass": "de.labymod.lennart.TimoliaAddon",
-  "description": "This Addon adds some Server Support Features for Timolia.de",
+  "name": "LabyGroup",
+  "mainClass": "de.labymod.lennart.LabyGroup",
+  "description": "Adds VIP Badge",
   "version": 1,
-  "author": "L3nnart_, TryAnixx",
+  "author": "L3nnart_",
   "category": 3,
-  "icon": "https://i.imgur.com/NkFEsHW.png"
+  "icon": "https://cdn.discordapp.com/attachments/719614057379921972/845640885353185320/logo_white.png"
 }
