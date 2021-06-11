@@ -10,10 +10,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MovingObjectPosition;
-<<<<<<< Updated upstream:src/main/java/de/labymod/lennart/pxlspace/MessageReceivePixelSpacePlacedBlockListener.java
-=======
-
->>>>>>> Stashed changes:src/main/java/de/labymod/lennart/pixelspace/MessageReceivePixelSpacePlacedBlockListener.java
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
@@ -27,21 +23,10 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (msg.contains("Timolia» Du hast einen Block platziert! In 20 Sekunden kannst du den nächsten bauen!")) {
                 getBlockColor();
-                System.out.println(farbe);
-                //TimoliaAddon.getInstance().addplacedBlocks();
-<<<<<<< Updated upstream:src/main/java/de/labymod/lennart/pxlspace/MessageReceivePixelSpacePlacedBlockListener.java
-=======
-
->>>>>>> Stashed changes:src/main/java/de/labymod/lennart/pixelspace/MessageReceivePixelSpacePlacedBlockListener.java
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            HttpURLConnection con = (HttpURLConnection) (new URL(
-<<<<<<< Updated upstream:src/main/java/de/labymod/lennart/pxlspace/MessageReceivePixelSpacePlacedBlockListener.java
-                                    "http://karmatop.de/addon/pxl.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&color=" + farbe + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
-=======
-                                    "http://karmatop.de/addon/pxl.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&karma=" + farbe + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
->>>>>>> Stashed changes:src/main/java/de/labymod/lennart/pixelspace/MessageReceivePixelSpacePlacedBlockListener.java
+                            HttpURLConnection con = (HttpURLConnection) (new URL("http://karmatop.de/addon/pxl.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&color=" + farbe + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
                             con.setRequestProperty("User-Agent",
                                     "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2");
                             con.connect();
@@ -56,11 +41,6 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
                         }
                     });
                 }
-<<<<<<< Updated upstream:src/main/java/de/labymod/lennart/pxlspace/MessageReceivePixelSpacePlacedBlockListener.java
-=======
-
-
->>>>>>> Stashed changes:src/main/java/de/labymod/lennart/pixelspace/MessageReceivePixelSpacePlacedBlockListener.java
             }
         } else {
             return false;
