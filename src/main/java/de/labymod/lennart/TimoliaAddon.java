@@ -3,14 +3,12 @@ package de.labymod.lennart;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import de.labymod.lennart.config.AddonConfig;
-import de.labymod.lennart.group.GroupManager;
-import de.labymod.lennart.group.GroupOnRender;
 import de.labymod.lennart.karmatop.Authenticator;
 import de.labymod.lennart.karmatop.KarmaListener;
 import de.labymod.lennart.karmatop.KarmaUpdater;
 import de.labymod.lennart.karmatop.WebsiteSettingsModule;
-import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import de.labymod.lennart.listener.AutoGG;
+import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import de.labymod.lennart.listener.TablistHeaderListener;
 import de.labymod.lennart.listener.TablistHeaderMapListener;
 import de.labymod.lennart.modules.EnemyStats;
@@ -22,12 +20,10 @@ import net.labymod.api.LabyModAddon;
 import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.ModuleCategoryRegistry;
 import net.labymod.settings.elements.*;
-import net.labymod.user.group.LabyGroup;
 import net.labymod.utils.Material;
 import net.minecraft.util.ResourceLocation;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -47,12 +43,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     //Stats
     private int placedBlocks;
-
-    //Group
-    private LabyGroup group;
-    private final HashMap<UUID, Boolean> cachedTimoliaTeam = new HashMap<>();
-    private GroupManager groupManager;
-
 
     //Header Check
     private boolean pixelspace;
@@ -108,10 +98,6 @@ public class TimoliaAddon extends LabyModAddon {
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
 
-        //Group
-        groupManager = new GroupManager();
-        api.getEventManager().register(new GroupOnRender());
-
         //AutoGG
         api.getEventManager().register(new AutoGG());
 
@@ -137,7 +123,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     @Override
     public void loadConfig() {
-
         this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
 
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
@@ -179,11 +164,9 @@ public class TimoliaAddon extends LabyModAddon {
 
     @Override
     protected void fillSettings(List<SettingsElement> subSettings) {
-
         subSettings.add(new HeaderElement("Allgemein"));
         subSettings.add(new BooleanElement("KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
         subSettings.add(new BooleanElement("PxlSpace Custom-Commands", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
-        subSettings.add(new BooleanElement("Team Badges (Restart required)", this, new ControlElement.IconData(Material.RECORD_4), "enabledTeamBadge", this.enabledTeamBadge));
 
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
@@ -451,27 +434,11 @@ public class TimoliaAddon extends LabyModAddon {
         return enabledPxlSpaceStats;
     }
 
-    public HashMap<UUID, Boolean> getCachedTimoliaTeam() {
-        return cachedTimoliaTeam;
-    }
-
     public ExecutorService getExService() {
         return exService;
     }
 
     public Authenticator getAuthenticator() {
         return authenticator;
-    }
-
-    public LabyGroup getGroup() {
-        return group;
-    }
-
-    public void setGroup(LabyGroup group) {
-        this.group = group;
-    }
-
-    public GroupManager getGroupManager() {
-        return groupManager;
     }
 }
