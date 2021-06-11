@@ -34,12 +34,8 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - DNA
 
 ### Pxlspace
-- Custom Command ``/stats``
+- Added Stats for PxlSpace -> ``/stats``
  
-### 1vs1
-- GUI-Module "Enemy Stats for 1vs1"
-
 ### Sonstiges
 - Automatic Karma Updater [(karmatop.de)](https://karmatop.de/)
-- Badges for Timolia Teamler
 - Stats for PxlSpace
