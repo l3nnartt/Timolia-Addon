@@ -32,10 +32,11 @@ public class TimoliaAddon extends LabyModAddon {
     private String latestserver = null;
     private boolean listenForMap;
     private boolean karmaAnswer;
-    private boolean enabledPxlSpaceStats;
+    private boolean enabledKarmaUpdater;
 
-    //Stats
+    //PxlSpace Stats
     private int placedBlocks;
+    private boolean enabledPxlSpaceStats;
 
     //Header Check
     private boolean pixelspace;
@@ -48,9 +49,6 @@ public class TimoliaAddon extends LabyModAddon {
     private boolean tspiele;
     private boolean intime;
     private boolean dna;
-
-    //Sonstiges
-    private boolean enabledKarmaUpdater;
 
     //AutoGGEnabled Check
     private boolean enabledAutoGG1vs1;
