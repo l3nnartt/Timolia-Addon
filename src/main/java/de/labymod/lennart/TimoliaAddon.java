@@ -11,18 +11,13 @@ import de.labymod.lennart.listener.AutoGG;
 import de.labymod.lennart.listener.MessageEnemyReceiveListener;
 import de.labymod.lennart.listener.TablistHeaderListener;
 import de.labymod.lennart.listener.TablistHeaderMapListener;
-import de.labymod.lennart.modules.EnemyStats;
 import de.labymod.lennart.modules.ServerSupport;
 import de.labymod.lennart.pixelspace.MessageReceivePixelSpacePlacedBlockListener;
 import de.labymod.lennart.pixelspace.MessageSendStats;
 import de.labymod.lennart.pixelspace.MessageSendTop;
 import net.labymod.api.LabyModAddon;
-import net.labymod.ingamegui.ModuleCategory;
-import net.labymod.ingamegui.ModuleCategoryRegistry;
 import net.labymod.settings.elements.*;
 import net.labymod.utils.Material;
-import net.minecraft.util.ResourceLocation;
-
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -32,13 +27,11 @@ public class TimoliaAddon extends LabyModAddon {
     private static TimoliaAddon instance;
     private final ExecutorService exService = Executors.newSingleThreadExecutor();
 
-    private ModuleCategory timolia;
     private Gson gson;
     private AddonConfig addonConfig;
     private String latestserver = null;
     private boolean listenForMap;
     private boolean karmaAnswer;
-    private boolean enabledTeamBadge;
     private boolean enabledPxlSpaceStats;
 
     //Stats
@@ -92,8 +85,6 @@ public class TimoliaAddon extends LabyModAddon {
     public void onEnable() {
         instance = this;
         authenticator = new Authenticator();
-        timolia = new ModuleCategory("Timolia", true, new ControlElement.IconData(new ResourceLocation("icons/timolia/timolia128.png")));
-        ModuleCategoryRegistry.loadCategory(timolia);
 
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
@@ -117,7 +108,6 @@ public class TimoliaAddon extends LabyModAddon {
 
         //Modules
         api.registerServerSupport(this, new ServerSupport());
-        api.registerModule(new EnemyStats());
         System.out.println("Timolia-Addon enabled");
     }
 
@@ -126,7 +116,6 @@ public class TimoliaAddon extends LabyModAddon {
         this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
 
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
-        this.enabledTeamBadge = !getConfig().has("enabledTeamBadge") || getConfig().get("enabledTeamBadge").getAsBoolean();
         this.enabledPxlSpaceStats = !getConfig().has("enabledPxlSpaceStats") || getConfig().get("enabledPxlSpaceStats").getAsBoolean();
 
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
@@ -212,14 +201,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     public static TimoliaAddon getInstance() {
         return instance;
-    }
-
-    public ModuleCategory getTimolia() {
-        return timolia;
-    }
-
-    public void setTimolia(ModuleCategory timolia) {
-        this.timolia = timolia;
     }
 
     public Gson getGson() {
@@ -424,10 +405,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     public boolean isEnabledKarmaUpdater() {
         return enabledKarmaUpdater;
-    }
-
-    public boolean isEnabledTeamBadge() {
-        return enabledTeamBadge;
     }
 
     public boolean isEnabledPxlSpaceStats() {
