@@ -1,6 +1,9 @@
 # Labymod Timolia Addon 1.8.9
 
 ## Download & Einrichtung
+
+Seit dem 09.07.2021 ist das Addon außerdem im Addon Store bei Labymod zu finden und kann darüber installiert werden.
+
 Lade dir zuerst die neuste Version des Addons herunter.</br>
 https://github.com/l3nnartt/timolia-addon-1.8/releases
 
@@ -33,9 +36,7 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
 - TSpiele
 - DNA
 
-### Pxlspace
-- Added Stats for PxlSpace -> ``/stats``
  
 ### Sonstiges
 - Automatic Karma Updater [(karmatop.de)](https://karmatop.de/)
-- Stats for PxlSpace
+- pxlSpace stats -> /stats [Name]
