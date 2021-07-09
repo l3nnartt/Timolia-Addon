@@ -26,7 +26,7 @@ public class TimoliaAddon extends LabyModAddon {
 
     //Sonstiges
     private static TimoliaAddon instance;
-    private final ExecutorService exService = Executors.newSingleThreadExecutor();
+    private final ExecutorService exService = Executors.newCachedThreadPool();
     private Gson gson;
     private AddonConfig addonConfig;
     private String latestserver = null;
@@ -80,7 +80,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     //Authenticator
     private Authenticator authenticator;
-
 
     //onEnable
     @Override
