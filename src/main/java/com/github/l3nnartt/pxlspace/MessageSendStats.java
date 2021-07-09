@@ -15,16 +15,23 @@ import java.util.Map;
 
 public class MessageSendStats implements MessageSendEvent {
 
+    String player = null;
+
     @Override
     public boolean onSend(final String message) {
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (!TimoliaAddon.getInstance().isPixelspace()) return false;
             String[] args = message.split(" ");
             if (message.equalsIgnoreCase("/stats")) {
+                if (args[1] == null) {
+                    player = LabyMod.getInstance().getPlayerName();
+                } else {
+                    player = args[1];
+                }
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            JsonArray content = getURLContent("http://karmatop.de/addon/pxl-api.php?name=" + LabyMod.getInstance().getPlayerName()).getAsJsonArray();
+                            JsonArray content = getURLContent("http://karmatop.de/addon/pxl-api.php?name=" + player).getAsJsonArray();
                             createStats(content);
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -46,10 +53,12 @@ public class MessageSendStats implements MessageSendEvent {
 
     public void createStats(JsonArray content) {
         JsonElement stats = content.get(0);
-        LabyMod.getInstance().displayMessageInChat("§6░▒▓§bStats von" + LabyMod.getInstance().getPlayerName() + " §6▓▒░");
+        LabyMod.getInstance().displayMessageInChat("§6░▒▓§bStats von " + player + " §6▓▒░");
         LabyMod.getInstance().displayMessageInChat("§6╔═════");
         for (Map.Entry<String, JsonElement> entry : stats.getAsJsonObject().entrySet()) {
-            LabyMod.getInstance().displayMessageInChat("§6╠ §" + convertColor(entry.getKey()) + "✦ §f" + capitalize(entry.getKey()) + ": §7" + entry.getValue().getAsString());
+            if (!entry.getKey().equals("total") && !entry.getKey().equals("name") && !entry.getKey().equals("uuid")) {
+                LabyMod.getInstance().displayMessageInChat("§6╠ §" + convertColor(entry.getKey()) + "✦ §f" + capitalize(entry.getKey()) + ": §7" + entry.getValue().getAsString());
+            }
         }
         LabyMod.getInstance().displayMessageInChat("§6╚═════");
     }
