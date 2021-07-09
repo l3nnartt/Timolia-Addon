@@ -7,7 +7,6 @@ import com.google.gson.JsonParser;
 import net.labymod.api.events.MessageSendEvent;
 import net.labymod.main.LabyMod;
 import org.apache.commons.io.IOUtils;
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
