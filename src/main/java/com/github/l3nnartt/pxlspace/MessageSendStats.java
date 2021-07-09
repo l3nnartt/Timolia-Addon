@@ -22,11 +22,11 @@ public class MessageSendStats implements MessageSendEvent {
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (!TimoliaAddon.getInstance().isPixelspace()) return false;
             String[] args = message.split(" ");
-            if (message.equalsIgnoreCase("/stats")) {
-                if (args[1] == null) {
-                    player = LabyMod.getInstance().getPlayerName();
-                } else {
+            if (message.startsWith("/stats")) {
+                if (args.length > 1) {
                     player = args[1];
+                } else {
+                    player = LabyMod.getInstance().getPlayerName();
                 }
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
@@ -38,7 +38,7 @@ public class MessageSendStats implements MessageSendEvent {
                         }
                     });
                 }
-            } return message.equalsIgnoreCase("/stats");
+            } return message.startsWith("/stats");
         } return false;
     }
 
