@@ -1,6 +1,6 @@
-package de.labymod.lennart.pxlspace;
+package com.github.l3nnartt.pxlspace;
 
-import de.labymod.lennart.TimoliaAddon;
+import com.github.l3nnartt.TimoliaAddon;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.labymod.core.LabyModCore;
 import net.labymod.main.LabyMod;

@@ -1,4 +1,4 @@
-package de.labymod.lennart;
+package com.github.l3nnartt;
 
 import static net.labymod.settings.elements.ControlElement.*;
 

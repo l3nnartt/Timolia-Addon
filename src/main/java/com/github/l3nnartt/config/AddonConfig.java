@@ -1,7 +1,7 @@
-package de.labymod.lennart.config;
+package com.github.l3nnartt.config;
 
 import com.google.common.io.Resources;
-import de.labymod.lennart.TimoliaAddon;
+import com.github.l3nnartt.TimoliaAddon;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;

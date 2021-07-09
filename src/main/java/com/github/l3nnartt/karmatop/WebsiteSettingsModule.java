@@ -1,4 +1,4 @@
-package de.labymod.lennart.karmatop;
+package com.github.l3nnartt.karmatop;
 
 import net.labymod.main.LabyMod;
 import net.labymod.settings.elements.SettingsElement;

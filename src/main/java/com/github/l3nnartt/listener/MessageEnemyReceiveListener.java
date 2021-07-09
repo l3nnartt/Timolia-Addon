@@ -1,4 +1,4 @@
-package de.labymod.lennart.listener;
+package com.github.l3nnartt.listener;
 
 import net.labymod.api.events.MessageReceiveEvent;
 

@@ -1,9 +1,9 @@
-package de.labymod.lennart.pxlspace;
+package com.github.l3nnartt.pxlspace;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import de.labymod.lennart.TimoliaAddon;
+import com.github.l3nnartt.TimoliaAddon;
 import net.labymod.api.events.MessageSendEvent;
 import net.labymod.main.LabyMod;
 import org.apache.commons.io.IOUtils;

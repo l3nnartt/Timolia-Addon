@@ -1,7 +1,7 @@
-package de.labymod.lennart.listener;
+package com.github.l3nnartt.listener;
 
-import de.labymod.lennart.TimoliaAddon;
-import de.labymod.lennart.modules.ServerSupport;
+import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.modules.ServerSupport;
 import net.labymod.api.events.TabListEvent;
 import net.minecraft.client.Minecraft;
 import java.util.List;

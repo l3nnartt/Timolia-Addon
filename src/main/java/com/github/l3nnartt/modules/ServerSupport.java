@@ -1,7 +1,7 @@
-package de.labymod.lennart.modules;
+package com.github.l3nnartt.modules;
 
-import de.labymod.lennart.TimoliaAddon;
-import de.labymod.lennart.listener.MessageEnemyReceiveListener;
+import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.listener.MessageEnemyReceiveListener;
 import net.labymod.api.events.TabListEvent;
 import net.labymod.ingamegui.moduletypes.ColoredTextModule;
 import net.labymod.servermanager.ChatDisplayAction;

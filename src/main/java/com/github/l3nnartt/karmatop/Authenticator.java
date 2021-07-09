@@ -1,4 +1,4 @@
-package de.labymod.lennart.karmatop;
+package com.github.l3nnartt.karmatop;
 
 import com.mojang.authlib.exceptions.AuthenticationException;
 import net.minecraft.client.Minecraft;
