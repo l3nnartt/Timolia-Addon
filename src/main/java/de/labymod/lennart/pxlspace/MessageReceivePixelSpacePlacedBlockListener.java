@@ -22,6 +22,7 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
     public boolean onReceive(String s, String msg) {
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (msg.contains("Timolia» Du hast einen Block platziert! In 20 Sekunden kannst du den nächsten bauen!")) {
+                TimoliaAddon.getInstance().addplacedBlocks();
                 getBlockColor();
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
@@ -32,7 +33,7 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
                             con.connect();
                             int code = con.getResponseCode();
                             if (code == 200) {
-                                System.out.println("Timolia Addon » Stats gesendet");
+                                System.out.println("Timolia Addon » Block added");
                             } else {
                                 System.out.println(code);
                             }

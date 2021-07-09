@@ -14,6 +14,7 @@ public class MessageSendStats implements MessageSendEvent {
 
             if (message.equalsIgnoreCase("/stats")) {
                 LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Du hast bereits §6" + TimoliaAddon.getInstance().getPlacedBlocks() + "§7 Blöcke platziert!");
+                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7https://karmatop.de/addons/pxl-api.php?name=" + LabyMod.getInstance().getPlayerName());
             } return message.equalsIgnoreCase("/stats");
         } return false;
     }
