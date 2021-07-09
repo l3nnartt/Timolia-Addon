@@ -23,11 +23,9 @@ public class MessageSendStats implements MessageSendEvent {
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            JsonArray content = getURLContent("https://karmatop.de/addon/pxl-api.php?name=" + LabyMod.getInstance().getPlayerName()).getAsJsonArray();
+                            JsonArray content = getURLContent("http://karmatop.de/addon/pxl-api.php?name=" + LabyMod.getInstance().getPlayerName()).getAsJsonArray();
                             for (JsonElement jsonElement : content) {
-                                String name = jsonElement.getAsJsonObject().get("name").getAsString();
-                                String total = jsonElement.getAsJsonObject().get("total").getAsString();
-                                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7" + name + " hat bereits §6" + total + "§7 Blöcke platziert!");
+                                LabyMod.getInstance().displayMessageInChat("§1│ §7" + jsonElement);
                             }
                         } catch (IOException e) {
                             e.printStackTrace();

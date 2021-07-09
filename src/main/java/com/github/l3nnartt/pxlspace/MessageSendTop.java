@@ -26,7 +26,9 @@ public class MessageSendTop implements MessageSendEvent {
                         try {
                             JsonArray content = getURLContent("http://hosting151773.a2e37.netcup.net/lennart/timolia/addon/pxl-top.php").getAsJsonArray();
                             for (JsonElement jsonElement : content) {
-                                LabyMod.getInstance().displayMessageInChat("§1│ §6" + jsonElement);
+                                String name = jsonElement.getAsJsonObject().get("name").getAsString();
+                                String total = jsonElement.getAsJsonObject().get("total").getAsString();
+                                LabyMod.getInstance().displayMessageInChat("§1│ §6" + name + " §7mit §6" + total + " §7Blöcken");
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
