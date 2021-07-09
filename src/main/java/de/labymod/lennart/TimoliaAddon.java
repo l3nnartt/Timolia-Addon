@@ -24,13 +24,15 @@ import java.util.concurrent.Executors;
 
 public class TimoliaAddon extends LabyModAddon {
 
+    //Sonstiges
     private static TimoliaAddon instance;
     private final ExecutorService exService = Executors.newSingleThreadExecutor();
-
     private Gson gson;
     private AddonConfig addonConfig;
     private String latestserver = null;
     private boolean listenForMap;
+
+    //Karmatop
     private boolean karmaAnswer;
     private boolean enabledKarmaUpdater;
 
@@ -79,6 +81,8 @@ public class TimoliaAddon extends LabyModAddon {
     //Authenticator
     private Authenticator authenticator;
 
+
+    //onEnable
     @Override
     public void onEnable() {
         instance = this;
@@ -109,6 +113,7 @@ public class TimoliaAddon extends LabyModAddon {
         System.out.println("Timolia-Addon enabled");
     }
 
+    //Config
     @Override
     public void loadConfig() {
         this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
@@ -149,6 +154,7 @@ public class TimoliaAddon extends LabyModAddon {
         this.gameTSpiele = getConfig().has("gameTSpiele") ? getConfig().get("gameTSpiele").getAsString() : "gg";
     }
 
+    //Settings Elemente
     @Override
     protected void fillSettings(List<SettingsElement> subSettings) {
         subSettings.add(new HeaderElement("Allgemein"));
