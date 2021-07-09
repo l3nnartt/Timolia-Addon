@@ -59,7 +59,7 @@ public class WebsiteSettingsModule extends SettingsElement {
         Minecraft.getMinecraft().getTextureManager().bindTexture(TIMOLIA_STATS);
         LabyMod.getInstance().getDrawUtils().drawTexture((add + 3), (height - 40 - add), 245.0D, 255.0D, (25 + add * 2), (25 + add * 2));
         if(isMouseOver()) {
-            LabyMod.getInstance().getDrawUtils().drawHoveringText(mouseX, mouseY, new String[] { "OUR WEBSITE" });
+            LabyMod.getInstance().getDrawUtils().drawHoveringText(mouseX, mouseY, "OUR WEBSITE");
         }
         GlStateManager.popMatrix();
     }
