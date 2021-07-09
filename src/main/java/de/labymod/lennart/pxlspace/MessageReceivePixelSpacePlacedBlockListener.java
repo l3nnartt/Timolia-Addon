@@ -26,7 +26,7 @@ public class MessageReceivePixelSpacePlacedBlockListener implements MessageRecei
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            HttpURLConnection con = (HttpURLConnection) (new URL("http://karmatop.de/addon/pxl.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&color=" + farbe + "&name=" + LabyMod.getInstance().getPlayerName() + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
+                            HttpURLConnection con = (HttpURLConnection) (new URL("http://karmatop.de/addon/pxl.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&color=" + farbe + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
                             con.setRequestProperty("User-Agent",
                                     "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2");
                             con.connect();
