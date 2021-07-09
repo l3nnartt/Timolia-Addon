@@ -20,9 +20,7 @@ public class MessageSendTop implements MessageSendEvent {
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (!TimoliaAddon.getInstance().isPixelspace()) return false;
             if (message.equalsIgnoreCase("/top")) {
-
-                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Die Top &610 &7der Spieler Timolias mit den meisten platzierten Blöcken");
-
+                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Die Top §610 §7der Spieler Timolias mit den meisten platzierten Blöcken");
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
@@ -37,7 +35,6 @@ public class MessageSendTop implements MessageSendEvent {
                         }
                     });
                 }
-
             } return message.equalsIgnoreCase("/top");
         } return false;
     }
