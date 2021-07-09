@@ -1,12 +1,13 @@
 package com.github.l3nnartt.pxlspace;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.github.l3nnartt.TimoliaAddon;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import net.labymod.api.events.MessageSendEvent;
 import net.labymod.main.LabyMod;
 import org.apache.commons.io.IOUtils;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -31,14 +32,19 @@ public class MessageSendStats implements MessageSendEvent {
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            JsonArray content = getURLContent("http://karmatop.de/addon/pxl-api.php?name=" + player).getAsJsonArray();
-                            createStats(content);
+                            JsonObject content = getURLContent("http://karmatop.de/addon/pxl-api-test.php?name=" + player).getAsJsonObject();
+                            if(content.has("status") && content.get("status").getAsInt() == 404){
+                                LabyMod.getInstance().displayMessageInChat(content.get("message").getAsString());
+                            }else {
+                                createStats(content);
+                            }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     });
                 }
-            } return message.startsWith("/stats");
+                return true;
+            }
         } return false;
     }
 
@@ -51,11 +57,10 @@ public class MessageSendStats implements MessageSendEvent {
         return  parser.parse(jsonString);
     }
 
-    public void createStats(JsonArray content) {
-        JsonElement stats = content.get(0);
+    public void createStats(JsonObject content) {
         LabyMod.getInstance().displayMessageInChat("§6░▒▓§bStats von " + player + " §6▓▒░");
         LabyMod.getInstance().displayMessageInChat("§6╔═════");
-        for (Map.Entry<String, JsonElement> entry : stats.getAsJsonObject().entrySet()) {
+        for (Map.Entry<String, JsonElement> entry : content.entrySet()) {
             if (!entry.getKey().equals("total") && !entry.getKey().equals("name") && !entry.getKey().equals("uuid")) {
                 LabyMod.getInstance().displayMessageInChat("§6╠ §" + convertColor(entry.getKey()) + "✦ §f" + capitalize(entry.getKey()) + ": §7" + entry.getValue().getAsString());
             }
