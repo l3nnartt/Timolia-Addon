@@ -30,7 +30,7 @@ public class MessageSendTop implements MessageSendEvent {
                             for (JsonElement jsonElement : content) {
                                 String name = jsonElement.getAsJsonObject().get("name").getAsString();
                                 String total = jsonElement.getAsJsonObject().get("total").getAsString();
-                                LabyMod.getInstance().displayMessageInChat("1│ &6" + name + " &7mit &6" + total + " &7Blöcken");
+                                LabyMod.getInstance().displayMessageInChat("§1│ §6" + name + " §7mit §6" + total + " §7Blöcken");
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
