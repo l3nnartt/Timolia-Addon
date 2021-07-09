@@ -1,7 +1,7 @@
 package de.labymod.lennart.pxlspace;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import de.labymod.lennart.TimoliaAddon;
 import net.labymod.api.events.MessageSendEvent;
@@ -21,16 +21,16 @@ public class MessageSendTop implements MessageSendEvent {
             if (!TimoliaAddon.getInstance().isPixelspace()) return false;
             if (message.equalsIgnoreCase("/top")) {
 
-                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Die Top 10 Spieler in PxlSpace mit dem Timolia Addon");
+                LabyMod.getInstance().displayMessageInChat("§1│ §9Timolia-Addon§1» §7Die Top &610 &7der Spieler Timolias mit den meisten platzierten Blöcken");
 
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            JsonObject content = getURLContent("http://hosting151773.a2e37.netcup.net/lennart/timolia/addon/pxl-top.php").getAsJsonObject();
-                            for (JsonElement jsonElement : content.getAsJsonArray()) {
+                            JsonArray content = getURLContent("http://hosting151773.a2e37.netcup.net/lennart/timolia/addon/pxl-top.php").getAsJsonArray();
+                            for (JsonElement jsonElement : content) {
                                 String name = jsonElement.getAsJsonObject().get("name").getAsString();
                                 String total = jsonElement.getAsJsonObject().get("total").getAsString();
-                                LabyMod.getInstance().displayMessageInChat("1│ &7" + name + " mit " + total + "Blöcken");
+                                LabyMod.getInstance().displayMessageInChat("1│ &6" + name + " &7mit &6" + total + " &7Blöcken");
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
