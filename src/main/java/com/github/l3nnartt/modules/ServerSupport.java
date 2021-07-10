@@ -120,6 +120,6 @@ public class ServerSupport extends Server {
         settingsElements.add(new BooleanElement("Display Enemy", this, new ControlElement.IconData(Material.NAME_TAG), "displayEnemy"));
         settingsElements.add(new BooleanElement("Display Kit", this, new ControlElement.IconData(Material.DIAMOND_SWORD), "displayKit"));
         settingsElements.add(new BooleanElement("Display Current Map", this, new ControlElement.IconData(Material.SIGN), "displayMap"));
-        settingsElements.add(new BooleanElement("Display Blocks", this, new ControlElement.IconData(Material.CLAY), "displayBlocks"));
+        settingsElements.add(new BooleanElement("Display Blocks", this, new ControlElement.IconData(Material.HARD_CLAY), "displayBlocks"));
     }
 }
