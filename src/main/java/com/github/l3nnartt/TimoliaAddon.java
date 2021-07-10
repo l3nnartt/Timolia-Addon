@@ -158,7 +158,7 @@ public class TimoliaAddon extends LabyModAddon {
     protected void fillSettings(List<SettingsElement> subSettings) {
         subSettings.add(new HeaderElement("Allgemein"));
         subSettings.add(new BooleanElement("KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
-        subSettings.add(new BooleanElement("PxlSpace Custom-Commands", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
+        subSettings.add(new BooleanElement("PxlSpace Stats", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
 
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
