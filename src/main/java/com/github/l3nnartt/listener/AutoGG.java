@@ -15,10 +15,8 @@ public class AutoGG implements MessageReceiveEvent {
                 if (s1.contains("in Folge") || s1.contains("hat den Kampf gegen")) return false;
                 if (s1.contains("gewonnen")) {
                     Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getWin1vs1());
-                    //TimoliaAddon.getInstance().setKillstreak(+1);
                 } else if (s1.contains("verloren")) {
                     Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getLose1vs1());
-                    //TimoliaAddon.getInstance().setKillstreak(0);
                 }
             }
         }

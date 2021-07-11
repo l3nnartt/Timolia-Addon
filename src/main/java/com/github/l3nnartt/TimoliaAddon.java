@@ -191,6 +191,7 @@ public class TimoliaAddon extends LabyModAddon {
         }
     }
 
+    //Platzierte Blocke GUI
     public void addplacedBlocks() {
         placedBlocks++;
         getConfig().addProperty("placedBlocks", placedBlocks);

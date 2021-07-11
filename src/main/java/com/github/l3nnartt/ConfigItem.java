@@ -16,7 +16,6 @@ public class ConfigItem {
         this.icon = icon;
     }
 
-
     public String getGamemode() {
         return gamemode;
     }
