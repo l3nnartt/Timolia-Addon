@@ -13,6 +13,7 @@ public class AutoGG implements MessageReceiveEvent {
         if (TimoliaAddon.getInstance().isEnabledAutoGG1vs1()) {
             if (s1.contains("1vs1") && s1.contains("»")) {
                 if (s1.contains("in Folge") || s1.contains("hat den Kampf gegen")) return false;
+                if (s1.contains("Du hast nur deinen letzten Kampf") || s1.contains("Du hast deine letzten")) return false;
                 if (s1.contains("gewonnen")) {
                     Minecraft.getMinecraft().thePlayer.sendChatMessage(TimoliaAddon.getInstance().getWin1vs1());
                 } else if (s1.contains("verloren")) {
