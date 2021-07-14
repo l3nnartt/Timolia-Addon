@@ -34,7 +34,7 @@ public class ServerSupport extends Server {
     }
 
     public boolean isAllowed(Permissions.Permission permission) {
-        return (permission == Permissions.Permission.REFILL_FIX);
+        return (permission.isDefaultEnabled());
     }
 
     public void addModuleLines(List<Server.DisplayLine> lines) {
