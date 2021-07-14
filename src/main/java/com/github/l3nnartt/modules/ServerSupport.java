@@ -34,7 +34,7 @@ public class ServerSupport extends Server {
     }
 
     public boolean isAllowed(Permissions.Permission permission) {
-        return false;
+        return true;
     }
 
     public void addModuleLines(List<Server.DisplayLine> lines) {
