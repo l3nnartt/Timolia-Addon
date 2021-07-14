@@ -3,6 +3,7 @@ package com.github.l3nnartt.modules;
 import com.github.l3nnartt.TimoliaAddon;
 import com.github.l3nnartt.listener.MessageEnemyReceiveListener;
 import net.labymod.api.events.TabListEvent;
+import net.labymod.api.permissions.Permissions;
 import net.labymod.ingamegui.moduletypes.ColoredTextModule;
 import net.labymod.servermanager.ChatDisplayAction;
 import net.labymod.servermanager.Server;
@@ -30,6 +31,10 @@ public class ServerSupport extends Server {
 
     public ServerSupport() {
         super("timolia", "timolia.de", "play.timolia.de", "*.timolia.de", "%.timolia.de", "85.190.150.145", "95.156.239.20");
+    }
+
+    public boolean isAllowed(Permissions.Permission permission) {
+        return (permission != Permissions.Permission.REFILL_FIX);
     }
 
     public void addModuleLines(List<Server.DisplayLine> lines) {
