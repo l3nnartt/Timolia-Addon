@@ -23,7 +23,7 @@ public class MessageSendTop implements MessageSendEvent {
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            JsonArray content = getURLContent("http://hosting151773.a2e37.netcup.net/lennart/timolia/addon/pxl-top.php").getAsJsonArray();
+                            JsonArray content = getURLContent("http://karmatop.de/addon/pxl-top.php").getAsJsonArray();
                             for (JsonElement jsonElement : content) {
                                 String name = jsonElement.getAsJsonObject().get("name").getAsString();
                                 String total = jsonElement.getAsJsonObject().get("total").getAsString();
