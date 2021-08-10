@@ -22,7 +22,7 @@ public class MessageSendStats implements MessageSendEvent {
         if (TimoliaAddon.getInstance().isEnabledPxlSpaceStats()) {
             if (!TimoliaAddon.getInstance().isPixelspace()) return false;
             String[] args = message.split(" ");
-            if (message.startsWith("/stats")) {
+            if (message.toLowerCase().startsWith("/stats")) {
                 if (args.length > 1) {
                     player = args[1];
                 } else {
