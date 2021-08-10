@@ -31,7 +31,7 @@ public class MessageSendStats implements MessageSendEvent {
                 if (TimoliaAddon.getInstance().getAuthenticator().authenticate()) {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
-                            JsonObject content = getURLContent("http://karmatop.de/addon/pxl-api-test.php?name=" + player).getAsJsonObject();
+                            JsonObject content = getURLContent("http://karmatop.de/addon/pxl-api.php?name=" + player).getAsJsonObject();
                             if(content.has("status") && content.get("status").getAsInt() == 404){
                                 LabyMod.getInstance().displayMessageInChat(content.get("message").getAsString());
                             }else {
