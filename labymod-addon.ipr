@@ -16,6 +16,7 @@
   </component>
   <component name="DiscordProjectSettings">
     <option name="show" value="PROJECT" />
+    <option name="description" value="" />
   </component>
   <component name="EntryPointsManager">
     <list size="4">
@@ -174,6 +175,13 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="RunConfigurationProducerService">
+    <option name="ignoredProducers">
+      <set>
+        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+      </set>
+    </option>
   </component>
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />

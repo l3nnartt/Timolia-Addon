@@ -1,20 +1,13 @@
 package com.github.l3nnartt;
 
 import com.github.l3nnartt.config.AddonConfig;
-import com.github.l3nnartt.pxlspace.MessageReceivePixelSpacePlacedBlockListener;
-import com.github.l3nnartt.pxlspace.MessageSendStats;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.github.l3nnartt.karmatop.Authenticator;
-import com.github.l3nnartt.karmatop.KarmaListener;
-import com.github.l3nnartt.karmatop.KarmaUpdater;
-import com.github.l3nnartt.karmatop.WebsiteSettingsModule;
 import com.github.l3nnartt.listener.AutoGG;
 import com.github.l3nnartt.listener.MessageEnemyReceiveListener;
 import com.github.l3nnartt.listener.TablistHeaderListener;
 import com.github.l3nnartt.listener.TablistHeaderMapListener;
 import com.github.l3nnartt.modules.ServerSupport;
-import com.github.l3nnartt.pxlspace.MessageSendTop;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.*;
 import net.labymod.utils.Material;
@@ -78,29 +71,16 @@ public class TimoliaAddon extends LabyModAddon {
     private String gameBrainbow;
     private String gameTSpiele;
 
-    //Authenticator
-    private Authenticator authenticator;
-
     //onEnable
     @Override
     public void onEnable() {
         instance = this;
-        authenticator = new Authenticator();
 
         gson = new GsonBuilder().setPrettyPrinting().create();
         addonConfig = AddonConfig.read();
 
         //AutoGG
         api.getEventManager().register(new AutoGG());
-
-        //Automatic Karma Updater
-        api.getEventManager().register(new KarmaListener());
-        api.getEventManager().registerOnJoin(new KarmaUpdater());
-
-        //pxlspace
-        api.getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
-        api.getEventManager().register(new MessageSendStats());
-        api.getEventManager().register(new MessageSendTop());
 
         //Other
         api.getEventManager().register(new MessageEnemyReceiveListener());
@@ -115,11 +95,6 @@ public class TimoliaAddon extends LabyModAddon {
     //Config
     @Override
     public void loadConfig() {
-        this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
-
-        this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
-        this.enabledPxlSpaceStats = !getConfig().has("enabledPxlSpaceStats") || getConfig().get("enabledPxlSpaceStats").getAsBoolean();
-
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
         this.lose1vs1 = getConfig().has("lose1vs1") ? getConfig().get("lose1vs1").getAsString() : "gg";
@@ -156,10 +131,6 @@ public class TimoliaAddon extends LabyModAddon {
     //Settings Elemente
     @Override
     protected void fillSettings(List<SettingsElement> subSettings) {
-        subSettings.add(new HeaderElement("Allgemein"));
-        subSettings.add(new BooleanElement("KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
-        subSettings.add(new BooleanElement("PxlSpace Stats", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
-
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
         subSettings.add(new StringElement("1vs1-WinGG", this, new ControlElement.IconData(Material.NAME_TAG), "win1vs1", this.win1vs1));
@@ -180,7 +151,6 @@ public class TimoliaAddon extends LabyModAddon {
                 new ConfigItem("Brainbow", this.gameBrainbow, this.enabledAutoGGBrainbow, new ControlElement.IconData(Material.BOW)),
                 new ConfigItem("TSpiele", this.gameTSpiele, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
         );
-        subSettings.add(new WebsiteSettingsModule("Website", "karmatop.de Website", "Website"));
     }
 
     private void configurSettings(List<SettingsElement> subSettings, ConfigItem... gamemodes) {
@@ -189,18 +159,6 @@ public class TimoliaAddon extends LabyModAddon {
             subSettings.add(new BooleanElement("AutoGG-" + gamemode.getGamemode(), this, gamemode.getIcon(), "enabledAutoGG" + gamemode.getGamemode(), gamemode.isConfigEnabledValue()));
             subSettings.add(new StringElement("GameGG", this, new ControlElement.IconData(Material.NAME_TAG), "game" + gamemode.getGamemode(), gamemode.getConfigMessage()));
         }
-    }
-
-    //Platzierte Blocke GUI
-    public void addplacedBlocks() {
-        placedBlocks++;
-        getConfig().addProperty("placedBlocks", placedBlocks);
-        this.saveConfig();
-        this.loadConfig();
-    }
-
-    public int getPlacedBlocks() {
-        return placedBlocks;
     }
 
     public static TimoliaAddon getInstance() {
@@ -229,14 +187,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     public void setLatestserver(String latestserver) {
         this.latestserver = latestserver;
-    }
-
-    public boolean isKarmaAnswer() {
-        return karmaAnswer;
-    }
-
-    public void setKarmaAnswer(boolean karmaAnswer) {
-        this.karmaAnswer = karmaAnswer;
     }
 
     public boolean isPixelspace() {
@@ -405,21 +355,5 @@ public class TimoliaAddon extends LabyModAddon {
 
     public String getGameTSpiele() {
         return gameTSpiele;
-    }
-
-    public boolean isEnabledKarmaUpdater() {
-        return enabledKarmaUpdater;
-    }
-
-    public boolean isEnabledPxlSpaceStats() {
-        return enabledPxlSpaceStats;
-    }
-
-    public ExecutorService getExService() {
-        return exService;
-    }
-
-    public Authenticator getAuthenticator() {
-        return authenticator;
     }
 }
