@@ -1,9 +1,11 @@
 # Labymod Timolia Addon 1.8.9
 
 ## Download & Einrichtung
+### Empfohlener Weg
+Seit dem 09.07.2021 ist das Addon außerdem im Addon Store bei Labymod zu finden und kann darüber installiert werden.<br>
+Alternativ gibt es die Website [labyaddons.de](https://labyaddons.de/) wo das Addon heruntergeladen werden und mit dem unten beschriebenen Weg installiert werden kann.
 
-Seit dem 09.07.2021 ist das Addon außerdem im Addon Store bei Labymod zu finden und kann darüber installiert werden.
-
+### Alternativer Download
 Lade dir zuerst die neuste Version des Addons herunter.</br>
 https://github.com/l3nnartt/timolia-addon-1.8/releases
 
@@ -11,10 +13,6 @@ Die heruntergeladene JAR Datei in den Appdata Ordner von Minecraft(``.minecraft\
 Anschließend Minecraft muss Minecraft einmal neugestartet werden, und das Addon wurde installiert. <br>
 <br>
 Solltet ihr das Addon Updaten wollen, so löscht ihr die alte Version(.jar Datei) aus eurem Ordner und verschiebt die neuere Version in diesen Ordner.
-
-## Discord/News/Updates/Bugs/Ideen
-Habt ihr einen Bug gefunden? Ihr wollt ein Feature vorschlagen, oder ihr braucht einfach Hilfe bei der Installation?
-Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6UvWbq) melden und es wird euch geholfen.
 
 ## Features
 
@@ -39,4 +37,3 @@ Dann könnt ihr euch gerne auf diesem [Discord-Server](https://discord.gg/3HMw6U
  
 ### Sonstiges
 - Automatic Karma Updater [(karmatop.de)](https://karmatop.de/)
-- pxlSpace stats -> /stats [Name]
