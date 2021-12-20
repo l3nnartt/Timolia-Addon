@@ -1,20 +1,16 @@
 package com.github.l3nnartt;
 
 import com.github.l3nnartt.config.AddonConfig;
-import com.github.l3nnartt.pxlspace.MessageReceivePixelSpacePlacedBlockListener;
-import com.github.l3nnartt.pxlspace.MessageSendStats;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.github.l3nnartt.karmatop.Authenticator;
 import com.github.l3nnartt.karmatop.KarmaListener;
 import com.github.l3nnartt.karmatop.KarmaUpdater;
-import com.github.l3nnartt.karmatop.WebsiteSettingsModule;
 import com.github.l3nnartt.listener.AutoGG;
 import com.github.l3nnartt.listener.MessageEnemyReceiveListener;
 import com.github.l3nnartt.listener.TablistHeaderListener;
 import com.github.l3nnartt.listener.TablistHeaderMapListener;
 import com.github.l3nnartt.modules.ServerSupport;
-import com.github.l3nnartt.pxlspace.MessageSendTop;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.*;
 import net.labymod.utils.Material;
@@ -97,11 +93,6 @@ public class TimoliaAddon extends LabyModAddon {
         api.getEventManager().register(new KarmaListener());
         api.getEventManager().registerOnJoin(new KarmaUpdater());
 
-        //pxlspace
-        api.getEventManager().register(new MessageReceivePixelSpacePlacedBlockListener());
-        api.getEventManager().register(new MessageSendStats());
-        api.getEventManager().register(new MessageSendTop());
-
         //Other
         api.getEventManager().register(new MessageEnemyReceiveListener());
         api.getEventManager().register(new TablistHeaderMapListener());
@@ -180,7 +171,6 @@ public class TimoliaAddon extends LabyModAddon {
                 new ConfigItem("Brainbow", this.gameBrainbow, this.enabledAutoGGBrainbow, new ControlElement.IconData(Material.BOW)),
                 new ConfigItem("TSpiele", this.gameTSpiele, this.enabledAutoGGTSpiele, new ControlElement.IconData(Material.BEACON))
         );
-        subSettings.add(new WebsiteSettingsModule("Website", "karmatop.de Website", "Website"));
     }
 
     private void configurSettings(List<SettingsElement> subSettings, ConfigItem... gamemodes) {

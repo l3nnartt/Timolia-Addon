@@ -16,6 +16,7 @@
   </component>
   <component name="DiscordProjectSettings">
     <option name="show" value="PROJECT" />
+    <option name="description" value="" />
   </component>
   <component name="EntryPointsManager">
     <list size="4">

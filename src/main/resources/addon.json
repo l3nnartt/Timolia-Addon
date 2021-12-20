@@ -3,7 +3,7 @@
   "name": "Timolia",
   "mainClass": "com.github.l3nnartt.TimoliaAddon",
   "description": "This Addon adds some Server Support Features for Timolia.de",
-  "version": 1,
+  "version": 4,
   "author": "L3nnart_",
   "category": 3,
   "icon": "https://i.imgur.com/NkFEsHW.png"
