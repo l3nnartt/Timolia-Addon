@@ -23,7 +23,6 @@ public class ServerSupport extends Server {
     private boolean displayEnemy;
     private boolean displayKit;
     private boolean displayMap;
-    private boolean displayBlocks;
 
     public static String enemy = null;
     public static String kit = null;
@@ -51,9 +50,6 @@ public class ServerSupport extends Server {
             } if (displayMap) {
                 if (latestMap != null)
                     lines.add(new Server.DisplayLine("Map", Collections.singletonList(ColoredTextModule.Text.getText(latestMap))));
-            } if (displayBlocks) {
-                if (TimoliaAddon.getInstance().isPixelspace())
-                    lines.add(new Server.DisplayLine("Blocks", Collections.singletonList(ColoredTextModule.Text.getText(String.valueOf(TimoliaAddon.getInstance().getPlacedBlocks())))));
             }
         } catch (Exception error) {
             error.printStackTrace();
@@ -103,7 +99,7 @@ public class ServerSupport extends Server {
     }
 
     @Override
-    public void handlePluginMessage(String s, PacketBuffer packetBuffer) throws Exception {
+    public void handlePluginMessage(String s, PacketBuffer packetBuffer) {
     }
 
     public void reset() {
@@ -116,7 +112,6 @@ public class ServerSupport extends Server {
         this.displayEnemy = getBooleanAttribute("displayEnemy", true);
         this.displayKit = getBooleanAttribute("displayKit", true);
         this.displayMap = getBooleanAttribute("displayMap", true);
-        this.displayBlocks = getBooleanAttribute("displayBlocks", true);
     }
 
     public void fillSubSettings(List<SettingsElement> settingsElements) {
@@ -125,6 +120,5 @@ public class ServerSupport extends Server {
         settingsElements.add(new BooleanElement("Display Enemy", this, new ControlElement.IconData(Material.NAME_TAG), "displayEnemy"));
         settingsElements.add(new BooleanElement("Display Kit", this, new ControlElement.IconData(Material.DIAMOND_SWORD), "displayKit"));
         settingsElements.add(new BooleanElement("Display Current Map", this, new ControlElement.IconData(Material.SIGN), "displayMap"));
-        settingsElements.add(new BooleanElement("Display Blocks", this, new ControlElement.IconData(Material.HARD_CLAY), "displayBlocks"));
     }
 }

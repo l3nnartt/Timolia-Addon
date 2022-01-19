@@ -106,10 +106,7 @@ public class TimoliaAddon extends LabyModAddon {
     //Config
     @Override
     public void loadConfig() {
-        this.placedBlocks = getConfig().has("placedBlocks") ? getConfig().get("placedBlocks").getAsInt() : 0;
-
         this.enabledKarmaUpdater = !getConfig().has("enabledKarmaUpdater") || getConfig().get("enabledKarmaUpdater").getAsBoolean();
-        this.enabledPxlSpaceStats = !getConfig().has("enabledPxlSpaceStats") || getConfig().get("enabledPxlSpaceStats").getAsBoolean();
 
         this.enabledAutoGG1vs1 = !getConfig().has("enabledAutoGG1vs1") || getConfig().get("enabledAutoGG1vs1").getAsBoolean();
         this.win1vs1 = getConfig().has("win1vs1") ? getConfig().get("win1vs1").getAsString() : "gg";
@@ -149,7 +146,6 @@ public class TimoliaAddon extends LabyModAddon {
     protected void fillSettings(List<SettingsElement> subSettings) {
         subSettings.add(new HeaderElement("Allgemein"));
         subSettings.add(new BooleanElement("KarmaUpdater", this, new ControlElement.IconData(Material.EXP_BOTTLE), "enabledKarmaUpdater", this.enabledKarmaUpdater));
-        subSettings.add(new BooleanElement("PxlSpace Stats", this, new ControlElement.IconData(Material.BOOK_AND_QUILL), "enabledPxlSpaceStats", this.enabledPxlSpaceStats));
 
         subSettings.add(new HeaderElement("1vs1"));
         subSettings.add(new BooleanElement("AutoGG-1vs1", this, new ControlElement.IconData(Material.CHAINMAIL_CHESTPLATE), "enabledAutoGG1vs1", this.enabledAutoGG1vs1));
@@ -179,18 +175,6 @@ public class TimoliaAddon extends LabyModAddon {
             subSettings.add(new BooleanElement("AutoGG-" + gamemode.getGamemode(), this, gamemode.getIcon(), "enabledAutoGG" + gamemode.getGamemode(), gamemode.isConfigEnabledValue()));
             subSettings.add(new StringElement("GameGG", this, new ControlElement.IconData(Material.NAME_TAG), "game" + gamemode.getGamemode(), gamemode.getConfigMessage()));
         }
-    }
-
-    //Platzierte Blocke GUI
-    public void addplacedBlocks() {
-        placedBlocks++;
-        getConfig().addProperty("placedBlocks", placedBlocks);
-        this.saveConfig();
-        this.loadConfig();
-    }
-
-    public int getPlacedBlocks() {
-        return placedBlocks;
     }
 
     public static TimoliaAddon getInstance() {
