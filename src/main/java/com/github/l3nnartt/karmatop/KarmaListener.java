@@ -25,15 +25,15 @@ public class KarmaListener implements MessageReceiveEvent {
                     TimoliaAddon.getInstance().getExService().execute(() -> {
                         try {
                             HttpURLConnection con = (HttpURLConnection) (new URL(
-                                    "http://karmatop.de/addon/auth.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&karma=" + karma + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
+                                    "http://dl.lennartloesche.de/karmatop/auth.php?name=" + LabyMod.getInstance().getLabyModAPI().getPlayerUsername() + "&karma=" + karma + "&uuid=" + LabyMod.getInstance().getLabyModAPI().getPlayerUUID())).openConnection();
                             con.setRequestProperty("User-Agent",
                                     "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2");
                             con.connect();
                             int code = con.getResponseCode();
                             if (code == 200) {
-                                System.out.println("Timolia Addon » Karma gesendet");
+                                System.out.println("[Timolia-Addon] Karma gesendet");
                             } else {
-                                System.out.println(code);
+                                System.out.println("[Timolia-Addon] FEHLERCODE:" + code);
                             }
                         } catch (Exception e) {
                             e.printStackTrace();

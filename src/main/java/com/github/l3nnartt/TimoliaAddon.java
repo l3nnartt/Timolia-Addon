@@ -100,7 +100,7 @@ public class TimoliaAddon extends LabyModAddon {
 
         //Modules
         api.registerServerSupport(this, new ServerSupport());
-        System.out.println("Timolia-Addon enabled");
+        System.out.println("[Timolia-Addon] Addon enabled");
     }
 
     //Config
