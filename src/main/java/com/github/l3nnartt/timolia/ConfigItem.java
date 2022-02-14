@@ -1,4 +1,4 @@
-package com.github.l3nnartt;
+package com.github.l3nnartt.timolia;
 
 import static net.labymod.settings.elements.ControlElement.*;
 

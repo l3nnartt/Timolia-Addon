@@ -1,10 +1,10 @@
 {
   "uuid": "%uuid%",
   "name": "Timolia",
-  "mainClass": "com.github.l3nnartt.TimoliaAddon",
+  "mainClass": "com.github.l3nnartt.timolia.TimoliaAddon",
   "description": "This Addon adds some Server Support Features for Timolia.de",
-  "version": 4,
+  "version": 5,
   "author": "L3nnart_",
   "category": 3,
-  "icon": "https://i.imgur.com/NkFEsHW.png"
+  "icon": "https://dl.lennartloesche.de/timolia/logo.png"
 }

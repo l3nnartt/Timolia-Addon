@@ -1,6 +1,6 @@
-package com.github.l3nnartt.karmatop;
+package com.github.l3nnartt.timolia.karmatop;
 
-import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.timolia.TimoliaAddon;
 import net.labymod.utils.ServerData;
 import net.minecraft.client.Minecraft;
 import java.util.function.Consumer;

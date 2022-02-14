@@ -1,7 +1,7 @@
-package com.github.l3nnartt.config;
+package com.github.l3nnartt.timolia.config;
 
 import com.google.common.io.Resources;
-import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.timolia.TimoliaAddon;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;

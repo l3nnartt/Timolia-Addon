@@ -1,7 +1,7 @@
-package com.github.l3nnartt.modules;
+package com.github.l3nnartt.timolia.modules;
 
-import com.github.l3nnartt.TimoliaAddon;
-import com.github.l3nnartt.listener.MessageEnemyReceiveListener;
+import com.github.l3nnartt.timolia.TimoliaAddon;
+import com.github.l3nnartt.timolia.listener.MessageEnemyReceiveListener;
 import net.labymod.api.events.TabListEvent;
 import net.labymod.api.permissions.Permissions;
 import net.labymod.ingamegui.moduletypes.ColoredTextModule;

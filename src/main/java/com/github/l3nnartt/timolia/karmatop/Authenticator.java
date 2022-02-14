@@ -1,4 +1,4 @@
-package com.github.l3nnartt.karmatop;
+package com.github.l3nnartt.timolia.karmatop;
 
 import com.mojang.authlib.exceptions.AuthenticationException;
 import net.minecraft.client.Minecraft;

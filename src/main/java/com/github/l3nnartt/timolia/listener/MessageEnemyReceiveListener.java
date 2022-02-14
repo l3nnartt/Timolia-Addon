@@ -1,4 +1,4 @@
-package com.github.l3nnartt.listener;
+package com.github.l3nnartt.timolia.listener;
 
 import net.labymod.api.events.MessageReceiveEvent;
 

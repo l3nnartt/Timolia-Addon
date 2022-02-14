@@ -1,6 +1,6 @@
-package com.github.l3nnartt.karmatop;
+package com.github.l3nnartt.timolia.karmatop;
 
-import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.timolia.TimoliaAddon;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.labymod.main.LabyMod;
 import java.net.HttpURLConnection;

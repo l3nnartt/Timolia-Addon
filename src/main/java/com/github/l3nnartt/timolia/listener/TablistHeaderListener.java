@@ -1,6 +1,6 @@
-package com.github.l3nnartt.listener;
+package com.github.l3nnartt.timolia.listener;
 
-import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.timolia.TimoliaAddon;
 import net.labymod.api.events.TabListEvent;
 
 public class TablistHeaderListener implements TabListEvent {
@@ -12,12 +12,6 @@ public class TablistHeaderListener implements TabListEvent {
             String serveroutput = servername[servername.length-1];
             serveroutput = serveroutput.substring(0,serveroutput.length()-4);
             TimoliaAddon.getInstance().setLatestserver(serveroutput);
-        }
-
-        if (s.contains("pxlspace")) {
-            TimoliaAddon.getInstance().setPixelspace(true);
-        } else if (s.contains("games")) {
-            TimoliaAddon.getInstance().setPixelspace(false);
         }
 
         if (s.contains("4rena")) {

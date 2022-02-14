@@ -1,6 +1,6 @@
-package com.github.l3nnartt.listener;
+package com.github.l3nnartt.timolia.listener;
 
-import com.github.l3nnartt.TimoliaAddon;
+import com.github.l3nnartt.timolia.TimoliaAddon;
 import net.labymod.api.events.MessageReceiveEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;

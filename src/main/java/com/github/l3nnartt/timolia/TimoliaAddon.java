@@ -1,16 +1,16 @@
-package com.github.l3nnartt;
+package com.github.l3nnartt.timolia;
 
-import com.github.l3nnartt.config.AddonConfig;
+import com.github.l3nnartt.timolia.config.AddonConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.github.l3nnartt.karmatop.Authenticator;
-import com.github.l3nnartt.karmatop.KarmaListener;
-import com.github.l3nnartt.karmatop.KarmaUpdater;
-import com.github.l3nnartt.listener.AutoGG;
-import com.github.l3nnartt.listener.MessageEnemyReceiveListener;
-import com.github.l3nnartt.listener.TablistHeaderListener;
-import com.github.l3nnartt.listener.TablistHeaderMapListener;
-import com.github.l3nnartt.modules.ServerSupport;
+import com.github.l3nnartt.timolia.karmatop.Authenticator;
+import com.github.l3nnartt.timolia.karmatop.KarmaListener;
+import com.github.l3nnartt.timolia.karmatop.KarmaUpdater;
+import com.github.l3nnartt.timolia.listener.AutoGG;
+import com.github.l3nnartt.timolia.listener.MessageEnemyReceiveListener;
+import com.github.l3nnartt.timolia.listener.TablistHeaderListener;
+import com.github.l3nnartt.timolia.listener.TablistHeaderMapListener;
+import com.github.l3nnartt.timolia.modules.ServerSupport;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.*;
 import net.labymod.utils.Material;
@@ -31,10 +31,6 @@ public class TimoliaAddon extends LabyModAddon {
     //Karmatop
     private boolean karmaAnswer;
     private boolean enabledKarmaUpdater;
-
-    //PxlSpace Stats
-    private int placedBlocks;
-    private boolean enabledPxlSpaceStats;
 
     //Header Check
     private boolean pixelspace;
@@ -213,14 +209,6 @@ public class TimoliaAddon extends LabyModAddon {
         this.karmaAnswer = karmaAnswer;
     }
 
-    public boolean isPixelspace() {
-        return pixelspace;
-    }
-
-    public void setPixelspace(boolean pixelspace) {
-        this.pixelspace = pixelspace;
-    }
-
     public boolean isCastles() {
         return castles;
     }
@@ -383,10 +371,6 @@ public class TimoliaAddon extends LabyModAddon {
 
     public boolean isEnabledKarmaUpdater() {
         return enabledKarmaUpdater;
-    }
-
-    public boolean isEnabledPxlSpaceStats() {
-        return enabledPxlSpaceStats;
     }
 
     public ExecutorService getExService() {
